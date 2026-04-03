@@ -427,6 +427,50 @@ a.og-card:hover .og-card-title {
   margin-top: var(--gap-sm);
 }
 
+/* bookmark form — two column layout */
+.bookmark-form-layout {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--gap-xl);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .bookmark-form-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bookmark-form-main .form-standalone {
+  max-width: none;
+}
+
+/* vertical og card — preview sidebar */
+.og-card-vertical {
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+}
+
+.og-card-vertical-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.og-card-vertical-body {
+  padding: var(--gap-md);
+}
+
+.og-card-domain {
+  font-size: var(--font-xs);
+  color: var(--color-on-bg-muted);
+  margin-top: var(--gap-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* detail sections */
 .detail-section {
   margin-top: var(--gap-xl);
