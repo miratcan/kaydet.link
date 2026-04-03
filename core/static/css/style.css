@@ -296,7 +296,7 @@ body > footer .footer-links a:hover {
 .card-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: filter 300ms;
 }
@@ -393,7 +393,7 @@ a.card-body:hover .card-title {
 .og-card-image {
   width: 120px;
   height: 80px;
-  object-fit: cover;
+  object-fit: contain;
   flex-shrink: 0;
   filter: grayscale(100%);
 }
