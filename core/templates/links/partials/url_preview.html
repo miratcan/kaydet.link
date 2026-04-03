@@ -1,22 +1,8 @@
 {% if info.title or info.image %}
-<div class="link-card-wrapper" id="url-preview">
-    <article class="link-card">
-        {% if info.image %}
-        <div class="card-sidebar">
-            <div class="card-thumb">
-                <img src="{{ info.image }}" alt="{{ info.title|default:'' }}" loading="lazy" onerror="this.style.display='none'">
-            </div>
-        </div>
-        {% endif %}
-        <div class="card-body">
-            {% if info.title %}
-            <h2 class="card-title">{{ info.title }}</h2>
-            {% endif %}
-            {% if info.description %}
-            <p class="card-description">{{ info.description }}</p>
-            {% endif %}
-        </div>
-    </article>
+<div id="url-preview">
+    {% with link=info %}
+    {% include "links/partials/link_card.html" %}
+    {% endwith %}
 </div>
 {% else %}
 <div id="url-preview"></div>
