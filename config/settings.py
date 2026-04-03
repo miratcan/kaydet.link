@@ -76,7 +76,7 @@ LANGUAGES = [
     ('en', _('English')),
     ('tr', _('Turkish')),
 ]
-LOCALE_PATHS = [BASE_DIR / 'locale']
+LOCALE_PATHS = [BASE_DIR / 'core' / 'locale']
 
 TIME_ZONE = env('TIME_ZONE', default='UTC')
 USE_I18N = True
