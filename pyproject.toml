@@ -1,7 +1,7 @@
 [project]
 name = 'kaydet-link'
 version = '0.1.0'
-description = 'LinkFloyd reborn — a link sharing platform'
+description = 'Self-hosted bookmark sharing platform'
 requires-python = '>=3.13'
 dependencies = [
     'django>=5.1',
@@ -14,6 +14,11 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+prod = [
+    'dj-database-url>=2.1',
+    'gunicorn>=22.0',
+    'psycopg[binary]>=3.1',
+]
 dev = [
     'ruff>=0.8',
     'pylint>=3.3',
