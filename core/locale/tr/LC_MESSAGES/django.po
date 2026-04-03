@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaydet-link 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-03 13:58+0300\n"
+"POT-Creation-Date: 2026-04-03 13:40+0000\n"
 "PO-Revision-Date: 2026-04-03 13:00+0300\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: forms/link.py:16 templates/links/bookmark_form.html:42
+#: forms/link.py:16 templates/links/bookmark_form.html:49
 msgid "Why are you saving this?"
 msgstr "Neden kaydediyorsun?"
 
-#: forms/link.py:20 forms/link.py:57 models/tag.py:32 templates/base.html:53
-#: templates/links/bookmark_form.html:47 templates/tags/list.html:4
+#: forms/link.py:20 forms/link.py:57 models/tag.py:32 templates/base.html:56
+#: templates/links/bookmark_form.html:40 templates/tags/list.html:4
 #: templates/tags/list.html:8
 msgid "Tags"
 msgstr "Etiketler"
@@ -91,11 +91,11 @@ msgstr "güncellenme tarihi"
 msgid "Comment"
 msgstr "Yorum"
 
-#: models/comment.py:53 templates/links/detail.html:36
+#: models/comment.py:53 templates/links/detail.html:69
 msgid "Comments"
 msgstr "Yorumlar"
 
-#: models/link.py:14 templates/links/bookmark_form.html:15
+#: models/link.py:14 templates/links/bookmark_form.html:17
 msgid "URL"
 msgstr "URL"
 
@@ -159,7 +159,7 @@ msgstr "görüldü"
 msgid "Notification"
 msgstr "Bildirim"
 
-#: models/notification.py:64 templates/base.html:22
+#: models/notification.py:64 templates/base.html:25
 #: templates/notifications/list.html:4 templates/notifications/list.html:8
 msgid "Notifications"
 msgstr "Bildirimler"
@@ -224,17 +224,32 @@ msgstr "Wiki Sayfası"
 msgid "Wiki Pages"
 msgstr "Wiki Sayfaları"
 
+#: templates/account/login.html:4 templates/account/login.html:8
 #: templates/auth/login.html:4 templates/auth/login.html:8
-#: templates/auth/login.html:12 templates/base.html:28
+#: templates/auth/login.html:12 templates/base.html:32
 msgid "Login"
 msgstr "Giriş Yap"
+
+#: templates/account/login.html:9
+msgid "Sign in with Google"
+msgstr "Google ile giriş yap"
+
+#: templates/account/logout.html:4 templates/account/logout.html:8
+#: templates/account/logout.html:12 templates/base.html:30
+msgid "Logout"
+msgstr "Çıkış"
+
+#: templates/account/logout.html:9
+msgid "Are you sure you want to sign out?"
+msgstr "Çıkış yapmak istediğinize emin misiniz?"
 
 #: templates/auth/login.html:14
 msgid "Don't have an account? Register"
 msgstr "Hesabınız yok mu? Kayıt olun"
 
 #: templates/auth/register.html:4 templates/auth/register.html:8
-#: templates/auth/register.html:12 templates/base.html:29
+#: templates/auth/register.html:12 templates/socialaccount/signup.html:4
+#: templates/socialaccount/signup.html:8 templates/socialaccount/signup.html:13
 msgid "Register"
 msgstr "Kayıt Ol"
 
@@ -242,61 +257,81 @@ msgstr "Kayıt Ol"
 msgid "Already have an account? Login"
 msgstr "Zaten hesabınız var mı? Giriş yapın"
 
-#: templates/base.html:20 templates/comments/partials/form.html:12
-#: templates/links/bookmark_form.html:53
+#: templates/base.html:23 templates/comments/partials/form.html:12
+#: templates/links/bookmark_form.html:53 templates/links/detail.html:32
 #: templates/links/partials/link_card.html:36
 #: templates/preferences/update.html:12 templates/wiki/edit.html:12
 msgid "Save"
 msgstr "Kaydet"
 
-#: templates/base.html:54 templates/wiki/index.html:4
+#: templates/base.html:57 templates/wiki/index.html:4
 #: templates/wiki/index.html:8 templates/wiki/view.html:4
 msgid "Wiki"
 msgstr "Wiki"
+
+#: templates/base.html:58
+msgid "Report Issue"
+msgstr "Sorun Bildir"
 
 #: templates/comments/partials/form.html:4
 #: templates/comments/partials/form.html:8
 msgid "Edit Comment"
 msgstr "Yorumu Düzenle"
 
-#: templates/links/bookmark_form.html:29
+#: templates/links/bookmark_form.html:31
 msgid "Fetching..."
 msgstr "Yükleniyor..."
 
-#: templates/links/bookmark_form.html:40
+#: templates/links/bookmark_form.html:47
 msgid "Note"
 msgstr "Not"
 
-#: templates/links/bookmark_form.html:58
+#: templates/links/bookmark_form.html:65
 msgid "Are you sure?"
 msgstr "Emin misiniz?"
 
-#: templates/links/bookmark_form.html:58
+#: templates/links/bookmark_form.html:65
 msgid "Delete"
 msgstr "Sil"
 
-#: templates/links/detail.html:10
+#: templates/links/detail.html:19 templates/links/partials/link_card.html:29
+msgid "saved"
+msgstr "kaydeden"
+
+#: templates/links/detail.html:23 templates/links/partials/link_card.html:30
+msgid "comments"
+msgstr "yorum"
+
+#: templates/links/detail.html:28 templates/links/partials/link_card.html:32
+msgid "Saved"
+msgstr "Kaydedildi"
+
+#: templates/links/detail.html:36
+msgid "Go to Link"
+msgstr "Linke Git"
+
+#: templates/links/detail.html:43
 msgid "Saved by"
 msgstr "Kaydedenler"
 
-#: templates/links/detail.html:16 templates/links/detail.html:43
+#: templates/links/detail.html:49 templates/links/detail.html:89
 #: templates/notifications/list.html:19
 msgid "ago"
 msgstr "önce"
 
-#: templates/links/detail.html:18 templates/links/detail.html:45
+#: templates/links/detail.html:51 templates/links/detail.html:91
 msgid "edit"
 msgstr "düzenle"
 
-#: templates/links/detail.html:31
+#: templates/links/detail.html:64
 msgid "No one has saved this link yet."
 msgstr "Bu linki henüz kimse kaydetmedi."
 
-#: templates/links/detail.html:58
+#: templates/links/detail.html:77
 msgid "Post Comment"
 msgstr "Yorum Yap"
 
-#: templates/links/detail.html:63
+#: templates/links/detail.html:99
 msgid "Log in to comment"
 msgstr "Yorum yapmak için giriş yapın"
 
@@ -336,18 +371,6 @@ msgstr "Önceki sayfa"
 msgid "Next page"
 msgstr "Sonraki sayfa"
 
-#: templates/links/partials/link_card.html:29
-msgid "saved"
-msgstr "kaydeden"
-
-#: templates/links/partials/link_card.html:30
-msgid "comments"
-msgstr "yorum"
-
-#: templates/links/partials/link_card.html:32
-msgid "Saved"
-msgstr "Kaydedildi"
-
 #: templates/notifications/list.html:22
 msgid "No notifications."
 msgstr "Bildirim yok."
@@ -355,6 +378,10 @@ msgstr "Bildirim yok."
 #: templates/preferences/update.html:4 templates/preferences/update.html:8
 msgid "Settings"
 msgstr "Ayarlar"
+
+#: templates/socialaccount/signup.html:9
+msgid "Choose a username to complete your registration."
+msgstr "Kaydınızı tamamlamak için bir kullanıcı adı seçin."
 
 #: templates/tags/list.html:13
 msgid "No tags yet."
@@ -372,10 +399,10 @@ msgstr "Wiki Sayfasını Düzenle"
 msgid "No wiki pages yet."
 msgstr "Henüz wiki sayfası yok."
 
-#: views/link.py:113
+#: views/link.py:128
 msgid "Save a Link"
 msgstr "Link Kaydet"
 
-#: views/link.py:141
+#: views/link.py:156
 msgid "Edit Bookmark"
 msgstr "Linki Düzenle"
