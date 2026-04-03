@@ -55,22 +55,7 @@
         </div>
         <aside class="bookmark-form-preview">
             {% if link %}
-            <div class="og-card-vertical">
-                {% if link.image %}
-                <img src="{{ link.image }}" alt="{{ link.title|default:'' }}" class="og-card-vertical-image" loading="lazy">
-                {% endif %}
-                <div class="og-card-vertical-body">
-                    {% if link.title %}
-                    <strong class="og-card-title">{{ link.title }}</strong>
-                    {% endif %}
-                    {% if link.description %}
-                    <p class="og-card-description">{{ link.description }}</p>
-                    {% endif %}
-                    {% if link.get_domain %}
-                    <p class="og-card-domain">{{ link.get_domain }}</p>
-                    {% endif %}
-                </div>
-            </div>
+            {% include "links/partials/link_card.html" %}
             {% endif %}
             <div id="url-preview"></div>
             {% if bookmark %}
