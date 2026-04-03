@@ -29,11 +29,11 @@
         <span>{{ link.save_count }} {% translate "saved" %}</span>
         <span>{{ link.comment_count }} {% translate "comments" %}</span>
         {% if link.is_saved %}
-        <a href="{% url 'bookmark-edit' pk=link.user_bookmark_id %}" class="btn btn-outline dangling card-meta-action">{% translate "Saved" %}</a>
+        <a href="{% url 'bookmark-edit' pk=link.user_bookmark_id %}" class="btn btn-outline card-meta-action">{% translate "Saved" %}</a>
         {% else %}
         {% with first_bm=link.first_bookmark %}
         {% if first_bm %}
-        <a href="{% url 'bookmark-create' %}?from={{ first_bm.pk }}" class="btn dangling card-meta-action">{% translate "Save" %}</a>
+        <a href="{% url 'bookmark-create' %}?from={{ first_bm.pk }}" class="btn card-meta-action">{% translate "Save" %}</a>
         {% endif %}
         {% endwith %}
         {% endif %}

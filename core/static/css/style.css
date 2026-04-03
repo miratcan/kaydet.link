@@ -70,6 +70,16 @@ body {
   flex-direction: column;
 }
 
+/* general links */
+a {
+  color: var(--color-on-bg);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
 /* wrapper */
 .wrapper {
   max-width: var(--wrapper-max);
@@ -697,6 +707,7 @@ input[type="submit"] {
 button:hover,
 input[type="submit"]:hover {
   background: var(--color-bg-button-hover);
+  color: var(--color-on-button);
   border-color: var(--color-bg-button-hover);
   text-decoration: none;
 }
@@ -723,11 +734,6 @@ input[type="submit"]:hover {
   background: none;
   color: var(--color-on-bg);
   border-color: var(--color-border);
-}
-
-/* dangling */
-.dangling {
-  border-top: none;
 }
 
 /* pagination */
@@ -927,15 +933,6 @@ select:focus {
   margin-bottom: var(--gap-xl);
 }
 
-/* general links */
-a {
-  color: var(--color-on-bg);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-accent);
-}
 
 /* htmx indicator */
 .htmx-indicator {
