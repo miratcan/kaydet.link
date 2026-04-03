@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Export" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1 class="page-title">{% translate "Export Your Data" %}</h1>
+    <p class="section-description">{% translate "Download all your bookmarks. Your data is yours." %}</p>
+
+    <div class="export-options">
+        <a href="{% url 'export-json' %}" class="export-card">
+            <h3>JSON</h3>
+            <p>{% translate "Full export with notes, tags, collections, and status. Re-importable to kaydet.link." %}</p>
+        </a>
+        <a href="{% url 'export-html' %}" class="export-card">
+            <h3>HTML</h3>
+            <p>{% translate "Browser bookmark format. Importable to Chrome, Firefox, Safari." %}</p>
+        </a>
+        <a href="{% url 'export-csv' %}" class="export-card">
+            <h3>CSV</h3>
+            <p>{% translate "Spreadsheet format. Open in Excel, Google Sheets, etc." %}</p>
+        </a>
+    </div>
+</section>
+{% endblock %}

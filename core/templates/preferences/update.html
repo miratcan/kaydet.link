@@ -11,5 +11,11 @@
         {% include "forms/fields.html" %}
         <button type="submit">{% translate "Save" %}</button>
     </form>
+
+    <div class="settings-links">
+        <h2>{% translate "Data" %}</h2>
+        <a href="{% url 'export' %}">{% translate "Export your data" %} &rarr;</a>
+        <a href="{% url 'import' %}">{% translate "Import bookmarks" %} &rarr;</a>
+    </div>
 </section>
 {% endblock %}

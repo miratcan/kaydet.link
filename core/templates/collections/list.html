@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Collections" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <div class="section-header">
+        <h1 class="page-title">{% translate "Collections" %}</h1>
+        <a href="{% url 'collection-create' %}" class="btn">+ {% translate "New" %}</a>
+    </div>
+
+    {% if collections %}
+    <div class="collection-grid">
+        {% for collection in collections %}
+        <a href="{% url 'collection-detail' username=user.username slug=collection.slug %}" class="collection-card">
+            <div class="collection-card-header">
+                <h2 class="collection-card-title">
+                    {% if collection.is_private %}
+                    <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    {% endif %}
+                    {{ collection.name }}
+                </h2>
+                <span class="collection-card-count">{{ collection.bookmark_count }}</span>
+            </div>
+            {% if collection.description %}
+            <p class="collection-card-desc">{{ collection.description|truncatewords:20 }}</p>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>{% translate "No collections yet." %}</p>
+        <a href="{% url 'collection-create' %}" class="btn">{% translate "Create your first collection" %}</a>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

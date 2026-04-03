@@ -1,0 +1,6 @@
+{% load i18n %}<button
+    class="status-badge status-{{ bookmark.status }}"
+    hx-post="{% url 'bookmark-status-toggle' pk=bookmark.pk %}"
+    hx-swap="outerHTML"
+    title="{% if bookmark.status == 'unread' %}{% translate 'Mark as read' %}{% elif bookmark.status == 'read' %}{% translate 'Archive' %}{% else %}{% translate 'Mark as unread' %}{% endif %}"
+>{% if bookmark.status == "unread" %}{% translate "Unread" %}{% elif bookmark.status == "read" %}{% translate "Read" %}{% else %}{% translate "Archived" %}{% endif %}</button>

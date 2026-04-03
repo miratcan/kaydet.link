@@ -1,14 +1,22 @@
 import logging
 
+import markdown
+
 from core.services.link import LinkService
 
 logger = logging.getLogger('core.BookmarkService')
 
 
+def render_note(note):
+    if not note:
+        return ''
+    return markdown.markdown(note, extensions=['nl2br', 'fenced_code'])
+
+
 class BookmarkService:
 
     @staticmethod
-    def create_bookmark(user, url, note='', tags=None, parent=None):
+    def create_bookmark(user, url, note='', tags=None, parent=None, is_private=True):
         from core.models import Bookmark
 
         link = LinkService.get_or_create_link(url)
@@ -16,7 +24,9 @@ class BookmarkService:
         existing = Bookmark.objects.filter(user=user, link=link).first()
         if existing:
             existing.note = note
-            existing.save(update_fields=['note'])
+            existing.note_html = render_note(note)
+            existing.is_private = is_private
+            existing.save(update_fields=['note', 'note_html', 'is_private'])
             if tags:
                 existing.tags.set(tags)
             return existing
@@ -26,6 +36,8 @@ class BookmarkService:
             link=link,
             parent=parent,
             note=note,
+            note_html=render_note(note),
+            is_private=is_private,
         )
         if tags:
             bookmark.tags.set(tags)

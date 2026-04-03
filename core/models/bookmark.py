@@ -11,6 +11,12 @@ class BookmarkManager(models.Manager):
         )
 
 
+class ReadingStatus(models.TextChoices):
+    UNREAD = 'unread', _('Unread')
+    READ = 'read', _('Read')
+    ARCHIVED = 'archived', _('Archived')
+
+
 class Bookmark(models.Model):
     user = models.ForeignKey(
         to=get_user_model(),
@@ -39,6 +45,11 @@ class Bookmark(models.Model):
         blank=True,
         verbose_name=_('note'),
     )
+    is_private = models.BooleanField(
+        default=True,
+        verbose_name=_('private'),
+        help_text=_('Only you can see this bookmark'),
+    )
     note_html = models.TextField(
         blank=True,
         editable=False,
@@ -49,6 +60,27 @@ class Bookmark(models.Model):
         related_name='bookmarks',
         blank=True,
         verbose_name=_('tags'),
+    )
+    collections = models.ManyToManyField(
+        to='core.Collection',
+        related_name='bookmarks',
+        blank=True,
+        verbose_name=_('collections'),
+    )
+    status = models.CharField(
+        max_length=10,
+        choices=ReadingStatus.choices,
+        default=ReadingStatus.UNREAD,
+        verbose_name=_('reading status'),
+    )
+    is_pinned = models.BooleanField(
+        default=False,
+        verbose_name=_('pinned'),
+    )
+    pinned_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        verbose_name=_('pinned at'),
     )
     created_at = models.DateTimeField(
         auto_now_add=True,

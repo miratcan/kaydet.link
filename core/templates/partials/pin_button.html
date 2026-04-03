@@ -1,0 +1,6 @@
+{% load i18n %}<button
+    class="pin-btn {% if bookmark.is_pinned %}pinned{% endif %}"
+    hx-post="{% url 'bookmark-pin-toggle' pk=bookmark.pk %}"
+    hx-swap="outerHTML"
+    title="{% if bookmark.is_pinned %}{% translate 'Unpin' %}{% else %}{% translate 'Pin to top' %}{% endif %}"
+>{% if bookmark.is_pinned %}&#9733;{% else %}&#9734;{% endif %}</button>

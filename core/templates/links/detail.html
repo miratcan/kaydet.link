@@ -44,6 +44,11 @@
         {% for bookmark in bookmarks %}
         <article class="detail-entry">
             <div class="entry-meta">
+                {% if bookmark.is_private %}
+                <span class="entry-private" title="{% translate 'Private' %}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                {% endif %}
                 <span class="entry-user">@{{ bookmark.user.username }}</span>
                 &middot;
                 <time datetime="{{ bookmark.created_at|date:'c' }}">{{ bookmark.created_at|timesince }} {% translate "ago" %}</time>
@@ -51,7 +56,7 @@
                     &middot; <a href="{% url 'bookmark-edit' pk=bookmark.pk %}">{% translate "edit" %}</a>
                 {% endif %}
             </div>
-            {% if bookmark.note %}<p class="entry-note">{{ bookmark.note }}</p>{% endif %}
+            {% if bookmark.note_html %}<div class="entry-note">{{ bookmark.note_html|safe }}</div>{% elif bookmark.note %}<p class="entry-note">{{ bookmark.note }}</p>{% endif %}
             {% if bookmark.tags.all %}
             <div class="entry-tags">
                 {% for tag in bookmark.tags.all %}

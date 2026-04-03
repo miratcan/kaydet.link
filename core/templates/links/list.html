@@ -30,7 +30,15 @@
     {% for link in links %}
         {% include "links/partials/link_card.html" %}
     {% empty %}
+        {% if not user.is_authenticated %}
+        <div class="landing-hero">
+            <h2>{% translate "Save, organize, and rediscover your bookmarks." %}</h2>
+            <p>{% translate "A personal bookmarking tool. Private by default. Tag, collect, and search your links — all in one place." %}</p>
+            <a href="{% url 'account_login' %}" class="btn btn-hero">{% translate "Sign in to get started" %}</a>
+        </div>
+        {% else %}
         <p class="empty">{% translate "No links yet." %}</p>
+        {% endif %}
     {% endfor %}
 </div>
 

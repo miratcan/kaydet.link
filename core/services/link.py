@@ -119,36 +119,50 @@ class LinkService:
         query = Q()
 
         if tag:
-            query &= Q(bookmark__tags=tag)
+            # Only count public bookmarks for tag filtering
+            tag_q = Q(bookmark__tags=tag)
+            if user and user.is_authenticated:
+                tag_q &= (Q(bookmark__is_private=False) | Q(bookmark__user=user))
+            else:
+                tag_q &= Q(bookmark__is_private=False)
+            query &= tag_q
 
         if saved_by:
-            query &= Q(bookmark__user=saved_by)
+            saved_q = Q(bookmark__user=saved_by)
+            # If viewing someone else's profile, hide their private bookmarks
+            if not user or not user.is_authenticated or user != saved_by:
+                saved_q &= Q(bookmark__is_private=False)
+            query &= saved_q
+
+        # In the main feed (no tag/saved_by filter), only show links
+        # that have at least one public bookmark
+        if not tag and not saved_by:
+            public_bookmarks = Q(bookmark__is_private=False)
+            if user and user.is_authenticated:
+                public_bookmarks |= Q(bookmark__user=user)
+            query &= public_bookmarks
 
         links = Link.objects.filter(query).distinct()
 
         if user and user.is_authenticated:
             from django.db.models import Subquery
 
+            user_bookmarks = Bookmark.objects.filter(
+                user=user,
+                link=OuterRef('pk'),
+            )
             links = links.annotate(
-                is_saved=Exists(
-                    Bookmark.objects.filter(
-                        user=user,
-                        link=OuterRef('pk'),
-                    ),
-                ),
-                user_bookmark_id=Subquery(
-                    Bookmark.objects.filter(
-                        user=user,
-                        link=OuterRef('pk'),
-                    ).values('pk')[:1],
-                ),
+                is_saved=Exists(user_bookmarks),
+                user_bookmark_id=Subquery(user_bookmarks.values('pk')[:1]),
+                user_bookmark_private=Subquery(user_bookmarks.values('is_private')[:1]),
             )
         else:
-            from django.db.models import IntegerField
+            from django.db.models import BooleanField, IntegerField
 
             links = links.annotate(
                 is_saved=Value(False),
                 user_bookmark_id=Value(None, output_field=IntegerField()),
+                user_bookmark_private=Value(None, output_field=BooleanField()),
             )
 
         order_map = {
