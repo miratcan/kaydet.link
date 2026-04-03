@@ -580,7 +580,8 @@ a.og-card:hover .og-card-title {
   display: flex;
   align-items: center;
   padding: var(--gap-md) var(--gap-xl);
-  font-size: var(--font-sm);
+  font-size: var(--font-xl);
+  justify-content: center;
 }
 
 .stat-label {
