@@ -119,7 +119,7 @@ body > header .nav-links {
   height: 100%;
 }
 
-body > header .nav-links a {
+body > header .nav-links a:not(.btn) {
   color: var(--color-on-bg);
   text-decoration: none;
   font-size: var(--font-xs);
@@ -133,10 +133,15 @@ body > header .nav-links a {
   border-left: 1px solid var(--color-border-light);
 }
 
-body > header .nav-links a:hover {
+body > header .nav-links a:not(.btn):hover {
   background: var(--color-primary);
   color: var(--color-on-primary);
   text-decoration: none;
+}
+
+body > header .nav-links .btn {
+  margin-left: var(--gap-sm);
+  height: auto;
 }
 
 /* main */
@@ -550,7 +555,7 @@ a.og-card:hover .og-card-title {
 
 .detail-stats {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: var(--gap-md);
   margin-top: var(--gap-lg);
 }
@@ -561,7 +566,21 @@ a.og-card:hover .og-card-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-width: 80px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: var(--gap-md);
+  margin-left: auto;
+}
+
+.detail-action-btn {
+  display: flex;
+  align-items: center;
+  padding: var(--gap-md) var(--gap-xl);
+  font-size: var(--font-sm);
 }
 
 .stat-label {

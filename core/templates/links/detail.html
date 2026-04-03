@@ -23,15 +23,18 @@
             <span class="stat-label">{% translate "comments" %}</span>
             <span class="stat-value">{{ link.comment_count }}</span>
         </div>
-        {% if is_saved %}
-        <span class="btn btn-outline" style="margin-left:auto">{% translate "Saved" %}</span>
-        {% else %}
-        {% with first_bm=link.first_bookmark %}
-        {% if first_bm %}
-        <a href="{% url 'bookmark-create' %}?from={{ first_bm.pk }}" class="btn" style="margin-left:auto">{% translate "Save" %}</a>
-        {% endif %}
-        {% endwith %}
-        {% endif %}
+        <div class="detail-actions">
+            {% if is_saved %}
+            <span class="btn btn-outline detail-action-btn">{% translate "Saved" %}</span>
+            {% else %}
+            {% with first_bm=link.first_bookmark %}
+            {% if first_bm %}
+            <a href="{% url 'bookmark-create' %}?from={{ first_bm.pk }}" class="btn detail-action-btn">{% translate "Save" %}</a>
+            {% endif %}
+            {% endwith %}
+            {% endif %}
+            <a href="{{ link.url }}" rel="noopener" target="_blank" class="btn detail-action-btn">{% translate "Go to Link" %} &rarr;</a>
+        </div>
     </div>
 </article>
 
