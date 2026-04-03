@@ -427,6 +427,17 @@ a.og-card:hover .og-card-title {
   margin-top: var(--gap-sm);
 }
 
+/* page title — big brutalist heading */
+.page-title {
+  font-family: var(--font-headline);
+  font-size: var(--font-3xl);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: var(--line-height-none);
+  margin-bottom: var(--gap-xl);
+}
+
 /* bookmark form — two column layout */
 .bookmark-form-layout {
   display: grid;
@@ -441,8 +452,33 @@ a.og-card:hover .og-card-title {
   }
 }
 
-.bookmark-form-main .form-standalone {
+.bookmark-form-main form {
   max-width: none;
+}
+
+/* input with inline action */
+.input-with-action {
+  position: relative;
+}
+
+.input-with-action input {
+  padding-right: 120px;
+}
+
+.input-with-action .htmx-indicator {
+  position: absolute;
+  right: var(--gap-md);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* full-width submit button */
+.btn-full {
+  width: 100%;
+  display: block;
+  padding: var(--gap-lg);
+  font-size: var(--font-sm);
+  text-align: center;
 }
 
 /* vertical og card — preview sidebar */
@@ -469,6 +505,29 @@ a.og-card:hover .og-card-title {
   margin-top: var(--gap-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* delete zone — right sidebar bottom */
+.form-delete-zone {
+  margin-top: var(--gap-xl);
+  border: 2px solid var(--color-error);
+  padding: var(--gap-lg);
+}
+
+.btn-delete {
+  width: 100%;
+  display: block;
+  background: none;
+  color: var(--color-error);
+  border: 2px solid var(--color-error);
+  text-align: center;
+  padding: var(--gap-sm) var(--gap-lg);
+}
+
+.btn-delete:hover {
+  background: var(--color-error);
+  color: var(--color-on-error);
+  border-color: var(--color-error);
 }
 
 /* detail sections */

@@ -5,41 +5,36 @@
 
 {% block content %}
 <section>
-    <h1>{{ page_title }}</h1>
+    <h1 class="page-title">{{ page_title }}</h1>
     <div class="bookmark-form-layout">
         <div class="bookmark-form-main">
-            <form method="post" class="form-standalone">
+            <form method="post">
                 {% csrf_token %}
                 {% if parent %}<input type="hidden" name="parent_id" value="{{ parent.pk }}">{% endif %}
 
                 {% if show_url %}
                 <div class="form-field">
                     <label for="id_url">{% translate "URL" %}</label>
-                    <input type="url" name="url" id="id_url"
-                           maxlength="2000"
-                           required
-                           placeholder="https://..."
-                           value="{{ form.url.value|default_if_none:'' }}"
-                           hx-get="{% url 'fetch-url-info' %}"
-                           hx-trigger="change"
-                           hx-target="#url-preview"
-                           hx-swap="outerHTML"
-                           hx-include="[name='url']"
-                           hx-params="url"
-                           hx-indicator="#url-loading">
+                    <div class="input-with-action">
+                        <input type="url" name="url" id="id_url"
+                               maxlength="2000"
+                               required
+                               placeholder="https://..."
+                               value="{{ form.url.value|default_if_none:'' }}"
+                               hx-get="{% url 'fetch-url-info' %}"
+                               hx-trigger="change"
+                               hx-target="#url-preview"
+                               hx-swap="outerHTML"
+                               hx-include="[name='url']"
+                               hx-params="url"
+                               hx-indicator="#url-loading">
+                        <span id="url-loading" class="htmx-indicator">{% translate "Fetching..." %}</span>
+                    </div>
                     {{ form.url.errors }}
-                    <span id="url-loading" class="htmx-indicator">{% translate "Fetching..." %}</span>
                 </div>
                 {% else %}
                 <input type="hidden" name="url" value="{{ link.url }}">
                 {% endif %}
-
-                <div class="form-field">
-                    <label for="id_note">{% translate "Note" %}</label>
-                    {{ form.note }}
-                    <span class="helptext">{% translate "Why are you saving this?" %}</span>
-                    {{ form.note.errors }}
-                </div>
 
                 <div class="form-field">
                     <label for="id_tag_names">{% translate "Tags" %}</label>
@@ -48,14 +43,15 @@
                     {{ form.tag_names.errors }}
                 </div>
 
-                <button type="submit">{% translate "Save" %}</button>
+                <div class="form-field">
+                    <label for="id_note">{% translate "Note" %}</label>
+                    {{ form.note }}
+                    <span class="helptext">{% translate "Why are you saving this?" %}</span>
+                    {{ form.note.errors }}
+                </div>
+
+                <button type="submit" class="btn-full">{% translate "Save" %}</button>
             </form>
-            {% if bookmark %}
-            <form method="post" action="{% url 'bookmark-delete' pk=bookmark.pk %}" class="form-delete">
-                {% csrf_token %}
-                <button type="submit" class="btn-text" onclick="return confirm('{% translate "Are you sure?" %}')">{% translate "Delete" %}</button>
-            </form>
-            {% endif %}
         </div>
         <aside class="bookmark-form-preview">
             {% if link %}
@@ -77,6 +73,14 @@
             </div>
             {% endif %}
             <div id="url-preview"></div>
+            {% if bookmark %}
+            <div class="form-delete-zone">
+                <form method="post" action="{% url 'bookmark-delete' pk=bookmark.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-delete" onclick="return confirm('{% translate "Are you sure?" %}')">{% translate "Delete" %}</button>
+                </form>
+            </div>
+            {% endif %}
         </aside>
     </div>
 </section>
