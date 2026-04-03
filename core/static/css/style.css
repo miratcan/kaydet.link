@@ -85,7 +85,7 @@ a:hover {
 .wrapper {
   max-width: var(--wrapper-max);
   margin-inline: auto;
-  padding-inline: var(--gap-lg);
+  padding-inline: 0;
 }
 
 /* header */
