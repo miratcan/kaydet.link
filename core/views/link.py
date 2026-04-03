@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db import models
 from django.http import HttpResponse, HttpResponseForbidden, JsonResponse
 from django.shortcuts import get_object_or_404, redirect
 from django.template.response import TemplateResponse
@@ -82,7 +83,15 @@ class LinkDetailView(DetailView):
         from core.forms.comment import CommentForm
 
         context['comment_form'] = CommentForm()
-        context['bookmarks'] = self.object.bookmarks.select_related('user').prefetch_related('tags').order_by('-created_at')
+        bookmarks = self.object.bookmarks.select_related('user').prefetch_related('tags').order_by('-created_at')
+        user = self.request.user
+        if user.is_authenticated:
+            bookmarks = bookmarks.filter(
+                models.Q(is_private=False) | models.Q(user=user),
+            )
+        else:
+            bookmarks = bookmarks.filter(is_private=False)
+        context['bookmarks'] = bookmarks
         return context
 
 
@@ -91,7 +100,7 @@ class BookmarkCreateView(LoginRequiredMixin, View):
 
     def get(self, request):
         parent_id = request.GET.get('from')
-        form = BookmarkForm()
+        form = BookmarkForm(user=request.user)
         parent = None
 
         if parent_id:
@@ -101,7 +110,7 @@ class BookmarkCreateView(LoginRequiredMixin, View):
                     'url': parent.link.url,
                     'note': parent.note,
                     'tag_names': ', '.join(parent.tags.values_list('name', flat=True)),
-                })
+                }, user=request.user)
 
         return TemplateResponse(request, self.template, self._context(form, parent))
 
@@ -111,7 +120,7 @@ class BookmarkCreateView(LoginRequiredMixin, View):
         if parent_id:
             parent = Bookmark.objects.filter(pk=parent_id).select_related('link').first()
 
-        form = BookmarkForm(request.POST)
+        form = BookmarkForm(request.POST, user=request.user)
         if form.is_valid():
             bookmark = form.save(user=request.user, parent=parent)
             return redirect(bookmark.link.get_absolute_url())
@@ -168,6 +177,10 @@ class BookmarkDeleteView(LoginRequiredMixin, View):
 
 class RandomLinkView(View):
     def get(self, request):
+        if request.user.is_authenticated:
+            bookmark = Bookmark.objects.filter(user=request.user).select_related('link').order_by('?').first()
+            if bookmark:
+                return redirect(bookmark.link.get_absolute_url())
         link = Link.objects.order_by('?').first()
         if link:
             return redirect(link.get_absolute_url())

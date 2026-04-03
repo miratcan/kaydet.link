@@ -20,7 +20,7 @@ def render_bookmark_markdown(sender, instance, **kwargs):
 def on_bookmark_saved(sender, instance, created, **kwargs):
     if created:
         link = instance.link
-        link.save_count = link.bookmarks.count()
+        link.save_count = link.bookmarks.filter(is_private=False).count()
         link.last_saved_at = timezone.now()
         link.save(update_fields=['save_count', 'last_saved_at'])
 
@@ -38,5 +38,5 @@ def on_bookmark_saved(sender, instance, created, **kwargs):
 @receiver(post_delete, sender=Bookmark)
 def on_bookmark_deleted(sender, instance, **kwargs):
     link = instance.link
-    link.save_count = link.bookmarks.count()
+    link.save_count = link.bookmarks.filter(is_private=False).count()
     link.save(update_fields=['save_count'])

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Delete Collection" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1 class="page-title">{% translate "Delete Collection" %}</h1>
+    <div class="form-narrow">
+        <p>{% blocktranslate with name=object.name %}Are you sure you want to delete "{{ name }}"? This will not delete the bookmarks inside it.{% endblocktranslate %}</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-actions">
+                <a href="{% url 'collection-list' %}" class="btn btn-outline">{% translate "Cancel" %}</a>
+                <button type="submit" class="btn btn-danger">{% translate "Delete" %}</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% if query %}{{ query }} — {% endif %}{% translate "Search" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1 class="page-title">{% translate "Search" %}</h1>
+
+    <form action="{% url 'search' %}" method="get" class="search-form">
+        <div class="search-input-row">
+            <input type="search" name="q" value="{{ query }}" placeholder="{% translate 'Search bookmarks...' %}" class="search-input" autofocus>
+            <button type="submit" class="btn">{% translate "Search" %}</button>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="search-scope">
+            <label class="search-scope-option {% if scope == 'mine' %}active{% endif %}">
+                <input type="radio" name="scope" value="mine" {% if scope == 'mine' %}checked{% endif %} onchange="this.form.submit()">
+                {% translate "My bookmarks" %}
+            </label>
+            <label class="search-scope-option {% if scope == 'all' %}active{% endif %}">
+                <input type="radio" name="scope" value="all" {% if scope == 'all' %}checked{% endif %} onchange="this.form.submit()">
+                {% translate "All" %}
+            </label>
+        </div>
+        {% endif %}
+    </form>
+
+    {% if query %}
+        {% if links %}
+        <div class="search-results">
+            <p class="search-count">{{ page_obj.paginator.count }} {% translate "result" %}{{ page_obj.paginator.count|pluralize:"s" }}</p>
+            <div class="dashboard-bookmark-list">
+                {% for link in links %}
+                <article class="dashboard-bookmark">
+                    <div class="dashboard-bookmark-main">
+                        <a href="{{ link.get_absolute_url }}" class="dashboard-bookmark-title">
+                            {{ link.title|default:link.url }}
+                        </a>
+                        <span class="dashboard-bookmark-domain">{{ link.get_domain }}</span>
+                    </div>
+                    {% if link.description %}
+                    <p class="search-result-desc">{{ link.description|truncatewords:30 }}</p>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+
+            {% if page_obj.has_other_pages %}
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <a href="?q={{ query }}&scope={{ scope }}&page={{ page_obj.previous_page_number }}">&laquo; {% translate "Previous" %}</a>
+                {% endif %}
+                <span class="pagination-info">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                <a href="?q={{ query }}&scope={{ scope }}&page={{ page_obj.next_page_number }}">{% translate "Next" %} &raquo;</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <p>{% translate "No results found." %}</p>
+        </div>
+        {% endif %}
+    {% endif %}
+</section>
+{% endblock %}

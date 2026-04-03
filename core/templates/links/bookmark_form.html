@@ -43,11 +43,33 @@
                     {{ form.tag_names.errors }}
                 </div>
 
-                <div class="form-field">
-                    <label for="id_note">{% translate "Note" %}</label>
-                    {{ form.note }}
-                    <span class="helptext">{% translate "Why are you saving this?" %}</span>
+                <div class="form-field form-field-note">
+                    <div class="form-field-header">
+                        <label for="id_note">{% translate "Note" %}</label>
+                        <button type="button" class="note-preview-toggle" onclick="toggleNotePreview()">{% translate "Preview" %}</button>
+                    </div>
+                    <div id="note-edit">{{ form.note }}</div>
+                    <div id="note-preview" class="note-preview" style="display:none"></div>
+                    <span class="helptext">{% translate "Markdown supported. Leave a note for your future self." %}</span>
                     {{ form.note.errors }}
+                </div>
+
+                {% if form.collections.field.queryset.exists %}
+                <div class="form-field">
+                    <label>{% translate "Collections" %}</label>
+                    <div class="checkbox-list">
+                        {% for checkbox in form.collections %}
+                        <label class="checkbox-label">{{ checkbox.tag }} {{ checkbox.choice_label }}</label>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="form-field form-field-checkbox">
+                    <label class="checkbox-label">
+                        {{ form.is_private }}
+                        <span>{% translate "Private — only you can see this" %}</span>
+                    </label>
                 </div>
 
                 <button type="submit" class="btn-full">{% translate "Save" %}</button>
@@ -69,4 +91,31 @@
         </aside>
     </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function toggleNotePreview() {
+    const edit = document.getElementById('note-edit');
+    const preview = document.getElementById('note-preview');
+    const btn = document.querySelector('.note-preview-toggle');
+    if (edit.style.display === 'none') {
+        edit.style.display = '';
+        preview.style.display = 'none';
+        btn.textContent = '{{ "Preview"|escapejs }}';
+    } else {
+        const text = document.getElementById('id_note').value;
+        let html = text
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+            .replace(/`(.+?)`/g, '<code>$1</code>')
+            .replace(/\n/g, '<br>');
+        preview.innerHTML = html || '<em>Nothing to preview</em>';
+        edit.style.display = 'none';
+        preview.style.display = '';
+        btn.textContent = '{{ "Edit"|escapejs }}';
+    }
+}
+</script>
 {% endblock %}

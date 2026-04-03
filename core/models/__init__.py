@@ -1,5 +1,6 @@
 # ruff: noqa: F401
-from .bookmark import Bookmark
+from .bookmark import Bookmark, ReadingStatus
+from .collection import Collection
 from .comment import Comment
 from .link import Link
 from .notification import Notification
