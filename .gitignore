@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+db.sqlite3
+staticfiles/
+*.mo
+.DS_Store
+mockup-*.html
+stitch-designs/

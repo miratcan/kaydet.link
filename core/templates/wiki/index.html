@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Wiki" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1>{% translate "Wiki" %}</h1>
+    <ul class="wiki-list">
+        {% for page in pages %}
+        <li><a href="{{ page.get_absolute_url }}">{{ page.name }}</a></li>
+        {% empty %}
+        <li class="empty">{% translate "No wiki pages yet." %}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

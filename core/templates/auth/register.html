@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Register" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="auth-page">
+    <h1>{% translate "Register" %}</h1>
+    <form method="post" class="form-standalone">
+        {% csrf_token %}
+        {% include "forms/fields.html" %}
+        <button type="submit">{% translate "Register" %}</button>
+    </form>
+    <p><a href="{% url 'login' %}">{% translate "Already have an account? Login" %}</a></p>
+</section>
+{% endblock %}

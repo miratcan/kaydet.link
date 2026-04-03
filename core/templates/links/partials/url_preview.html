@@ -1,0 +1,7 @@
+{% if info.title or info.image %}
+<div class="og-card" id="url-preview">
+    {% include "links/partials/og_card.html" with og_image=info.image og_title=info.title og_description=info.description %}
+</div>
+{% else %}
+<div id="url-preview"></div>
+{% endif %}

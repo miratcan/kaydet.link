@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Notifications" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1>{% translate "Notifications" %}</h1>
+
+    {% for notification in notifications %}
+    <div class="notification">
+        <span>
+            <strong>{{ notification.actor }}</strong>
+            {{ notification.get_type_display }}
+            {% if notification.target_link %}
+                — <a href="{{ notification.target_link.get_absolute_url }}">{{ notification.target_link.title }}</a>
+            {% endif %}
+        </span>
+        <time datetime="{{ notification.created_at|date:'c' }}">{{ notification.created_at|timesince }} {% translate "ago" %}</time>
+    </div>
+    {% empty %}
+        <p class="empty">{% translate "No notifications." %}</p>
+    {% endfor %}
+</section>
+
+{% if is_paginated %}
+<nav class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+    {% endif %}
+    <span>{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+    {% endif %}
+</nav>
+{% endif %}
+{% endblock %}

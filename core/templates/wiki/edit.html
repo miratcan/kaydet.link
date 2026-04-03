@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Edit" %} {{ page.name }} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1>{% translate "Edit Wiki Page" %}</h1>
+    <form method="post" class="form-standalone">
+        {% csrf_token %}
+        {% include "forms/fields.html" %}
+        <button type="submit">{% translate "Save" %}</button>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+[project]
+name = 'kaydet-link'
+version = '0.1.0'
+description = 'LinkFloyd reborn — a link sharing platform'
+requires-python = '>=3.13'
+dependencies = [
+    'django>=5.1',
+    'whitenoise>=6.7',
+    'markdown-it-py>=3.0',
+    'nh3>=0.2',
+    'beautifulsoup4>=4.12',
+    'requests>=2.31',
+    'django-htmx>=1.19',
+]
+
+[project.optional-dependencies]
+dev = [
+    'ruff>=0.8',
+    'pylint>=3.3',
+    'pylint-django>=2.6',
+    'coverage>=7.6',
+    'pre-commit>=4.0',
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ['config', 'core']
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'

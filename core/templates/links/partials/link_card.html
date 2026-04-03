@@ -1,0 +1,41 @@
+{% load i18n %}
+<div class="link-card-wrapper">
+    <article class="link-card">
+        <div class="card-sidebar">
+            {% if link.image %}
+            <div class="card-thumb">
+                <img src="{{ link.image }}" alt="{{ link.title|default:'' }}" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            {% elif link.title %}
+            <div class="card-thumb-fallback">
+                <span class="initials">{{ link.title|make_list|first|upper }}{{ link.title|make_list|last|upper }}</span>
+            </div>
+            {% else %}
+            <div class="card-thumb-fallback">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 010 5.656l-2 2a4 4 0 01-5.656-5.656l1-1M10.172 13.828a4 4 0 010-5.656l2-2a4 4 0 115.656 5.656l-1 1" />
+                </svg>
+            </div>
+            {% endif %}
+        </div>
+        <a href="{{ link.get_absolute_url }}" class="card-body">
+            <h2 class="card-title">{{ link.title|default:link.url }}</h2>
+            {% if link.description %}
+            <p class="card-description">{{ link.description }}</p>
+            {% endif %}
+        </a>
+    </article>
+    <div class="card-meta">
+        <span>{{ link.save_count }} {% translate "saved" %}</span>
+        <span>{{ link.comment_count }} {% translate "comments" %}</span>
+        {% if link.is_saved %}
+        <a href="{% url 'bookmark-edit' pk=link.user_bookmark_id %}" class="btn btn-outline dangling card-meta-action">{% translate "Saved" %}</a>
+        {% else %}
+        {% with first_bm=link.first_bookmark %}
+        {% if first_bm %}
+        <a href="{% url 'bookmark-create' %}?from={{ first_bm.pk }}" class="btn dangling card-meta-action">{% translate "Save" %}</a>
+        {% endif %}
+        {% endwith %}
+        {% endif %}
+    </div>
+</div>

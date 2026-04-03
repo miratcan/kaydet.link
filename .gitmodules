@@ -1,0 +1,4 @@
+[submodule "legacy/linkfloyd"]
+	path = legacy/linkfloyd
+	url = https://github.com/linkfloyd/linkfloyd-museum.git
+	branch = master

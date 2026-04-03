@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Settings" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1>{% translate "Settings" %}</h1>
+    <form method="post" class="form-standalone">
+        {% csrf_token %}
+        {% include "forms/fields.html" %}
+        <button type="submit">{% translate "Save" %}</button>
+    </form>
+</section>
+{% endblock %}

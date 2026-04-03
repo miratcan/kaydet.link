@@ -1,0 +1,11 @@
+{% if og_image %}
+<img src="{{ og_image }}" alt="{{ og_title|default:'' }}" class="og-card-image" loading="lazy">
+{% endif %}
+<div class="og-card-text">
+    {% if og_title %}
+    <strong class="og-card-title">{{ og_title }}</strong>
+    {% endif %}
+    {% if og_description %}
+    <p class="og-card-description">{{ og_description|truncatewords:30 }}</p>
+    {% endif %}
+</div>

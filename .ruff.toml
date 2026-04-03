@@ -1,0 +1,59 @@
+line-length = 119
+indent-width = 4
+target-version = "py313"
+exclude = [
+    "**/migrations",
+    "**/manage.py",
+]
+
+[format]
+quote-style = "single"
+exclude = ["**/manage.py"]
+
+[lint]
+select = ["ALL"]
+allowed-confusables = ["ı", "'"]
+mccabe.max-complexity = 15
+ignore = [
+    "ANN",
+    "D",
+    "D203",
+    "D213",
+    "ISC001",
+    "COM812",
+    "ERA",
+    "RUF012",
+    "FBT002",
+    "TD003",
+    "FIX002",
+    "PT009",
+    "PT019",
+    "PT027",
+    "PGH004",
+    "INP001",
+]
+
+[lint.flake8-quotes]
+inline-quotes = "single"
+docstring-quotes = "double"
+
+[lint.pylint]
+max-statements = 100
+max-returns = 20
+max-args = 10
+max-positional-args = 8
+max-branches = 20
+
+[lint.isort]
+known-first-party = ["core"]
+section-order = [
+    "future",
+    "standard-library",
+    "django",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[lint.isort.sections]
+django = ["django"]

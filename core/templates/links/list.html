@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% if current_tag %}{{ current_tag.name }} — {% endif %}
+    {% if profile_user %}{{ profile_user.username }} — {% endif %}
+    {{ site_name }}
+{% endblock %}
+
+{% block main_class %}{% endblock %}
+{% block content %}
+<section class="feed-header">
+    {% if current_tag %}
+        <h1>#{{ current_tag.name }}</h1>
+    {% elif profile_user %}
+        <h1>{{ profile_user.username }}</h1>
+    {% else %}
+        <h1>{% translate "All Links" %}</h1>
+    {% endif %}
+
+    <nav class="ordering">
+        <a href="?ordering=hot" class="{% if ordering == 'hot' %}active{% endif %}">{% translate "Hot" %}</a>
+        <a href="?ordering=top" class="{% if ordering == 'top' %}active{% endif %}">{% translate "Top" %}</a>
+        <a href="?ordering=latest" class="{% if ordering == 'latest' %}active{% endif %}">{% translate "Latest" %}</a>
+        <a href="?ordering=discussed" class="{% if ordering == 'discussed' %}active{% endif %}">{% translate "Discussed" %}</a>
+    </nav>
+</section>
+
+<div class="link-list">
+    {% for link in links %}
+        {% include "links/partials/link_card.html" %}
+    {% empty %}
+        <p class="empty">{% translate "No links yet." %}</p>
+    {% endfor %}
+</div>
+
+{% if links.has_other_pages %}
+<nav class="pagination" aria-label="{% translate 'Pagination' %}">
+    {% if links.has_previous %}
+        <a href="?page={{ links.previous_page_number }}&ordering={{ ordering }}" aria-label="{% translate 'Previous page' %}">&laquo;</a>
+    {% endif %}
+    <span>{{ links.number }} / {{ links.paginator.num_pages }}</span>
+    {% if links.has_next %}
+        <a href="?page={{ links.next_page_number }}&ordering={{ ordering }}" aria-label="{% translate 'Next page' %}">&raquo;</a>
+    {% endif %}
+</nav>
+{% endif %}
+{% endblock %}

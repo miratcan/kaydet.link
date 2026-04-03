@@ -1,0 +1,61 @@
+{% load static %}
+{% load i18n %}
+{% load notification_tags %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ site_name }}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="wrapper">
+            <a href="{% url 'link-list' %}" class="brand">{{ site_name }}</a>
+            <div class="nav-links">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'bookmark-create' %}" class="btn">+ {% translate "Save" %}</a>
+                    <a href="{% url 'notification-list' %}">
+                        {% translate "Notifications" %}
+                        {% get_unread_count user as unread %}
+                        {% if unread %}<span class="badge">{{ unread }}</span>{% endif %}
+                    </a>
+                    <a href="{% url 'link-list-by-user' username=user.username %}">{{ user.username }}</a>
+                {% else %}
+                    <a href="{% url 'login' %}">{% translate "Login" %}</a>
+                    <a href="{% url 'register' %}">{% translate "Register" %}</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper {% block main_class %}padded{% endblock %}">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <span class="footer-brand">{{ site_name }}</span>
+            <div class="footer-links">
+                <a href="{% url 'tag-list' %}">{% translate "Tags" %}</a>
+                <a href="{% url 'wiki-index' %}">{% translate "Wiki" %}</a>
+            </div>
+        </div>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

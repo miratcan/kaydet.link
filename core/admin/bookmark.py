@@ -1,0 +1,15 @@
+from django.contrib import admin
+
+from core.admin.base import BaseModelAdmin
+from core.models import Bookmark
+
+
+@admin.register(Bookmark)
+class BookmarkAdmin(BaseModelAdmin):
+    list_display = ('user', 'link', 'parent', 'created_at')
+    list_display_links = ('user',)
+    search_fields = ('user__username', 'note')
+    ordering = ('-created_at',)
+    autocomplete_fields = ('user', 'link', 'parent')
+    list_select_related = ('user', 'link', 'parent')
+    filter_horizontal = ('tags',)

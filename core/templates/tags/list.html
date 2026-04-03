@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Tags" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section>
+    <h1>{% translate "Tags" %}</h1>
+    <nav class="tag-cloud">
+        {% for tag in tags %}
+            <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="tag">#{{ tag.name }}</a>
+        {% empty %}
+            <p class="empty">{% translate "No tags yet." %}</p>
+        {% endfor %}
+    </nav>
+</section>
+{% endblock %}
