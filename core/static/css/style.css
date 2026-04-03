@@ -664,6 +664,7 @@ a.og-card:hover .og-card-title {
   }
   .detail-stats .detail-action-btn {
     flex: 1;
+    font-size: var(--font-lg);
   }
 }
 
