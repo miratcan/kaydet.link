@@ -304,7 +304,9 @@ body > footer .footer-links a:hover {
     padding: var(--gap-md) var(--gap-lg);
   }
   .ordering {
-    flex-wrap: wrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
   }
 }
 
