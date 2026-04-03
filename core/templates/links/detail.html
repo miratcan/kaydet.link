@@ -60,7 +60,7 @@
         </form>
     </article>
     {% else %}
-        <p class="detail-login-prompt"><a href="{% url 'login' %}">{% translate "Log in to comment" %}</a></p>
+        <p class="detail-login-prompt"><a href="{% url 'account_login' %}">{% translate "Log in to comment" %}</a></p>
     {% endif %}
 </section>
 {% endblock %}

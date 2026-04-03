@@ -1,7 +1,5 @@
-from django.urls import path
+from django.urls import path, re_path
 
-from core.views.auth.login import LoginView, LogoutView
-from core.views.auth.register import RegisterView
 from core.views.comment import CommentCreateView, CommentDeleteView, CommentUpdateView
 from core.views.link import (
     BookmarkCreateView,
@@ -20,7 +18,7 @@ from core.views.wiki import WikiEditView, WikiIndexView, WikiPageView
 urlpatterns = [
     # feed
     path('', LinkListView.as_view(), name='link-list'),
-    path('tag/<slug:tag_slug>/', LinkListView.as_view(), name='link-list-by-tag'),
+    re_path(r'^tag/(?P<tag_slug>[-\w]+)/$', LinkListView.as_view(), name='link-list-by-tag'),
     path('user/<str:username>/', LinkListView.as_view(), name='link-list-by-user'),
 
     # links
@@ -51,11 +49,7 @@ urlpatterns = [
 
     # wiki
     path('wiki/', WikiIndexView.as_view(), name='wiki-index'),
-    path('wiki/<slug:slug>/', WikiPageView.as_view(), name='wiki-page'),
-    path('wiki/<slug:slug>/edit/', WikiEditView.as_view(), name='wiki-edit'),
+    re_path(r'^wiki/(?P<slug>[-\w]+)/$', WikiPageView.as_view(), name='wiki-page'),
+    re_path(r'^wiki/(?P<slug>[-\w]+)/edit/$', WikiEditView.as_view(), name='wiki-edit'),
 
-    # auth
-    path('auth/login/', LoginView.as_view(), name='login'),
-    path('auth/logout/', LogoutView.as_view(), name='logout'),
-    path('auth/register/', RegisterView.as_view(), name='register'),
 ]

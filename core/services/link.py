@@ -13,6 +13,20 @@ logger = logging.getLogger('core.LinkService')
 
 SCRAPE_TIMEOUT = 15
 SCRAPE_USER_AGENT = 'Mozilla/5.0 (compatible; kaydet-link/1.0)'
+JUNK_TITLES = {
+    'just a moment...',
+    'just a moment',
+    'attention required!',
+    'access denied',
+    'please wait...',
+    'checking your browser',
+    'one more step',
+    'verify you are human',
+    'are you a robot?',
+    'bot verification',
+    'security check',
+    'please verify',
+}
 LINKS_PER_PAGE = 25
 
 
@@ -46,6 +60,12 @@ class LinkService:
         if 'text/html' in content_type:
             soup = BeautifulSoup(response.text, 'html.parser')
             if not soup:
+                return {'metadata': metadata, 'images': images}
+
+            # detect challenge/captcha pages
+            page_title = (soup.title.string.strip() if soup.title and soup.title.string else '').lower()
+            if page_title in JUNK_TITLES:
+                logger.warning('Challenge page detected for %s: "%s"', url, page_title)
                 return {'metadata': metadata, 'images': images}
 
             # collect all og: meta tags

@@ -58,16 +58,31 @@ class LinkDetailView(DetailView):
     context_object_name = 'link'
 
     def get_queryset(self):
-        return Link.objects.prefetch_related('bookmarks__user', 'bookmarks__tags', 'comments__posted_by')
+        from django.db.models import Exists, IntegerField, OuterRef, Subquery, Value
+
+        from core.models import Bookmark
+
+        qs = Link.objects.prefetch_related('bookmarks__user', 'bookmarks__tags', 'comments__posted_by')
+
+        user = self.request.user
+        if user.is_authenticated:
+            qs = qs.annotate(
+                is_saved=Exists(Bookmark.objects.filter(user=user, link=OuterRef('pk'))),
+                user_bookmark_id=Subquery(Bookmark.objects.filter(user=user, link=OuterRef('pk')).values('pk')[:1]),
+            )
+        else:
+            qs = qs.annotate(
+                is_saved=Value(False),
+                user_bookmark_id=Value(None, output_field=IntegerField()),
+            )
+        return qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         from core.forms.comment import CommentForm
-        from core.services.bookmark import BookmarkService
 
         context['comment_form'] = CommentForm()
         context['bookmarks'] = self.object.bookmarks.select_related('user').prefetch_related('tags').order_by('-created_at')
-        context['is_saved'] = BookmarkService.is_saved(self.request.user, self.object)
         return context
 
 

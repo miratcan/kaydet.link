@@ -218,7 +218,7 @@ body > footer .footer-links a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--gap-lg) var(--gap-lg);
+  padding-block: var(--gap-lg);
 }
 
 .feed-header h1 {
@@ -761,4 +761,90 @@ a:hover {
 .htmx-request .htmx-indicator,
 .htmx-request.htmx-indicator {
   display: inline;
+}
+
+/* issue reporter */
+#issue-reporter-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ir-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.ir-dialog {
+  position: relative;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 8px;
+  padding: var(--gap-xl);
+  width: 90%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.ir-dialog h3 {
+  margin: 0;
+}
+
+.ir-dialog label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+.ir-dialog input,
+.ir-dialog textarea {
+  font: inherit;
+  padding: var(--gap-sm);
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 4px;
+  background: var(--color-bg, #fff);
+  color: var(--color-text, #111);
+}
+
+.ir-info {
+  font-size: var(--font-xs);
+  color: var(--color-muted, #888);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ir-info code {
+  word-break: break-all;
+}
+
+.ir-actions {
+  display: flex;
+  gap: var(--gap-sm);
+  justify-content: flex-end;
+}
+
+.ir-actions button {
+  padding: var(--gap-sm) var(--gap-lg);
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+#ir-submit {
+  background: var(--color-accent, #111);
+  color: #fff;
+  border-color: transparent;
+}
+
+#issue-reporter-btn {
+  cursor: pointer;
 }

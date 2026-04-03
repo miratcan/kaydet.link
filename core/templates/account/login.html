@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Login" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="auth-page">
+    <h1>{% translate "Login" %}</h1>
+    <a href="{% url 'google_login' %}?process=login" class="btn btn-google">{% translate "Sign in with Google" %}</a>
+</section>
+{% endblock %}

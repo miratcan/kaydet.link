@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Logout" %} — {{ site_name }}{% endblock %}
+
+{% block content %}
+<section class="auth-page">
+    <h1>{% translate "Logout" %}</h1>
+    <p>{% translate "Are you sure you want to sign out?" %}</p>
+    <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        <button type="submit">{% translate "Logout" %}</button>
+    </form>
+</section>
+{% endblock %}

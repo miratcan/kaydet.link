@@ -12,6 +12,8 @@ dependencies = [
     'requests>=2.31',
     'django-htmx>=1.19',
     'django-environ>=0.11',
+    "django-allauth>=65.15.1",
+    "pyjwt[crypto]>=2.12.1",
 ]
 
 [project.optional-dependencies]
