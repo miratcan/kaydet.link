@@ -658,18 +658,12 @@ a.og-card:hover .og-card-title {
   .detail-stats {
     flex-wrap: wrap;
   }
-  .stat-box {
-    min-width: 60px;
-  }
   .detail-actions {
     margin-left: 0;
     width: 100%;
   }
   .detail-stats .detail-action-btn {
-    font-size: var(--font-base);
-    padding: var(--gap-sm) var(--gap-md);
     flex: 1;
-    min-width: 0;
   }
 }
 
