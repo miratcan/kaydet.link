@@ -68,6 +68,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* general links */
@@ -144,6 +145,23 @@ body > header .nav-links .btn {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  body > header nav {
+    height: auto;
+    min-height: 48px;
+    flex-wrap: wrap;
+  }
+  body > header .nav-links {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  body > header .nav-links a:not(.btn) {
+    padding: var(--gap-xs) var(--gap-sm);
+    border-left: none;
+    font-size: var(--font-xs);
+  }
+}
+
 /* main */
 body > main {
   flex: 1;
@@ -189,6 +207,18 @@ body > footer .footer-links a {
 
 body > footer .footer-links a:hover {
   color: var(--color-on-bg);
+}
+
+@media (max-width: 768px) {
+  body > footer .wrapper {
+    flex-direction: column;
+    gap: var(--gap-sm);
+    text-align: center;
+  }
+  body > footer .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* badge */
@@ -264,6 +294,18 @@ body > footer .footer-links a:hover {
 
 .ordering a:hover:not(.active) {
   background: var(--color-surface-container);
+}
+
+@media (max-width: 768px) {
+  .feed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-sm);
+    padding: var(--gap-md) var(--gap-lg);
+  }
+  .ordering {
+    flex-wrap: wrap;
+  }
 }
 
 /* link list — grid */
@@ -608,6 +650,16 @@ a.og-card:hover .og-card-title {
   .detail-two-col {
     grid-template-columns: 1fr;
   }
+  .detail-stats {
+    flex-wrap: wrap;
+  }
+  .stat-box {
+    min-width: 60px;
+  }
+  .detail-actions {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 /* detail sections */
@@ -893,6 +945,12 @@ select:focus {
   align-items: baseline;
   gap: var(--gap-lg);
   margin-bottom: var(--gap-lg);
+}
+
+@media (max-width: 768px) {
+  .wiki-content header {
+    flex-wrap: wrap;
+  }
 }
 
 .wiki-list {
