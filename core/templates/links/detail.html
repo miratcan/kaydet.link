@@ -44,7 +44,7 @@
 
 <div class="detail-two-col">
     <section class="detail-section">
-        <h2>{% translate "Saved by" %}</h2>
+        <h2>{{ link.save_count }} {% translate "people saved this" %}</h2>
         {% for bookmark in bookmarks %}
         <article class="detail-entry">
             <div class="entry-meta">
@@ -56,10 +56,12 @@
                 {% avatar_url bookmark.user 24 as bm_avatar %}
                 {% if bm_avatar and "gravatar" not in bm_avatar %}
                 <img src="{{ bm_avatar }}" alt="" class="entry-avatar">
+                {% else %}
+                <span class="entry-letter-avatar">{{ bookmark.user.username|make_list|first|upper }}</span>
                 {% endif %}
                 <a href="{% url 'link-list-by-user' username=bookmark.user.username %}" class="entry-user">@{{ bookmark.user.username }}</a>
                 &middot;
-                <time datetime="{{ bookmark.created_at|date:'c' }}">{{ bookmark.created_at|timesince }} {% translate "ago" %}</time>
+                <time datetime="{{ bookmark.created_at|date:'c' }}">{{ bookmark.created_at|short_timesince }} {% translate "ago" %}</time>
                 {% if user == bookmark.user %}
                     &middot; <a href="{% url 'bookmark-edit' pk=bookmark.pk %}">{% translate "edit" %}</a>
                 {% endif %}

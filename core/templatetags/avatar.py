@@ -1,10 +1,20 @@
 import hashlib
 
 from django import template
+from django.utils.timesince import timesince
 
 register = template.Library()
 
 GRAVATAR_BASE = 'https://www.gravatar.com/avatar/'
+
+
+@register.filter
+def short_timesince(value):
+    """Return only the first unit of timesince (e.g. '2 hours' instead of '2 hours, 3 minutes')."""
+    try:
+        return timesince(value).split(',')[0]
+    except Exception:
+        return ''
 
 
 @register.simple_tag

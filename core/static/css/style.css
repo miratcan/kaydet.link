@@ -1023,6 +1023,15 @@ select:focus {
   text-decoration: none;
 }
 
+@media (max-width: 600px) {
+  .tag {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: var(--gap-sm) var(--gap-md);
+  }
+}
+
 /* wiki */
 .wiki-content {
   padding-bottom: var(--gap-xl);
@@ -1168,6 +1177,20 @@ select:focus {
   font-size: var(--font-sm);
   margin-bottom: var(--gap-md);
   text-align: left;
+}
+
+.auth-forgot {
+  font-size: var(--font-sm);
+  margin-top: var(--gap-sm);
+  text-align: center;
+}
+
+.auth-forgot a {
+  color: var(--color-on-bg-muted);
+}
+
+.auth-forgot a:hover {
+  color: var(--color-on-bg);
 }
 
 .auth-features {
@@ -2269,6 +2292,22 @@ select:focus {
   border-radius: 50%;
   object-fit: cover;
   vertical-align: middle;
+}
+
+.entry-letter-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-headline);
+  font-size: 0.5rem;
+  font-weight: 700;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .profile-meta {

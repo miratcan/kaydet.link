@@ -34,6 +34,7 @@
         </div>
         <button type="submit" class="btn auth-submit">{% translate "Sign in" %}</button>
     </form>
+    <p class="auth-forgot"><a href="{% url 'account_reset_password' %}">{% translate "Forgot your password?" %}</a></p>
     <p class="auth-hint">{% translate "Don't have an account?" %} <a href="{% url 'account_signup' %}">{% translate "Sign up" %}</a></p>
 </section>
 {% endblock %}
