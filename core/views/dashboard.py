@@ -8,7 +8,7 @@ from django.utils import timezone
 from django.views import View
 from django.views.generic import TemplateView
 
-from core.models import Bookmark, Collection, ReadingStatus, Tag
+from core.models import Bookmark, ReadingStatus, Tag
 
 
 class HomeRedirectView(View):
@@ -55,13 +55,6 @@ class DashboardView(LoginRequiredMixin, TemplateView):
             .exclude(pk__in=shown_ids)
             .prefetch_related('tags')
             .order_by('-created_at')[:10]
-        )
-
-        # Collections
-        context['collections'] = (
-            Collection.objects.filter(user=user)
-            .annotate(bookmark_count=Count('bookmarks'))
-            .order_by('position', 'name')[:10]
         )
 
         # Top tags (most used by this user)

@@ -1,18 +1,11 @@
 from django.urls import path, re_path
 
-from core.views.collection import (
-    CollectionAddBookmarkView,
-    CollectionCreateView,
-    CollectionDeleteView,
-    CollectionDetailView,
-    CollectionEditView,
-    CollectionListView,
-)
 from core.views.bookmark_list import BookmarkListView
 from core.views.bookmark_status import BookmarkPinToggleView, BookmarkStatusSetView, BookmarkStatusToggleView
 from core.views.comment import CommentCreateView, CommentDeleteView, CommentUpdateView
 from core.views.data import ExportCSVView, ExportHTMLView, ExportJSONView, ExportView, ImportView
 from core.views.dashboard import DashboardRediscoverView, DashboardView, HomeRedirectView
+from core.views.ai import AnalyzePageView
 from core.views.link import (
     BookmarkCreateView,
     BookmarkDeleteView,
@@ -54,14 +47,6 @@ urlpatterns = [
     path('bookmarks/<int:pk>/status/<str:status>/', BookmarkStatusSetView.as_view(), name='bookmark-status-set'),
     path('bookmarks/<int:pk>/pin/', BookmarkPinToggleView.as_view(), name='bookmark-pin-toggle'),
 
-    # collections
-    path('collections/', CollectionListView.as_view(), name='collection-list'),
-    path('collections/new/', CollectionCreateView.as_view(), name='collection-create'),
-    path('collections/<str:slug>/edit/', CollectionEditView.as_view(), name='collection-edit'),
-    path('collections/<str:slug>/delete/', CollectionDeleteView.as_view(), name='collection-delete'),
-    path('collections/<str:username>/<str:slug>/', CollectionDetailView.as_view(), name='collection-detail'),
-    path('collections/<int:collection_pk>/toggle/<int:bookmark_pk>/', CollectionAddBookmarkView.as_view(), name='collection-toggle-bookmark'),
-
     # data
     path('settings/export/', ExportView.as_view(), name='export'),
     path('settings/export/json/', ExportJSONView.as_view(), name='export-json'),
@@ -80,8 +65,9 @@ urlpatterns = [
     path('comments/<int:pk>/edit/', CommentUpdateView.as_view(), name='comment-update'),
     path('comments/<int:pk>/delete/', CommentDeleteView.as_view(), name='comment-delete'),
 
-    # api (htmx)
+    # api
     path('api/fetch-url/', FetchUrlInfoView.as_view(), name='fetch-url-info'),
+    path('api/analyze/', AnalyzePageView.as_view(), name='analyze-page'),
 
     # notifications
     path('notifications/', NotificationListView.as_view(), name='notification-list'),

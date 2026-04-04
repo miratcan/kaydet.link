@@ -61,12 +61,6 @@ class Bookmark(models.Model):
         blank=True,
         verbose_name=_('tags'),
     )
-    collections = models.ManyToManyField(
-        to='core.Collection',
-        related_name='bookmarks',
-        blank=True,
-        verbose_name=_('collections'),
-    )
     status = models.CharField(
         max_length=10,
         choices=ReadingStatus.choices,

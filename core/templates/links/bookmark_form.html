@@ -61,17 +61,6 @@
                     {{ form.note.errors }}
                 </div>
 
-                {% if form.collections.field.queryset.exists %}
-                <div class="form-field">
-                    <label>{% translate "Collections" %}</label>
-                    <div class="checkbox-list">
-                        {% for checkbox in form.collections %}
-                        <label class="checkbox-label">{{ checkbox.tag }} {{ checkbox.choice_label }}</label>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-
                 <div class="form-field form-field-checkbox">
                     <label class="checkbox-label">
                         {{ form.is_private }}

@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand
 from django.utils.text import slugify
 
-from core.models import Bookmark, Collection, Comment, Link, Tag
+from core.models import Bookmark, Comment, Link, Tag
 
 User = get_user_model()
 
@@ -390,21 +390,6 @@ LINKS = [
     },
 ]
 
-COLLECTIONS = [
-    ('zeynep', 'Günlük Araçlar', 'Her gün kullandığım web araçları', False,
-     ['https://explainshell.com/', 'https://devhints.io/', 'https://squoosh.app/', 'https://coolors.co/']),
-    ('emre', 'Öğrenme Kaynakları', 'Yazılım öğrenmek için en iyi kaynaklar', False,
-     ['https://craftinginterpreters.com/', 'https://norvig.com/21-days.html', 'https://flukeout.github.io/']),
-    ('elif', 'Tasarım İlhamı', 'Tasarım yaparken başvurduğum yerler', False,
-     ['https://www.webdesignmuseum.org/', 'https://coolors.co/', 'https://fontjoy.com/', 'https://colorleap.app/']),
-    ('burak', 'Manifesto', 'Web nasıl olmalı hakkında fikirler', False,
-     ['https://250kb.club/', 'https://pxlnv.com/blog/bullshit-web/', 'https://useplaintext.email/']),
-    ('cem', 'Kod Yazarken', 'Kod yazma seansı için gereken her şey', False,
-     ['https://musicforprogramming.net/', 'https://vim-adventures.com/', 'https://devhints.io/']),
-    ('ada', 'Yapay Zeka Oyunları', 'AI ile etkileşimli projeler', False,
-     ['https://quickdraw.withgoogle.com/', 'https://fontjoy.com/']),
-]
-
 COMMENTS = [
     ('https://craftinginterpreters.com/', 'burak', 'Tree-walk interpreter bölümü tek başına bir kurs değerinde.'),
     ('https://craftinginterpreters.com/', 'elif', "Ben Lua bölümünden başladım, sonra Java'ya döndüm. İkisi de çok iyi."),
@@ -517,28 +502,6 @@ class Command(BaseCommand):
                     if bm_created:
                         bm.tags.set(link_tags)
 
-        # Create collections
-        for username, name, description, is_private, urls in COLLECTIONS:
-            user = users.get(username)
-            if not user:
-                continue
-            collection, created = Collection.objects.get_or_create(
-                user=user,
-                slug=slugify(name, allow_unicode=True),
-                defaults={
-                    'name': name,
-                    'description': description,
-                    'is_private': is_private,
-                },
-            )
-            if created:
-                bookmarks = Bookmark.objects.filter(
-                    user=user,
-                    link__url__in=urls,
-                )
-                collection.bookmarks.set(bookmarks)
-                self.stdout.write(self.style.SUCCESS(f'  Collection: {name} ({username})'))
-
         # Create comments
         comment_count = 0
         for url, username, body in COMMENTS:
@@ -575,5 +538,5 @@ class Command(BaseCommand):
             f'\nSeed complete: {Link.objects.count()} links, '
             f'{Bookmark.objects.count()} bookmarks, '
             f'{Comment.objects.count()} comments, '
-            f'{Collection.objects.count()} collections'
+            f'{Tag.objects.count()} tags'
         ))

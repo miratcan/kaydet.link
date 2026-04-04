@@ -23,7 +23,7 @@ class ExportJSONView(LoginRequiredMixin, View):
         bookmarks = (
             Bookmark.objects.filter(user=request.user)
             .select_related('link')
-            .prefetch_related('tags', 'collections')
+            .prefetch_related('tags')
             .order_by('-created_at')
         )
 
@@ -38,7 +38,6 @@ class ExportJSONView(LoginRequiredMixin, View):
                     'description': bm.link.description,
                     'note': bm.note,
                     'tags': list(bm.tags.values_list('name', flat=True)),
-                    'collections': list(bm.collections.values_list('name', flat=True)),
                     'is_private': bm.is_private,
                     'status': bm.status,
                     'is_pinned': bm.is_pinned,

@@ -15,6 +15,10 @@ dependencies = [
     "django-allauth>=65.15.1",
     "pyjwt[crypto]>=2.12.1",
     "markdown>=3.10.2",
+    "google-genai>=1.70.0",
+    "gunicorn[prod]>=25.3.0",
+    "psycopg[prod]>=3.3.3",
+    "django-cors-headers>=4.9.0",
 ]
 
 [project.optional-dependencies]
