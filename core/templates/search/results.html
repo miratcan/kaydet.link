@@ -5,43 +5,48 @@
 
 {% block content %}
 <section>
-    <h1 class="page-title">{% translate "Search" %}</h1>
-
-    <form action="{% url 'search' %}" method="get" class="search-form">
-        <div class="search-input-row">
-            <input type="search" name="q" value="{{ query }}" placeholder="{% translate 'Search bookmarks...' %}" class="search-input" autofocus>
-            <button type="submit" class="btn">{% translate "Search" %}</button>
-        </div>
-        {% if user.is_authenticated %}
-        <div class="search-scope">
-            <label class="search-scope-option {% if scope == 'mine' %}active{% endif %}">
-                <input type="radio" name="scope" value="mine" {% if scope == 'mine' %}checked{% endif %} onchange="this.form.submit()">
-                {% translate "My bookmarks" %}
-            </label>
-            <label class="search-scope-option {% if scope == 'all' %}active{% endif %}">
-                <input type="radio" name="scope" value="all" {% if scope == 'all' %}checked{% endif %} onchange="this.form.submit()">
-                {% translate "All" %}
-            </label>
-        </div>
-        {% endif %}
-    </form>
+    <div class="search-header">
+        <h1 class="page-title">{% if query %}{{ query }}{% else %}{% translate "Search" %}{% endif %}</h1>
+        <form action="{% url 'search' %}" method="get" class="search-form">
+            <div class="search-input-row">
+                <input type="search" name="q" value="{{ query }}" placeholder="{% translate 'Links, tags, notes...' %}" class="search-input" autofocus>
+                <button type="submit" class="btn">{% translate "Search" %}</button>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="search-scope">
+                <label class="search-scope-option {% if scope == 'mine' %}active{% endif %}">
+                    <input type="radio" name="scope" value="mine" {% if scope == 'mine' %}checked{% endif %} onchange="this.form.submit()">
+                    {% translate "My bookmarks" %}
+                </label>
+                <label class="search-scope-option {% if scope == 'all' %}active{% endif %}">
+                    <input type="radio" name="scope" value="all" {% if scope == 'all' %}checked{% endif %} onchange="this.form.submit()">
+                    {% translate "All" %}
+                </label>
+            </div>
+            {% endif %}
+        </form>
+    </div>
 
     {% if query %}
         {% if links %}
         <div class="search-results">
             <p class="search-count">{{ page_obj.paginator.count }} {% translate "result" %}{{ page_obj.paginator.count|pluralize:"s" }}</p>
-            <div class="dashboard-bookmark-list">
+            <div class="search-result-list">
                 {% for link in links %}
-                <article class="dashboard-bookmark">
-                    <div class="dashboard-bookmark-main">
-                        <a href="{{ link.get_absolute_url }}" class="dashboard-bookmark-title">
+                <article class="search-result-card">
+                    <div class="search-result-main">
+                        <a href="{{ link.get_absolute_url }}" class="search-result-title">
                             {{ link.title|default:link.url }}
                         </a>
-                        <span class="dashboard-bookmark-domain">{{ link.get_domain }}</span>
+                        <span class="search-result-domain">{{ link.get_domain }}</span>
                     </div>
                     {% if link.description %}
                     <p class="search-result-desc">{{ link.description|truncatewords:30 }}</p>
                     {% endif %}
+                    <div class="search-result-meta">
+                        <span>{{ link.save_count }} {% translate "saved" %}</span>
+                        <span>{{ link.comment_count }} {% translate "comments" %}</span>
+                    </div>
                 </article>
                 {% endfor %}
             </div>
@@ -59,10 +64,23 @@
             {% endif %}
         </div>
         {% else %}
-        <div class="empty-state">
-            <p>{% translate "No results found." %}</p>
+        <div class="search-empty">
+            <p class="search-empty-title">{% translate "No results found" %}</p>
+            <p class="search-empty-hint">{% translate "Try different keywords or browse" %} <a href="{% url 'tag-list' %}">{% translate "tags" %}</a> {% translate "to discover links." %}</p>
         </div>
         {% endif %}
+    {% else %}
+    <div class="search-landing">
+        <p class="search-landing-hint">{% translate "Search across link titles, descriptions, tags, and user notes." %}</p>
+        {% if popular_tags %}
+        <div class="search-popular-tags">
+            <span class="search-popular-label">{% translate "Popular tags" %}</span>
+            {% for tag in popular_tags %}
+                <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="search-tag">#{{ tag.name }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
     {% endif %}
 </section>
 {% endblock %}

@@ -1,7 +1,7 @@
-from django.db.models import BooleanField, Exists, OuterRef, Q, Value
+from django.db.models import BooleanField, Count, Exists, OuterRef, Q, Value
 from django.views.generic import ListView
 
-from core.models import Bookmark, Link
+from core.models import Bookmark, Link, Tag
 
 
 class SearchView(ListView):
@@ -55,4 +55,10 @@ class SearchView(ListView):
         context = super().get_context_data(**kwargs)
         context['query'] = self.request.GET.get('q', '')
         context['scope'] = self.request.GET.get('scope', 'mine')
+        if not context['query']:
+            context['popular_tags'] = (
+                Tag.objects.annotate(usage_count=Count('bookmarks'))
+                .filter(usage_count__gt=0)
+                .order_by('-usage_count')[:12]
+            )
         return context
