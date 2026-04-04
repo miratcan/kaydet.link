@@ -69,6 +69,27 @@ class LinkListView(ListView):
                 .annotate(usage_count=models.Count('bookmarks'))
                 .order_by('-usage_count')[:5]
             )
+
+        # Sidebar stats and tags for authenticated users
+        user = self.request.user
+        if user.is_authenticated:
+            from datetime import timedelta
+
+            from django.utils import timezone
+            now = timezone.now()
+            user_bookmarks = Bookmark.objects.filter(user=user)
+            context['user_stats'] = {
+                'total': user_bookmarks.count(),
+                'this_week': user_bookmarks.filter(
+                    created_at__gte=now - timedelta(days=7),
+                ).count(),
+            }
+            context['user_top_tags'] = (
+                Tag.objects.filter(bookmarks__user=user)
+                .annotate(usage_count=models.Count('bookmarks'))
+                .order_by('-usage_count')[:15]
+            )
+
         return context
 
     def get_paginate_by(self, queryset):

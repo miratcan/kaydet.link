@@ -1,0 +1,43 @@
+{% load i18n %}
+<article class="dashboard-bookmark{% if pinned %} pinned-bookmark{% endif %}">
+    {% if item_link.image %}
+    <a href="{{ item_link.get_absolute_url }}" class="dashboard-bookmark-thumb">
+        <img src="{{ item_link.image }}" alt="" loading="lazy">
+    </a>
+    {% endif %}
+    <div class="dashboard-bookmark-body">
+        <div class="dashboard-bookmark-main">
+            {% if pinned %}{% include "partials/pin_button.html" with bookmark=bookmark %}{% endif %}
+            <a href="{{ item_link.get_absolute_url }}" class="dashboard-bookmark-title">
+                {% if bookmark and bookmark.is_private %}
+                <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                {% endif %}
+                {% if bookmark and bookmark.is_pinned and not pinned %}&#9733; {% endif %}
+                {{ item_link.title|default:item_link.url }}
+            </a>
+            <span class="dashboard-bookmark-domain">{{ item_link.get_domain }}</span>
+        </div>
+        <div class="dashboard-bookmark-meta">
+            {% if show_edit and bookmark %}
+            {% include "partials/pin_button.html" with bookmark=bookmark %}
+            <a href="{% url 'bookmark-edit' pk=bookmark.pk %}" class="bookmark-edit-link">{% translate "edit" %}</a>
+            {% endif %}
+            {% if bookmark and bookmark.note %}<span class="note-indicator" title="{{ bookmark.note|truncatewords:20 }}">&#9998;</span>{% endif %}
+            {% if show_social %}
+            {% if item_link.last_saved_by %}<a href="{% url 'link-list-by-user' username=item_link.last_saved_by %}">@{{ item_link.last_saved_by }}</a>{% endif %}
+            <span>{{ item_link.save_count }} {% translate "saved" %}</span>
+            <span>{{ item_link.comment_count }} {% translate "comments" %}</span>
+            {% endif %}
+            {% if bookmark and bookmark.tags.all %}
+            <span class="dashboard-bookmark-tags">
+                {% for tag in bookmark.tags.all %}
+                <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
+                {% endfor %}
+            </span>
+            {% endif %}
+            {% if bookmark %}
+            <time datetime="{{ bookmark.created_at|date:'c' }}">{{ bookmark.created_at|timesince }} {% translate "ago" %}</time>
+            {% endif %}
+        </div>
+    </div>
+</article>

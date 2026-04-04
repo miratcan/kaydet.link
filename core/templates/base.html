@@ -24,7 +24,7 @@
                 </form>
                 {% if user.is_authenticated %}
                     <a href="{% url 'bookmark-create' %}" class="btn nav-save-btn"><span class="nav-save-plus">+</span> <span class="nav-save-text">{% translate "Save" %}</span></a>
-                    <a href="{% url 'link-list' %}" class="nav-link-desktop">{% translate "Explore" %}</a>
+                    <a href="{% url 'dashboard' %}" class="nav-link-desktop">{% translate "My Bookmarks" %}</a>
                     <a href="{% url 'notification-list' %}" class="nav-link-desktop">
                         {% get_unread_count user as unread %}
                         {% if unread %}<span class="badge">{{ unread }}</span>{% endif %}
@@ -37,7 +37,7 @@
                         <div class="nav-dropdown-menu">
                             <a href="{% url 'search' %}" class="nav-dropdown-search">{% translate "Search" %}</a>
                             <a href="{% url 'link-list' %}">{% translate "Explore" %}</a>
-                            <a href="{% url 'bookmark-list' %}">{% translate "My Bookmarks" %}</a>
+                            <a href="{% url 'dashboard' %}">{% translate "My Bookmarks" %}</a>
                             <a href="{% url 'notification-list' %}">{% translate "Notifications" %}{% if unread %} ({{ unread }}){% endif %}</a>
                             <hr>
                             <a href="{% url 'preferences' %}">{% translate "Settings" %}</a>

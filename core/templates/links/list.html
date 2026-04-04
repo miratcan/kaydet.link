@@ -9,37 +9,10 @@
 
 {% block main_class %}{% endblock %}
 {% block content %}
-<section class="feed-header">
-    {% if current_tag %}
-        <h1>#{{ current_tag.name }}</h1>
-    {% elif profile_user %}
-        <div class="profile-header">
-            {% avatar_url profile_user 112 as profile_pic %}
-            {% if profile_pic and "gravatar" not in profile_pic %}
-            <img src="{{ profile_pic }}" alt="{{ profile_user.username }}" class="profile-avatar-img">
-            {% else %}
-            <div class="profile-avatar">{{ profile_user.username|make_list|first|upper }}</div>
-            {% endif %}
-            <div class="profile-info">
-                <h1>{{ profile_user.username }}</h1>
-                <div class="profile-meta">
-                    <span>{{ profile_bookmark_count }} {% translate "bookmarks" %}</span>
-                    <span>&middot;</span>
-                    <span>{% translate "Joined" %} {{ profile_user.date_joined|date:"M Y" }}</span>
-                </div>
-                {% if profile_top_tags %}
-                <div class="profile-tags">
-                    {% for tag in profile_top_tags %}
-                        <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </div>
-    {% else %}
-        <h1>{% translate "Explore" %}</h1>
-    {% endif %}
 
+{% if current_tag %}
+<section class="feed-header">
+    <h1>#{{ current_tag.name }}</h1>
     {% if related_tags %}
     <div class="related-tags">
         {% for tag in related_tags %}
@@ -47,14 +20,46 @@
         {% endfor %}
     </div>
     {% endif %}
-
-    <nav class="ordering">
-        <a href="?ordering=hot" class="{% if ordering == 'hot' %}active{% endif %}">{% translate "Hot" %}</a>
-        <a href="?ordering=top" class="{% if ordering == 'top' %}active{% endif %}">{% translate "Top" %}</a>
-        <a href="?ordering=latest" class="{% if ordering == 'latest' %}active{% endif %}">{% translate "Latest" %}</a>
-        <a href="?ordering=discussed" class="{% if ordering == 'discussed' %}active{% endif %}">{% translate "Discussed" %}</a>
-    </nav>
 </section>
+{% elif profile_user %}
+<section class="feed-header">
+    <div class="profile-header">
+        {% avatar_url profile_user 112 as profile_pic %}
+        {% if profile_pic and "gravatar" not in profile_pic %}
+        <img src="{{ profile_pic }}" alt="{{ profile_user.username }}" class="profile-avatar-img">
+        {% else %}
+        <div class="profile-avatar">{{ profile_user.username|make_list|first|upper }}</div>
+        {% endif %}
+        <div class="profile-info">
+            <h1>{{ profile_user.username }}</h1>
+            <div class="profile-meta">
+                <span>{{ profile_bookmark_count }} {% translate "bookmarks" %}</span>
+                <span>&middot;</span>
+                <span>{% translate "Joined" %} {{ profile_user.date_joined|date:"M Y" }}</span>
+            </div>
+            {% if profile_top_tags %}
+            <div class="profile-tags">
+                {% for tag in profile_top_tags %}
+                    <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="dashboard-header">
+    <h1>{% translate "Explore" %}</h1>
+    <div class="dashboard-header-actions">
+        {% if user.is_authenticated %}
+        <a href="{% url 'dashboard' %}" class="btn btn-outline">{% translate "My Bookmarks" %}</a>
+        <a href="{% url 'bookmark-create' %}" class="btn">+ {% translate "Save" %}</a>
+        {% else %}
+        <a href="{% url 'account_login' %}" class="btn">{% translate "Sign in" %}</a>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
 
 {% if not user.is_authenticated and links and not current_tag and not profile_user %}
 <div class="explore-intro">
@@ -62,63 +67,80 @@
         <h2>{% translate "Save, organize, and rediscover your bookmarks." %}</h2>
         <p>{% translate "A shared bookmark collection. Save links, add notes, and rediscover them later." %}</p>
     </div>
-    <div class="explore-intro-features">
-        <div class="explore-intro-feature">
-            <strong>{% translate "Import from browser" %}</strong>
-            <span>{% translate "Bring your existing bookmarks with one click." %}</span>
-        </div>
-        <div class="explore-intro-feature">
-            <strong>{% translate "Tag & organize" %}</strong>
-            <span>{% translate "Add tags, notes, and collections to your links." %}</span>
-        </div>
-        <div class="explore-intro-feature">
-            <strong>{% translate "Share & discuss" %}</strong>
-            <span>{% translate "Make bookmarks public and comment on shared links." %}</span>
-        </div>
-    </div>
     <a href="{% url 'account_login' %}" class="btn btn-hero">{% translate "Sign in to get started" %}</a>
 </div>
 {% endif %}
 
-<div class="link-list">
-    {% for link in links %}
-        {% include "links/partials/link_card.html" %}
-    {% empty %}
-        {% if not user.is_authenticated %}
-        <div class="landing-hero">
-            <h2>{% translate "Save, organize, and rediscover your bookmarks." %}</h2>
-            <p>{% translate "A personal bookmarking tool. Private by default. Tag, collect, and search your links — all in one place." %}</p>
-            <a href="{% url 'account_login' %}" class="btn btn-hero">{% translate "Sign in to get started" %}</a>
-            <div class="landing-features">
-                <div class="landing-feature">
-                    <strong>{% translate "Private by default" %}</strong>
-                    <span>{% translate "Your bookmarks are private unless you choose to share them." %}</span>
+<div class="dashboard-grid">
+    <div class="dashboard-main">
+        <section class="dashboard-section">
+            <nav class="ordering">
+                <a href="?ordering=hot" class="{% if ordering == 'hot' %}active{% endif %}">{% translate "Hot" %}</a>
+                <a href="?ordering=top" class="{% if ordering == 'top' %}active{% endif %}">{% translate "Top" %}</a>
+                <a href="?ordering=latest" class="{% if ordering == 'latest' %}active{% endif %}">{% translate "Latest" %}</a>
+                <a href="?ordering=discussed" class="{% if ordering == 'discussed' %}active{% endif %}">{% translate "Discussed" %}</a>
+            </nav>
+
+            {% if links %}
+            <div class="dashboard-bookmark-list">
+                {% for link in links %}
+                {% include "partials/explore_item.html" with item_link=link %}
+                {% endfor %}
+            </div>
+            {% else %}
+                {% if not user.is_authenticated %}
+                <div class="landing-hero">
+                    <h2>{% translate "Save, organize, and rediscover your bookmarks." %}</h2>
+                    <p>{% translate "A personal bookmarking tool. Private by default. Tag and search your links — all in one place." %}</p>
+                    <a href="{% url 'account_login' %}" class="btn btn-hero">{% translate "Sign in to get started" %}</a>
                 </div>
-                <div class="landing-feature">
-                    <strong>{% translate "Tag & collect" %}</strong>
-                    <span>{% translate "Organize with tags and collections. Find anything instantly." %}</span>
+                {% else %}
+                <p class="empty">{% translate "No links yet." %}</p>
+                {% endif %}
+            {% endif %}
+        </section>
+
+        {% if links.has_other_pages %}
+        <nav class="pagination" aria-label="{% translate 'Pagination' %}">
+            {% if links.has_previous %}
+                <a href="?page={{ links.previous_page_number }}&ordering={{ ordering }}">&laquo;</a>
+            {% endif %}
+            <span>{{ links.number }} / {{ links.paginator.num_pages }}</span>
+            {% if links.has_next %}
+                <a href="?page={{ links.next_page_number }}&ordering={{ ordering }}">&raquo;</a>
+            {% endif %}
+        </nav>
+        {% endif %}
+    </div>
+
+    {% if user.is_authenticated %}
+    <aside class="dashboard-sidebar">
+        <section class="dashboard-section">
+            <h2>{% translate "Stats" %}</h2>
+            <div class="dashboard-stats">
+                <div class="dashboard-stat">
+                    <span class="dashboard-stat-value">{{ user_stats.total }}</span>
+                    <span class="dashboard-stat-label">{% translate "my bookmarks" %}</span>
                 </div>
-                <div class="landing-feature">
-                    <strong>{% translate "Notes & comments" %}</strong>
-                    <span>{% translate "Add personal notes to bookmarks. Discuss links with others." %}</span>
+                <div class="dashboard-stat">
+                    <span class="dashboard-stat-value">{{ user_stats.this_week }}</span>
+                    <span class="dashboard-stat-label">{% translate "this week" %}</span>
                 </div>
             </div>
-        </div>
-        {% else %}
-        <p class="empty">{% translate "No links yet." %}</p>
+        </section>
+
+        {% if user_top_tags %}
+        <section class="dashboard-section">
+            <h2>{% translate "My Tags" %}</h2>
+            <div class="dashboard-tags">
+                {% for tag in user_top_tags %}
+                <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }} <span class="tag-count">{{ tag.usage_count }}</span></a>
+                {% endfor %}
+            </div>
+        </section>
         {% endif %}
-    {% endfor %}
+    </aside>
+    {% endif %}
 </div>
 
-{% if links.has_other_pages %}
-<nav class="pagination" aria-label="{% translate 'Pagination' %}">
-    {% if links.has_previous %}
-        <a href="?page={{ links.previous_page_number }}&ordering={{ ordering }}" aria-label="{% translate 'Previous page' %}">&laquo;</a>
-    {% endif %}
-    <span>{{ links.number }} / {{ links.paginator.num_pages }}</span>
-    {% if links.has_next %}
-        <a href="?page={{ links.next_page_number }}&ordering={{ ordering }}" aria-label="{% translate 'Next page' %}">&raquo;</a>
-    {% endif %}
-</nav>
-{% endif %}
 {% endblock %}

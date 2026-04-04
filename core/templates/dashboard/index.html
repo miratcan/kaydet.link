@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{% translate "Dashboard" %} — {{ site_name }}{% endblock %}
+{% block title %}{% translate "My Bookmarks" %} — {{ site_name }}{% endblock %}
 
 {% block main_class %}{% endblock %}
 {% block content %}
@@ -9,7 +9,6 @@
 <section class="dashboard-header">
     <h1>{% translate "My Bookmarks" %}</h1>
     <div class="dashboard-header-actions">
-        <a href="{% url 'link-list' %}" class="btn btn-outline">{% translate "Explore" %}</a>
         <a href="{% url 'bookmark-create' %}" class="btn">+ {% translate "Save" %}</a>
     </div>
 </section>
@@ -34,48 +33,7 @@
             <h2>{% translate "Pinned" %}</h2>
             <div class="dashboard-bookmark-list">
                 {% for bookmark in pinned_bookmarks %}
-                <article class="dashboard-bookmark pinned-bookmark">
-                    <div class="dashboard-bookmark-main">
-                        {% include "partials/pin_button.html" with bookmark=bookmark %}
-                        <a href="{{ bookmark.link.get_absolute_url }}" class="dashboard-bookmark-title">
-                            {{ bookmark.link.title|default:bookmark.link.url }}
-                        </a>
-                        <span class="dashboard-bookmark-domain">{{ bookmark.link.get_domain }}</span>
-                    </div>
-                </article>
-                {% endfor %}
-            </div>
-        </section>
-        {% endif %}
-
-        {% if unread_bookmarks %}
-        <section class="dashboard-section">
-            <h2><a href="{% url 'bookmark-list' %}?status=unread" class="section-title-link">{% translate "To Read" %} <span class="section-count">{{ stats.unread_count }}</span></a></h2>
-            <div class="dashboard-bookmark-list">
-                {% for bookmark in unread_bookmarks %}
-                <article class="dashboard-bookmark">
-                    <div class="dashboard-bookmark-main">
-                        <a href="{{ bookmark.link.get_absolute_url }}" class="dashboard-bookmark-title">
-                            {% if bookmark.is_private %}
-                            <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                            {% endif %}
-                            {{ bookmark.link.title|default:bookmark.link.url }}
-                        </a>
-                        <span class="dashboard-bookmark-domain">{{ bookmark.link.get_domain }}</span>
-                    </div>
-                    <div class="dashboard-bookmark-meta">
-                        {% include "partials/status_badge.html" with bookmark=bookmark %}
-                        {% if bookmark.note %}<span class="note-indicator" title="{{ bookmark.note|truncatewords:20 }}">&#9998;</span>{% endif %}
-                        {% if bookmark.tags.all %}
-                        <span class="dashboard-bookmark-tags">
-                            {% for tag in bookmark.tags.all %}
-                            <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
-                            {% endfor %}
-                        </span>
-                        {% endif %}
-                        <time datetime="{{ bookmark.created_at|date:'c' }}">{{ bookmark.created_at|timesince }} {% translate "ago" %}</time>
-                    </div>
-                </article>
+                {% include "partials/bookmark_item.html" with item_link=bookmark.link bookmark=bookmark pinned=True %}
                 {% endfor %}
             </div>
         </section>
@@ -85,29 +43,7 @@
             <h2>{% translate "Recent" %}</h2>
             <div class="dashboard-bookmark-list">
                 {% for bookmark in recent_bookmarks %}
-                <article class="dashboard-bookmark">
-                    <div class="dashboard-bookmark-main">
-                        <a href="{{ bookmark.link.get_absolute_url }}" class="dashboard-bookmark-title">
-                            {% if bookmark.is_private %}
-                            <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                            {% endif %}
-                            {{ bookmark.link.title|default:bookmark.link.url }}
-                        </a>
-                        <span class="dashboard-bookmark-domain">{{ bookmark.link.get_domain }}</span>
-                    </div>
-                    <div class="dashboard-bookmark-meta">
-                        {% include "partials/status_badge.html" with bookmark=bookmark %}
-                        {% if bookmark.note %}<span class="note-indicator" title="{{ bookmark.note|truncatewords:20 }}">&#9998;</span>{% endif %}
-                        {% if bookmark.tags.all %}
-                        <span class="dashboard-bookmark-tags">
-                            {% for tag in bookmark.tags.all %}
-                            <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
-                            {% endfor %}
-                        </span>
-                        {% endif %}
-                        <time datetime="{{ bookmark.created_at|date:'c' }}">{{ bookmark.created_at|timesince }} {% translate "ago" %}</time>
-                    </div>
-                </article>
+                {% include "partials/bookmark_item.html" with item_link=bookmark.link bookmark=bookmark show_edit=True %}
                 {% endfor %}
             </div>
             {% if stats.total > 10 %}
@@ -129,14 +65,7 @@
             <h2>{% translate "This day" %} {{ section.label }} {% translate "ago" %}</h2>
             <div class="dashboard-bookmark-list">
                 {% for bookmark in section.bookmarks %}
-                <article class="dashboard-bookmark">
-                    <div class="dashboard-bookmark-main">
-                        <a href="{{ bookmark.link.get_absolute_url }}" class="dashboard-bookmark-title">
-                            {{ bookmark.link.title|default:bookmark.link.url }}
-                        </a>
-                        <span class="dashboard-bookmark-domain">{{ bookmark.link.get_domain }}</span>
-                    </div>
-                </article>
+                {% include "partials/bookmark_item.html" with item_link=bookmark.link bookmark=bookmark %}
                 {% endfor %}
             </div>
         </section>

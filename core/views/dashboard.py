@@ -8,13 +8,11 @@ from django.utils import timezone
 from django.views import View
 from django.views.generic import TemplateView
 
-from core.models import Bookmark, ReadingStatus, Tag
+from core.models import Bookmark, Tag
 
 
 class HomeRedirectView(View):
     def get(self, request):
-        if request.user.is_authenticated:
-            return redirect('dashboard')
         return redirect('link-list')
 
 
@@ -38,21 +36,10 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         context['pinned_bookmarks'] = pinned_qs
         pinned_ids = set(pinned_qs.values_list('pk', flat=True))
 
-        # Unread bookmarks (to-read list), exclude pinned
-        unread_qs = (
-            user_bookmarks
-            .filter(status=ReadingStatus.UNREAD)
-            .exclude(pk__in=pinned_ids)
-            .prefetch_related('tags')
-            .order_by('-created_at')[:5]
-        )
-        context['unread_bookmarks'] = unread_qs
-        shown_ids = pinned_ids | set(unread_qs.values_list('pk', flat=True))
-
-        # Recent bookmarks (last 10), exclude already shown
+        # Recent bookmarks, exclude pinned
         context['recent_bookmarks'] = (
             user_bookmarks
-            .exclude(pk__in=shown_ids)
+            .exclude(pk__in=pinned_ids)
             .prefetch_related('tags')
             .order_by('-created_at')[:10]
         )
@@ -71,7 +58,6 @@ class DashboardView(LoginRequiredMixin, TemplateView):
             'this_week': user_bookmarks.filter(
                 created_at__gte=now - timedelta(days=7),
             ).count(),
-            'unread_count': user_bookmarks.filter(status=ReadingStatus.UNREAD).count(),
             'private_count': user_bookmarks.filter(is_private=True).count(),
             'public_count': user_bookmarks.filter(is_private=False).count(),
         }

@@ -10,65 +10,29 @@
         <a href="{% url 'bookmark-create' %}" class="btn">+ {% translate "Save" %}</a>
     </div>
 
-    <div class="status-tabs">
-        <a href="{% url 'bookmark-list' %}" class="status-tab {% if not current_status %}active{% endif %}">{% translate "All" %}</a>
-        {% for value, label in statuses %}
-        <a href="{% url 'bookmark-list' %}?status={{ value }}" class="status-tab {% if current_status == value %}active{% endif %}">{{ label }}</a>
-        {% endfor %}
-    </div>
-
     {% if bookmarks %}
     <div class="dashboard-bookmark-list">
         {% for bookmark in bookmarks %}
-        <article class="dashboard-bookmark">
-            <div class="dashboard-bookmark-main">
-                <a href="{{ bookmark.link.get_absolute_url }}" class="dashboard-bookmark-title">
-                    {% if bookmark.is_pinned %}&#9733; {% endif %}
-                    {% if bookmark.is_private %}
-                    <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    {% endif %}
-                    {{ bookmark.link.title|default:bookmark.link.url }}
-                </a>
-                <span class="dashboard-bookmark-domain">{{ bookmark.link.get_domain }}</span>
-            </div>
-            <div class="dashboard-bookmark-meta">
-                {% include "partials/status_badge.html" with bookmark=bookmark %}
-                {% include "partials/pin_button.html" with bookmark=bookmark %}
-                <a href="{% url 'bookmark-edit' pk=bookmark.pk %}" class="bookmark-edit-link">{% translate "edit" %}</a>
-                {% if bookmark.note %}<span class="note-indicator" title="{{ bookmark.note|truncatewords:20 }}">&#9998;</span>{% endif %}
-                {% if bookmark.tags.all %}
-                <span class="dashboard-bookmark-tags">
-                    {% for tag in bookmark.tags.all %}
-                    <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
-                    {% endfor %}
-                </span>
-                {% endif %}
-                <time datetime="{{ bookmark.created_at|date:'c' }}">{{ bookmark.created_at|timesince }} {% translate "ago" %}</time>
-            </div>
-        </article>
+        {% include "partials/bookmark_item.html" with item_link=bookmark.link bookmark=bookmark show_edit=True %}
         {% endfor %}
     </div>
 
     {% if page_obj.has_other_pages %}
     <div class="pagination">
         {% if page_obj.has_previous %}
-        <a href="?{% if current_status %}status={{ current_status }}&{% endif %}page={{ page_obj.previous_page_number }}">&laquo; {% translate "Previous" %}</a>
+        <a href="?page={{ page_obj.previous_page_number }}">&laquo; {% translate "Previous" %}</a>
         {% endif %}
         <span class="pagination-info">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
         {% if page_obj.has_next %}
-        <a href="?{% if current_status %}status={{ current_status }}&{% endif %}page={{ page_obj.next_page_number }}">{% translate "Next" %} &raquo;</a>
+        <a href="?page={{ page_obj.next_page_number }}">{% translate "Next" %} &raquo;</a>
         {% endif %}
     </div>
     {% endif %}
 
     {% else %}
     <div class="empty-state">
-        {% if current_status %}
-        <p>{% translate "No bookmarks with this status." %}</p>
-        {% else %}
         <p>{% translate "No bookmarks yet." %}</p>
         <a href="{% url 'bookmark-create' %}" class="btn">{% translate "Save your first link" %}</a>
-        {% endif %}
     </div>
     {% endif %}
 </section>
