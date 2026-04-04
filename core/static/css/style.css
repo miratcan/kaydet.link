@@ -147,18 +147,29 @@ body > header .nav-links .btn {
 
 @media (max-width: 768px) {
   body > header nav {
-    height: auto;
-    min-height: 48px;
-    flex-wrap: wrap;
+    height: 48px;
+    flex-wrap: nowrap;
+    gap: 0;
   }
   body > header .nav-links {
-    flex-wrap: wrap;
-    height: auto;
+    flex-wrap: nowrap;
+    height: 100%;
+    gap: 0;
   }
   body > header .nav-links a:not(.btn) {
-    padding: var(--gap-xs) var(--gap-sm);
+    padding: 0 var(--gap-sm);
     border-left: none;
     font-size: var(--font-xs);
+  }
+  body > header .nav-links .btn {
+    margin-left: 0;
+    padding: var(--gap-xs) var(--gap-sm);
+    font-size: var(--font-xs);
+    white-space: nowrap;
+  }
+  .nav-dropdown-toggle {
+    font-size: var(--font-xs);
+    padding: 0 var(--gap-sm);
   }
 }
 
@@ -1392,6 +1403,12 @@ select:focus {
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
+  .dashboard-bookmark-main {
+    flex-wrap: wrap;
+  }
+  .dashboard-bookmark-meta {
+    flex-wrap: wrap;
+  }
 }
 
 .dashboard-section {
@@ -1872,9 +1889,19 @@ select:focus {
 }
 
 /* mobile: hide desktop-only nav links, show them in dropdown */
+.nav-dropdown-search {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .nav-link-desktop {
+  body > header .nav-links a.nav-link-desktop {
     display: none;
+  }
+  .nav-save-text {
+    display: none;
+  }
+  .nav-dropdown-search {
+    display: block;
   }
 }
 
@@ -2134,11 +2161,8 @@ select:focus {
 }
 
 @media (max-width: 768px) {
-  .nav-search-input {
-    width: 120px;
-  }
-  .nav-search-input:focus {
-    width: 160px;
+  .nav-search {
+    display: none;
   }
 }
 
