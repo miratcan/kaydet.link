@@ -34,18 +34,28 @@
             <div class="search-result-list">
                 {% for link in links %}
                 <article class="search-result-card">
-                    <div class="search-result-main">
-                        <a href="{{ link.get_absolute_url }}" class="search-result-title">
-                            {{ link.title|default:link.url }}
-                        </a>
-                        <span class="search-result-domain">{{ link.get_domain }}</span>
+                    {% if link.image %}
+                    <div class="search-result-thumb">
+                        <img src="{{ link.image }}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">
                     </div>
-                    {% if link.description %}
-                    <p class="search-result-desc">{{ link.description|truncatewords:30 }}</p>
                     {% endif %}
-                    <div class="search-result-meta">
-                        <span>{{ link.save_count }} {% translate "saved" %}</span>
-                        <span>{{ link.comment_count }} {% translate "comments" %}</span>
+                    <div class="search-result-content">
+                        <div class="search-result-main">
+                            <a href="{{ link.get_absolute_url }}" class="search-result-title">
+                                {{ link.title|default:link.url }}
+                            </a>
+                            <span class="search-result-domain">{{ link.get_domain }}</span>
+                        </div>
+                        {% if link.description %}
+                        <p class="search-result-desc">{{ link.description|truncatewords:30 }}</p>
+                        {% endif %}
+                        <div class="search-result-meta">
+                            <span>{{ link.save_count }} {% translate "saved" %}</span>
+                            <span>{{ link.comment_count }} {% translate "comments" %}</span>
+                            {% for tag in link.top_tags %}
+                                <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
+                            {% endfor %}
+                        </div>
                     </div>
                 </article>
                 {% endfor %}

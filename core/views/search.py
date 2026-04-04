@@ -49,7 +49,7 @@ class SearchView(ListView):
         else:
             qs = qs.annotate(is_saved=Value(False, output_field=BooleanField()))
 
-        return qs.order_by('-last_saved_at')
+        return qs.prefetch_related('bookmarks__tags').order_by('-last_saved_at')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

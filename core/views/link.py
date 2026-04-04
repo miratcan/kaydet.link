@@ -54,8 +54,20 @@ class LinkListView(ListView):
                 .order_by('-co_count')[:10]
             )
         if 'username' in self.kwargs:
-            context['profile_user'] = get_object_or_404(
+            profile_user = get_object_or_404(
                 get_user_model(), username=self.kwargs.get('username'),
+            )
+            context['profile_user'] = profile_user
+            context['profile_bookmark_count'] = Bookmark.objects.filter(
+                user=profile_user, is_private=False,
+            ).count()
+            context['profile_top_tags'] = (
+                Tag.objects.filter(
+                    bookmarks__user=profile_user,
+                    bookmarks__is_private=False,
+                )
+                .annotate(usage_count=models.Count('bookmarks'))
+                .order_by('-usage_count')[:5]
             )
         return context
 
@@ -102,6 +114,16 @@ class LinkDetailView(DetailView):
         else:
             bookmarks = bookmarks.filter(is_private=False)
         context['bookmarks'] = bookmarks
+
+        # Related links: links that share tags with this link
+        link_tags = Tag.objects.filter(bookmarks__link=self.object)
+        context['related_links'] = (
+            Link.objects.filter(bookmark__tags__in=link_tags)
+            .exclude(pk=self.object.pk)
+            .annotate(shared_tags=models.Count('bookmark__tags'))
+            .order_by('-shared_tags', '-save_count')
+            .distinct()[:6]
+        )
         return context
 
 

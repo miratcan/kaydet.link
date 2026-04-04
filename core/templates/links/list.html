@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n avatar %}
 
 {% block title %}
     {% if current_tag %}{{ current_tag.name }} — {% endif %}
@@ -13,7 +13,29 @@
     {% if current_tag %}
         <h1>#{{ current_tag.name }}</h1>
     {% elif profile_user %}
-        <h1>{{ profile_user.username }}</h1>
+        <div class="profile-header">
+            {% avatar_url profile_user 112 as profile_pic %}
+            {% if profile_pic and "gravatar" not in profile_pic %}
+            <img src="{{ profile_pic }}" alt="{{ profile_user.username }}" class="profile-avatar-img">
+            {% else %}
+            <div class="profile-avatar">{{ profile_user.username|make_list|first|upper }}</div>
+            {% endif %}
+            <div class="profile-info">
+                <h1>{{ profile_user.username }}</h1>
+                <div class="profile-meta">
+                    <span>{{ profile_bookmark_count }} {% translate "bookmarks" %}</span>
+                    <span>&middot;</span>
+                    <span>{% translate "Joined" %} {{ profile_user.date_joined|date:"M Y" }}</span>
+                </div>
+                {% if profile_top_tags %}
+                <div class="profile-tags">
+                    {% for tag in profile_top_tags %}
+                        <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
     {% else %}
         <h1>{% translate "Explore" %}</h1>
     {% endif %}
@@ -36,8 +58,25 @@
 
 {% if not user.is_authenticated and links and not current_tag and not profile_user %}
 <div class="explore-intro">
-    <p>{% translate "A shared bookmark collection. Save links, add notes, and rediscover them later." %}</p>
-    <a href="{% url 'account_login' %}" class="btn btn-sm">{% translate "Sign in to start saving" %}</a>
+    <div class="explore-intro-main">
+        <h2>{% translate "Save, organize, and rediscover your bookmarks." %}</h2>
+        <p>{% translate "A shared bookmark collection. Save links, add notes, and rediscover them later." %}</p>
+    </div>
+    <div class="explore-intro-features">
+        <div class="explore-intro-feature">
+            <strong>{% translate "Import from browser" %}</strong>
+            <span>{% translate "Bring your existing bookmarks with one click." %}</span>
+        </div>
+        <div class="explore-intro-feature">
+            <strong>{% translate "Tag & organize" %}</strong>
+            <span>{% translate "Add tags, notes, and collections to your links." %}</span>
+        </div>
+        <div class="explore-intro-feature">
+            <strong>{% translate "Share & discuss" %}</strong>
+            <span>{% translate "Make bookmarks public and comment on shared links." %}</span>
+        </div>
+    </div>
+    <a href="{% url 'account_login' %}" class="btn btn-hero">{% translate "Sign in to get started" %}</a>
 </div>
 {% endif %}
 

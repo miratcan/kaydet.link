@@ -76,3 +76,13 @@ class Link(models.Model):
     @property
     def first_bookmark(self):
         return self.bookmarks.order_by('created_at').first()
+
+    @property
+    def top_tags(self):
+        from core.models import Tag
+
+        return (
+            Tag.objects.filter(bookmarks__link=self)
+            .annotate(usage_count=models.Count('id'))
+            .order_by('-usage_count')[:3]
+        )

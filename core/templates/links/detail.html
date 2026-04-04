@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n avatar %}
 
 {% block title %}{{ link.title|default:link.url }} — {{ site_name }}{% endblock %}
 
@@ -52,6 +52,10 @@
                 <span class="entry-private" title="{% translate 'Private' %}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 </span>
+                {% endif %}
+                {% avatar_url bookmark.user 24 as bm_avatar %}
+                {% if bm_avatar and "gravatar" not in bm_avatar %}
+                <img src="{{ bm_avatar }}" alt="" class="entry-avatar">
                 {% endif %}
                 <a href="{% url 'link-list-by-user' username=bookmark.user.username %}" class="entry-user">@{{ bookmark.user.username }}</a>
                 &middot;
@@ -109,4 +113,19 @@
         {% endif %}
     </section>
 </div>
+
+{% if related_links %}
+<section class="related-links">
+    <h2>{% translate "Related links" %}</h2>
+    <div class="related-links-grid">
+        {% for rlink in related_links %}
+        <a href="{{ rlink.get_absolute_url }}" class="related-link-card">
+            <span class="related-link-title">{{ rlink.title|default:rlink.url|truncatewords:8 }}</span>
+            <span class="related-link-domain">{{ rlink.get_domain }}</span>
+            <span class="related-link-meta">{{ rlink.save_count }} {% translate "saved" %}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
 {% endblock %}
