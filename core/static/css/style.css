@@ -752,16 +752,18 @@ a.entry-user:hover {
 .entry-tag {
   font-size: var(--font-xs);
   padding: 1px var(--gap-sm);
-  background: var(--color-primary);
-  color: var(--color-on-primary);
+  background: var(--color-surface);
+  color: var(--color-on-bg);
+  border: 1px solid var(--color-border-light);
   text-decoration: none;
-  text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .entry-tag:hover {
-  background: var(--color-accent);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -938,23 +940,25 @@ select:focus {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap-sm);
-  padding: var(--gap-lg);
+  padding: var(--gap-lg) 0;
 }
 
 .tag {
   display: inline-block;
   font-size: var(--font-xs);
   padding: var(--gap-xs) var(--gap-sm);
-  background: var(--color-primary);
-  color: var(--color-on-primary);
+  background: var(--color-surface);
+  color: var(--color-on-bg);
+  border: 1px solid var(--color-border-light);
   text-decoration: none;
-  text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .tag:hover {
-  background: var(--color-accent);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -1760,6 +1764,11 @@ select:focus {
 }
 
 /* search page */
+.search-header {
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--gap-lg);
+}
+
 .search-form {
   margin-top: var(--gap-md);
 }
@@ -1771,11 +1780,11 @@ select:focus {
 
 .search-input {
   flex: 1;
-  padding: 10px 16px;
+  padding: var(--gap-md) var(--gap-lg);
   border: 2px solid var(--color-border);
   font-family: var(--font-body);
   font-size: var(--font-base);
-  background: transparent;
+  background: var(--color-surface);
   color: var(--color-on-bg);
 }
 
@@ -1808,6 +1817,50 @@ select:focus {
   accent-color: var(--color-on-bg);
 }
 
+/* search landing (no query yet) */
+.search-landing {
+  padding: var(--gap-xl) 0;
+}
+
+.search-landing-hint {
+  color: var(--color-on-bg-muted);
+  font-size: var(--font-sm);
+}
+
+.search-popular-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-sm);
+  margin-top: var(--gap-lg);
+}
+
+.search-popular-label {
+  font-family: var(--font-headline);
+  font-size: var(--font-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-on-bg-muted);
+}
+
+.search-tag {
+  display: inline-block;
+  font-size: var(--font-xs);
+  padding: var(--gap-xs) var(--gap-sm);
+  background: var(--color-surface);
+  color: var(--color-on-bg);
+  border: 1px solid var(--color-border-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.search-tag:hover {
+  border-color: var(--color-on-bg);
+  color: var(--color-on-bg);
+}
+
+/* search results */
 .search-results {
   margin-top: var(--gap-lg);
 }
@@ -1816,6 +1869,45 @@ select:focus {
   font-size: var(--font-sm);
   color: var(--color-on-bg-muted);
   margin-bottom: var(--gap-md);
+}
+
+.search-result-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result-card {
+  padding: var(--gap-md) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.search-result-card:last-child {
+  border-bottom: none;
+}
+
+.search-result-main {
+  display: flex;
+  align-items: baseline;
+  gap: var(--gap-sm);
+}
+
+.search-result-title {
+  font-family: var(--font-headline);
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--color-on-bg);
+  text-decoration: none;
+  letter-spacing: -0.025em;
+}
+
+.search-result-title:hover {
+  color: var(--color-accent);
+}
+
+.search-result-domain {
+  font-size: var(--font-xs);
+  color: var(--color-on-bg-muted);
+  white-space: nowrap;
 }
 
 .search-result-desc {
@@ -1831,6 +1923,28 @@ select:focus {
   font-size: var(--font-xs);
   color: var(--color-on-bg-muted);
   margin-top: var(--gap-xs);
+}
+
+/* search empty state */
+.search-empty {
+  text-align: center;
+  padding: var(--gap-3xl) 0;
+}
+
+.search-empty-title {
+  font-family: var(--font-headline);
+  font-size: var(--font-lg);
+  font-weight: 700;
+  margin-bottom: var(--gap-sm);
+}
+
+.search-empty-hint {
+  color: var(--color-on-bg-muted);
+  font-size: var(--font-sm);
+}
+
+.search-empty-hint a {
+  font-weight: 600;
 }
 
 /* pagination */
