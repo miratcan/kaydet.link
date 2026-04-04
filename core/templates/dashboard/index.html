@@ -20,7 +20,11 @@
         <section class="dashboard-section">
             <div class="dashboard-empty">
                 <p>{% translate "You haven't saved any bookmarks yet." %}</p>
-                <a href="{% url 'bookmark-create' %}" class="btn">{% translate "Save your first link" %}</a>
+                <div class="onboarding-actions">
+                    <a href="{% url 'bookmark-create' %}" class="btn">{% translate "Save your first link" %}</a>
+                    <a href="{% url 'import' %}" class="btn btn-outline">{% translate "Import from browser" %}</a>
+                    <a href="{% url 'link-list' %}" class="btn btn-outline">{% translate "Explore shared links" %}</a>
+                </div>
             </div>
         </section>
         {% else %}
@@ -116,23 +120,7 @@
         {% if random_bookmark %}
         <section class="dashboard-section">
             <h2>{% translate "Rediscover" %}</h2>
-            <article class="dashboard-bookmark rediscover-card">
-                <div class="dashboard-bookmark-main">
-                    <a href="{{ random_bookmark.link.get_absolute_url }}" class="dashboard-bookmark-title">
-                        {% if random_bookmark.is_private %}
-                        <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        {% endif %}
-                        {{ random_bookmark.link.title|default:random_bookmark.link.url }}
-                    </a>
-                    <span class="dashboard-bookmark-domain">{{ random_bookmark.link.get_domain }}</span>
-                </div>
-                {% if random_bookmark.note %}
-                <p class="rediscover-note">{{ random_bookmark.note|truncatewords:30 }}</p>
-                {% endif %}
-                <div class="dashboard-bookmark-meta">
-                    <time datetime="{{ random_bookmark.created_at|date:'c' }}">{% translate "Saved" %} {{ random_bookmark.created_at|timesince }} {% translate "ago" %}</time>
-                </div>
-            </article>
+            {% include "dashboard/partials/rediscover.html" %}
         </section>
         {% endif %}
 
@@ -157,7 +145,7 @@
         {% endif %}
     </div>
 
-    <aside class="dashboard-sidebar">
+    <aside class="dashboard-sidebar{% if stats.total == 0 %} hidden{% endif %}">
         <section class="dashboard-section">
             <h2>{% translate "Stats" %}</h2>
             <div class="dashboard-stats">

@@ -1,0 +1,28 @@
+{% load i18n %}
+<div id="rediscover-card">
+    {% if random_bookmark %}
+    <article class="dashboard-bookmark rediscover-card">
+        <div class="dashboard-bookmark-main">
+            <a href="{{ random_bookmark.link.get_absolute_url }}" class="dashboard-bookmark-title">
+                {% if random_bookmark.is_private %}
+                <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                {% endif %}
+                {{ random_bookmark.link.title|default:random_bookmark.link.url }}
+            </a>
+            <span class="dashboard-bookmark-domain">{{ random_bookmark.link.get_domain }}</span>
+        </div>
+        {% if random_bookmark.note %}
+        <p class="rediscover-note">{{ random_bookmark.note|truncatewords:30 }}</p>
+        {% endif %}
+        <div class="dashboard-bookmark-meta">
+            <time datetime="{{ random_bookmark.created_at|date:'c' }}">{% translate "Saved" %} {{ random_bookmark.created_at|timesince }} {% translate "ago" %}</time>
+            <button class="btn-text rediscover-refresh"
+                    hx-get="{% url 'dashboard-rediscover' %}"
+                    hx-target="#rediscover-card"
+                    hx-swap="outerHTML">{% translate "Show another" %}</button>
+        </div>
+    </article>
+    {% else %}
+    <p class="empty">{% translate "Save more links to unlock rediscovery." %}</p>
+    {% endif %}
+</div>

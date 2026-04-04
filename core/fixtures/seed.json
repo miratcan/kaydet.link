@@ -1,0 +1,6283 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$tJMiepBlljeG4ODS5ng3Si$JtMHcKG+mVG/Cu2C0xnVY1z2AOaRDZvI8JvIdhK8xgc=",
+    "last_login": "2026-04-04T08:00:21.107Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@linkfloyd.dev",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-04T06:55:56.380Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$MrSkKuIYNSk7M2mZYB2zaK$n26bQ5FQ9MUo/JpwsSchniYPAtm++ezXnBukdmdJIlA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "floyd",
+    "first_name": "",
+    "last_name": "",
+    "email": "floyd@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T06:55:56.635Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$mLYSeWKk3UuH45QO6LtPOD$UKyvCjbzAFz0kjBZLg1WQbSHqmbR5bFcmDz1Q1uO7ZQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ada",
+    "first_name": "",
+    "last_name": "",
+    "email": "ada@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T06:55:56.906Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$zXnlqQF6eeaCovWx6wGWs3$eRk78N5HQW2FyIJAgbESrlV4Jxi/VgVSQywKfom5K/Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "linus",
+    "first_name": "",
+    "last_name": "",
+    "email": "linus@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T06:55:57.154Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$9R6JqertvmT1gazNzBbQQG$PfdpohtcnNoHAg6/2vO69S4BjEzqwuTVS32zAufEJhE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "zeynep",
+    "first_name": "",
+    "last_name": "",
+    "email": "zeynep@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T08:14:26.048Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$nAdKH3SS4zIVLYP4E8uou7$bHGzmyjKFlxXtxCt60Q0khkJh53YlhRCejlT5V8fGW0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "emre",
+    "first_name": "",
+    "last_name": "",
+    "email": "emre@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T08:14:26.291Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Jfsjk0Z1n3WdF4Mb1bDLB5$UtmQufrLqLsNCNkYh5gQATR3Ow9Ho/w05x110Phe2ms=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "elif",
+    "first_name": "",
+    "last_name": "",
+    "email": "elif@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T08:14:26.531Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$0lvWSldqBCup6Q4YDvSOgz$2faGy5aG2tBkys3n+2iMJJpErTu09aV2ZDPyqgWHdNQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "burak",
+    "first_name": "",
+    "last_name": "",
+    "email": "burak@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T08:14:26.784Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$3YXQUAHMbmaWvA0aGgxhro$4pzIdtS0J0VD1uiVh3dsc1G82HBRyPX7Mq7ZjoPO+O8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "cem",
+    "first_name": "",
+    "last_name": "",
+    "email": "cem@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-04T08:14:27.024Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 1,
+  "fields": {
+    "name": "python",
+    "slug": "python",
+    "created_at": "2026-04-04T06:55:57.423Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 2,
+  "fields": {
+    "name": "django",
+    "slug": "django",
+    "created_at": "2026-04-04T06:55:57.424Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 3,
+  "fields": {
+    "name": "javascript",
+    "slug": "javascript",
+    "created_at": "2026-04-04T06:55:57.424Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 4,
+  "fields": {
+    "name": "rust",
+    "slug": "rust",
+    "created_at": "2026-04-04T06:55:57.425Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 5,
+  "fields": {
+    "name": "web",
+    "slug": "web",
+    "created_at": "2026-04-04T06:55:57.426Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 6,
+  "fields": {
+    "name": "devops",
+    "slug": "devops",
+    "created_at": "2026-04-04T06:55:57.427Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 7,
+  "fields": {
+    "name": "design",
+    "slug": "design",
+    "created_at": "2026-04-04T06:55:57.427Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 8,
+  "fields": {
+    "name": "focus",
+    "slug": "focus",
+    "created_at": "2026-04-04T08:14:27.265Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 9,
+  "fields": {
+    "name": "typography",
+    "slug": "typography",
+    "created_at": "2026-04-04T08:14:27.266Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 10,
+  "fields": {
+    "name": "documentation",
+    "slug": "documentation",
+    "created_at": "2026-04-04T08:14:27.267Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 11,
+  "fields": {
+    "name": "science",
+    "slug": "science",
+    "created_at": "2026-04-04T08:14:27.268Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 12,
+  "fields": {
+    "name": "google",
+    "slug": "google",
+    "created_at": "2026-04-04T08:14:27.269Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 13,
+  "fields": {
+    "name": "books",
+    "slug": "books",
+    "created_at": "2026-04-04T08:14:27.270Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 14,
+  "fields": {
+    "name": "images",
+    "slug": "images",
+    "created_at": "2026-04-04T08:14:27.270Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 15,
+  "fields": {
+    "name": "education",
+    "slug": "education",
+    "created_at": "2026-04-04T08:14:27.271Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 16,
+  "fields": {
+    "name": "cars",
+    "slug": "cars",
+    "created_at": "2026-04-04T08:14:27.271Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 17,
+  "fields": {
+    "name": "security",
+    "slug": "security",
+    "created_at": "2026-04-04T08:14:27.272Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 18,
+  "fields": {
+    "name": "css",
+    "slug": "css",
+    "created_at": "2026-04-04T08:14:27.273Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 19,
+  "fields": {
+    "name": "games",
+    "slug": "games",
+    "created_at": "2026-04-04T08:14:27.273Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 20,
+  "fields": {
+    "name": "free",
+    "slug": "free",
+    "created_at": "2026-04-04T08:14:27.274Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 21,
+  "fields": {
+    "name": "history",
+    "slug": "history",
+    "created_at": "2026-04-04T08:14:27.274Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 22,
+  "fields": {
+    "name": "typing",
+    "slug": "typing",
+    "created_at": "2026-04-04T08:14:27.275Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 23,
+  "fields": {
+    "name": "markdown",
+    "slug": "markdown",
+    "created_at": "2026-04-04T08:14:27.275Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 24,
+  "fields": {
+    "name": "infographics",
+    "slug": "infographics",
+    "created_at": "2026-04-04T08:14:27.276Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 25,
+  "fields": {
+    "name": "privacy",
+    "slug": "privacy",
+    "created_at": "2026-04-04T08:14:27.276Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 26,
+  "fields": {
+    "name": "engineering",
+    "slug": "engineering",
+    "created_at": "2026-04-04T08:14:27.277Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 27,
+  "fields": {
+    "name": "maps",
+    "slug": "maps",
+    "created_at": "2026-04-04T08:14:27.277Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 28,
+  "fields": {
+    "name": "best-practices",
+    "slug": "best-practices",
+    "created_at": "2026-04-04T08:14:27.278Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 29,
+  "fields": {
+    "name": "business",
+    "slug": "business",
+    "created_at": "2026-04-04T08:14:27.278Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 30,
+  "fields": {
+    "name": "simulation",
+    "slug": "simulation",
+    "created_at": "2026-04-04T08:14:27.279Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 31,
+  "fields": {
+    "name": "career",
+    "slug": "career",
+    "created_at": "2026-04-04T08:14:27.279Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 32,
+  "fields": {
+    "name": "internet-culture",
+    "slug": "internet-culture",
+    "created_at": "2026-04-04T08:14:27.280Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 33,
+  "fields": {
+    "name": "database",
+    "slug": "database",
+    "created_at": "2026-04-04T08:14:27.280Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 34,
+  "fields": {
+    "name": "programming",
+    "slug": "programming",
+    "created_at": "2026-04-04T08:14:27.281Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 35,
+  "fields": {
+    "name": "git",
+    "slug": "git",
+    "created_at": "2026-04-04T08:14:27.281Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 36,
+  "fields": {
+    "name": "marketing",
+    "slug": "marketing",
+    "created_at": "2026-04-04T08:14:27.282Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 37,
+  "fields": {
+    "name": "ai",
+    "slug": "ai",
+    "created_at": "2026-04-04T08:14:27.282Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 38,
+  "fields": {
+    "name": "performance",
+    "slug": "performance",
+    "created_at": "2026-04-04T08:14:27.283Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 39,
+  "fields": {
+    "name": "vim",
+    "slug": "vim",
+    "created_at": "2026-04-04T08:14:27.283Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 40,
+  "fields": {
+    "name": "diagrams",
+    "slug": "diagrams",
+    "created_at": "2026-04-04T08:14:27.284Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 41,
+  "fields": {
+    "name": "colors",
+    "slug": "colors",
+    "created_at": "2026-04-04T08:14:27.284Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 42,
+  "fields": {
+    "name": "startups",
+    "slug": "startups",
+    "created_at": "2026-04-04T08:14:27.285Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 43,
+  "fields": {
+    "name": "lessons",
+    "slug": "lessons",
+    "created_at": "2026-04-04T08:14:27.285Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 44,
+  "fields": {
+    "name": "turkce",
+    "slug": "turkce",
+    "created_at": "2026-04-04T08:14:27.286Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 45,
+  "fields": {
+    "name": "growth",
+    "slug": "growth",
+    "created_at": "2026-04-04T08:14:27.287Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 46,
+  "fields": {
+    "name": "productivity",
+    "slug": "productivity",
+    "created_at": "2026-04-04T08:14:27.287Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 47,
+  "fields": {
+    "name": "browser-games",
+    "slug": "browser-games",
+    "created_at": "2026-04-04T08:14:27.287Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 48,
+  "fields": {
+    "name": "email",
+    "slug": "email",
+    "created_at": "2026-04-04T08:14:27.288Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 49,
+  "fields": {
+    "name": "cheatsheets",
+    "slug": "cheatsheets",
+    "created_at": "2026-04-04T08:14:27.288Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 50,
+  "fields": {
+    "name": "linux",
+    "slug": "linux",
+    "created_at": "2026-04-04T08:14:27.289Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 51,
+  "fields": {
+    "name": "writing",
+    "slug": "writing",
+    "created_at": "2026-04-04T08:14:27.290Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 52,
+  "fields": {
+    "name": "optimization",
+    "slug": "optimization",
+    "created_at": "2026-04-04T08:14:27.290Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 53,
+  "fields": {
+    "name": "nostalgia",
+    "slug": "nostalgia",
+    "created_at": "2026-04-04T08:14:27.291Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 54,
+  "fields": {
+    "name": "essays",
+    "slug": "essays",
+    "created_at": "2026-04-04T08:14:27.291Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 55,
+  "fields": {
+    "name": "retro",
+    "slug": "retro",
+    "created_at": "2026-04-04T08:14:27.291Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 56,
+  "fields": {
+    "name": "alternatives",
+    "slug": "alternatives",
+    "created_at": "2026-04-04T08:14:27.292Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 57,
+  "fields": {
+    "name": "emoji",
+    "slug": "emoji",
+    "created_at": "2026-04-04T08:14:27.292Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 58,
+  "fields": {
+    "name": "notes",
+    "slug": "notes",
+    "created_at": "2026-04-04T08:14:27.293Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 59,
+  "fields": {
+    "name": "terminal",
+    "slug": "terminal",
+    "created_at": "2026-04-04T08:14:27.294Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 60,
+  "fields": {
+    "name": "compilers",
+    "slug": "compilers",
+    "created_at": "2026-04-04T08:14:27.294Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 61,
+  "fields": {
+    "name": "web-design",
+    "slug": "web-design",
+    "created_at": "2026-04-04T08:14:27.295Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 62,
+  "fields": {
+    "name": "text-adventure",
+    "slug": "text-adventure",
+    "created_at": "2026-04-04T08:14:27.295Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 63,
+  "fields": {
+    "name": "environment",
+    "slug": "environment",
+    "created_at": "2026-04-04T08:14:27.296Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 64,
+  "fields": {
+    "name": "learning",
+    "slug": "learning",
+    "created_at": "2026-04-04T08:14:27.296Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 65,
+  "fields": {
+    "name": "animation",
+    "slug": "animation",
+    "created_at": "2026-04-04T08:14:27.297Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 66,
+  "fields": {
+    "name": "music",
+    "slug": "music",
+    "created_at": "2026-04-04T08:14:27.297Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 67,
+  "fields": {
+    "name": "layout",
+    "slug": "layout",
+    "created_at": "2026-04-04T08:14:27.298Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 68,
+  "fields": {
+    "name": "space",
+    "slug": "space",
+    "created_at": "2026-04-04T08:14:27.298Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 69,
+  "fields": {
+    "name": "minimalism",
+    "slug": "minimalism",
+    "created_at": "2026-04-04T08:14:27.299Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 70,
+  "fields": {
+    "name": "software",
+    "slug": "software",
+    "created_at": "2026-04-04T08:14:27.299Z"
+  }
+},
+{
+  "model": "core.tag",
+  "pk": 71,
+  "fields": {
+    "name": "tools",
+    "slug": "tools",
+    "created_at": "2026-04-04T08:14:27.300Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 1,
+  "fields": {
+    "url": "https://www.djangoproject.com/",
+    "metadata": {
+      "og:title": "Django 6.0 Released",
+      "og:description": "The latest version of Django is out with exciting new features.",
+      "og:image": "https://static.djangoproject.com/img/logos/django-logo-negative.png"
+    },
+    "created_at": "2026-04-04T06:55:57.428Z",
+    "save_count": 3,
+    "comment_count": 3,
+    "last_saved_at": "2026-04-04T06:55:57.527Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 2,
+  "fields": {
+    "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+    "metadata": {
+      "og:title": "Understanding Rust Ownership",
+      "og:description": "A deep dive into Rust's ownership system.",
+      "og:image": "https://www.rust-lang.org/static/images/rust-social-wide.jpg"
+    },
+    "created_at": "2026-04-04T06:55:57.436Z",
+    "save_count": 3,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T06:55:57.522Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 3,
+  "fields": {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties",
+    "metadata": {
+      "og:title": "CSS Custom Properties Guide",
+      "og:description": "Learn how to use CSS variables effectively.",
+      "og:image": "https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png"
+    },
+    "created_at": "2026-04-04T06:55:57.441Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T06:55:57.518Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 4,
+  "fields": {
+    "url": "https://docs.astral.sh/uv/",
+    "metadata": {
+      "og:title": "uv",
+      "og:description": "uv is an extremely fast Python package and project manager, written in Rust."
+    },
+    "created_at": "2026-04-04T06:55:57.446Z",
+    "save_count": 2,
+    "comment_count": 1,
+    "last_saved_at": "2026-04-04T06:55:57.511Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 5,
+  "fields": {
+    "url": "https://htmx.org/",
+    "metadata": {
+      "og:title": "htmx — High Power Tools for HTML",
+      "og:description": "Access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML.",
+      "og:image": "https://htmx.org/img/htmx_logo.1.png"
+    },
+    "created_at": "2026-04-04T06:55:57.451Z",
+    "save_count": 2,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T06:55:57.508Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 6,
+  "fields": {
+    "url": "https://www.postgresql.org/",
+    "metadata": {
+      "og:title": "PostgreSQL 17 Released",
+      "og:description": "Major improvements to performance, developer experience, and observability.",
+      "og:image": "https://www.postgresql.org/media/img/about/press/elephant.png"
+    },
+    "created_at": "2026-04-04T06:55:57.456Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T06:55:57.505Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 7,
+  "fields": {
+    "url": "https://aosabook.org/en/",
+    "metadata": {
+      "og:title": "The Architecture of Open Source Applications"
+    },
+    "created_at": "2026-04-04T06:55:57.459Z",
+    "save_count": 1,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T06:55:57.461Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 8,
+  "fields": {
+    "url": "https://tailwindcss.com/docs/utility-first",
+    "metadata": {
+      "og:title": "Styling with utility classes - Core concepts",
+      "og:description": "Building complex components from a constrained set of primitive utilities.",
+      "og:url": "https://tailwindcss.com/docs/styling-with-utility-classes",
+      "og:image": "https://tailwindcss.com/api/og?path=/docs/styling-with-utility-classes",
+      "og:type": "article"
+    },
+    "created_at": "2026-04-04T06:55:57.463Z",
+    "save_count": 2,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T06:55:57.498Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 9,
+  "fields": {
+    "url": "https://click.palletsprojects.com/",
+    "metadata": {
+      "og:title": "Click — Python CLI Framework",
+      "og:description": "Click is a Python package for creating beautiful command line interfaces.",
+      "og:image": "https://click.palletsprojects.com/en/stable/_images/click-logo.png"
+    },
+    "created_at": "2026-04-04T06:55:57.467Z",
+    "save_count": 2,
+    "comment_count": 3,
+    "last_saved_at": "2026-04-04T06:55:57.496Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 10,
+  "fields": {
+    "url": "https://litestream.io/",
+    "metadata": {
+      "og:title": "Litestream — Streaming SQLite Replication",
+      "og:description": "Continuously stream SQLite changes to S3-compatible storage.",
+      "og:image": "https://litestream.io/img/logo.svg"
+    },
+    "created_at": "2026-04-04T06:55:57.470Z",
+    "save_count": 2,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T06:55:57.493Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 11,
+  "fields": {
+    "url": "https://www.rust-lang.org/",
+    "metadata": {
+      "og:description": "A language empowering everyone to build reliable and efficient software.",
+      "og:image": "https://www.rust-lang.org/static/images/rust-social-wide.jpg",
+      "og:type": "website",
+      "og:locale": "en_US",
+      "og:title": "Rust Programming Language"
+    },
+    "created_at": "2026-04-04T06:55:57.473Z",
+    "save_count": 2,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T06:55:57.490Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 12,
+  "fields": {
+    "url": "https://django-ninja.dev/",
+    "metadata": {
+      "og:title": "Django Ninja — Fast Django REST Framework",
+      "og:description": "A fast, async-ready alternative to DRF with automatic OpenAPI docs.",
+      "og:image": "https://django-ninja.dev/img/logo-big.png"
+    },
+    "created_at": "2026-04-04T06:55:57.477Z",
+    "save_count": 2,
+    "comment_count": 1,
+    "last_saved_at": "2026-04-04T06:55:57.488Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 13,
+  "fields": {
+    "url": "https://norvig.com/21-days.html",
+    "metadata": {
+      "og:title": "Teach Yourself Programming in Ten Years"
+    },
+    "created_at": "2026-04-04T06:55:57.480Z",
+    "save_count": 5,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:14:27.385Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 14,
+  "fields": {
+    "url": "https://zty.pe/",
+    "metadata": {
+      "og:url": "https://zty.pe/",
+      "og:title": "ZType – Type to Shoot",
+      "og:description": "A typing game that's actually fun to play.",
+      "og:image": "https://zty.pe/media/ztype-card.png"
+    },
+    "created_at": "2026-04-04T08:14:27.300Z",
+    "save_count": 5,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.938Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 15,
+  "fields": {
+    "url": "https://princejs.com/",
+    "metadata": {
+      "og:title": "PrinceJS",
+      "og:description": "Prince of Persia reimplementation written in HTML5 / JavaScript (MS-DOS version)"
+    },
+    "created_at": "2026-04-04T08:14:27.314Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.941Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 16,
+  "fields": {
+    "url": "http://adarkroom.doublespeakgames.com/?lang=tr",
+    "metadata": {
+      "og:description": "A minimalist text adventure",
+      "og:image": "http://adarkroom.doublespeakgames.com/img/adr.png",
+      "og:title": "A Dark Room"
+    },
+    "created_at": "2026-04-04T08:14:27.321Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.947Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 17,
+  "fields": {
+    "url": "https://quickdraw.withgoogle.com/",
+    "metadata": {
+      "og:type": "game",
+      "og:title": "Quick, Draw!",
+      "og:url": "http://quickdraw.withgoogle.com/",
+      "og:image": "https://quickdraw.withgoogle.com/static/shareimg.png",
+      "og:description": "Can a neural network learn to recognize doodles? See how well it does with your drawings and help teach it, just by playing."
+    },
+    "created_at": "2026-04-04T08:14:27.328Z",
+    "save_count": 4,
+    "comment_count": 1,
+    "last_saved_at": "2026-04-04T08:16:29.953Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 18,
+  "fields": {
+    "url": "https://flukeout.github.io/",
+    "metadata": {
+      "og:url": "http://cssdiner.com",
+      "og:type": "website",
+      "og:title": "CSS Diner",
+      "og:description": "A fun game to help you learn and practice CSS selectors.",
+      "og:image": "https://flukeout.github.io/images/fb-share.jpg"
+    },
+    "created_at": "2026-04-04T08:14:27.334Z",
+    "save_count": 5,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.956Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 19,
+  "fields": {
+    "url": "http://play.elevatorsaga.com/",
+    "metadata": {
+      "og:title": "Elevator Saga - the elevator programming game"
+    },
+    "created_at": "2026-04-04T08:14:27.344Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.961Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 20,
+  "fields": {
+    "url": "https://vim-adventures.com/",
+    "metadata": {
+      "og:type": "website",
+      "og:url": "https://vim-adventures.com/",
+      "og:image": "https://vim-adventures.com/images/FB%20Site%20Thumbnail%201.jpg",
+      "og:title": "Learn VIM while playing a game - VIM Adventures",
+      "og:description": "VIM Adventures is an online game based on VIM's keyboard shortcuts. It's the \"Zelda meets text editing\" game. So come have some fun and learn some VIM!"
+    },
+    "created_at": "2026-04-04T08:14:27.349Z",
+    "save_count": 2,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:14:27.353Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 21,
+  "fields": {
+    "url": "https://craftinginterpreters.com/",
+    "metadata": {
+      "og:title": "Crafting Interpreters"
+    },
+    "created_at": "2026-04-04T08:14:27.355Z",
+    "save_count": 5,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:16:29.964Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 22,
+  "fields": {
+    "url": "https://explainshell.com/",
+    "metadata": {
+      "og:title": "explainshell.com - match command-line arguments to their help text",
+      "og:description": "match command-line arguments to their help text"
+    },
+    "created_at": "2026-04-04T08:14:27.366Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.967Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 23,
+  "fields": {
+    "url": "https://ohshitgit.com/tr",
+    "metadata": {
+      "og:title": "Hasktir, Git!?!"
+    },
+    "created_at": "2026-04-04T08:14:27.374Z",
+    "save_count": 5,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:16:29.974Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 24,
+  "fields": {
+    "url": "https://gitmoji.dev/",
+    "metadata": {
+      "og:title": "gitmoji",
+      "og:description": "An emoji guide for your commit messages.",
+      "og:url": "https://gitmoji.dev",
+      "og:image": "https://gitmoji.dev/static/gitmoji.gif"
+    },
+    "created_at": "2026-04-04T08:14:27.387Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.980Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 25,
+  "fields": {
+    "url": "https://devhints.io/",
+    "metadata": {
+      "og:description": "A ridiculous collection of web development cheatsheets",
+      "og:image:height": "471",
+      "og:image": "https://assets.devhints.io/previews/index.jpg",
+      "og:image:width": "900",
+      "og:site_name": "Devhints.io cheatsheets",
+      "og:title": "Devhints — TL;DR for developer documentation",
+      "og:type": "website",
+      "og:url": "https://devhints.io"
+    },
+    "created_at": "2026-04-04T08:14:27.392Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:14:27.398Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 26,
+  "fields": {
+    "url": "https://keepachangelog.com/en/1.0.0/",
+    "metadata": {
+      "og:article:publisher": "https://www.facebook.com/olivier.lacan.5",
+      "og:title": "Keep a Changelog",
+      "og:type": "article",
+      "og:url": "https://keepachangelog.com/en/1.0.0/",
+      "og:description": "Don’t let your friends dump git logs into changelogs.",
+      "og:image": "https://keepachangelog.com/assets/images/keep-a-changelog-opengraph-851f2d20.png"
+    },
+    "created_at": "2026-04-04T08:14:27.399Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:14:27.405Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 27,
+  "fields": {
+    "url": "https://www.webdesignmuseum.org/",
+    "metadata": {
+      "og:title": "Web Design Museum",
+      "og:description": "See how famous websites looked over the years."
+    },
+    "created_at": "2026-04-04T08:14:27.407Z",
+    "save_count": 6,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:16:29.984Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 28,
+  "fields": {
+    "url": "https://250kb.club/",
+    "metadata": {
+      "og:title": "The 250kb Club",
+      "og:description": "An exclusive membership for web pages presenting themselves in no more than 250kb."
+    },
+    "created_at": "2026-04-04T08:14:27.419Z",
+    "save_count": 4,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:16:29.987Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 29,
+  "fields": {
+    "url": "https://excalidraw.com/",
+    "metadata": {
+      "og:site_name": "Excalidraw",
+      "og:type": "website",
+      "og:url": "https://excalidraw.com",
+      "og:title": "Excalidraw — Collaborative whiteboarding made easy",
+      "og:image:alt": "Excalidraw logo",
+      "og:description": "Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.",
+      "og:image": "https://excalidraw.com/og-image-3.png"
+    },
+    "created_at": "2026-04-04T08:14:27.427Z",
+    "save_count": 5,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:14:27.437Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 30,
+  "fields": {
+    "url": "https://fontjoy.com/",
+    "metadata": {
+      "og:title": "Fontjoy - Generate font pairings in one click",
+      "og:description": "Fontjoy helps designers choose the best font combinations. Mix and match different fonts for the perfect pairing."
+    },
+    "created_at": "2026-04-04T08:14:27.439Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.990Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 31,
+  "fields": {
+    "url": "https://coolors.co/",
+    "metadata": {
+      "og:title": "Coolors - The super fast color palettes generator!",
+      "og:description": "Generate or browse beautiful color combinations for your designs.",
+      "og:image": "https://coolors.co/assets/img/og_image.png",
+      "og:image:width": "2400",
+      "og:image:height": "1260",
+      "og:site_name": "Coolors.co",
+      "og:url": "https://coolors.co/",
+      "og:type": "website"
+    },
+    "created_at": "2026-04-04T08:14:27.444Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.993Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 32,
+  "fields": {
+    "url": "https://web.dev/patterns/layout/",
+    "metadata": {
+      "og:site_name": "web.dev",
+      "og:type": "website",
+      "og:title": "404  |  Page Not Found  |  web.dev",
+      "og:image": "https://web.dev/static/images/social-wide.jpg",
+      "og:image:width": "1200",
+      "og:image:height": "675"
+    },
+    "created_at": "2026-04-04T08:14:27.449Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:29.998Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 33,
+  "fields": {
+    "url": "https://animista.net/",
+    "metadata": {
+      "og:title": "Animista - On-Demand CSS Animations Library",
+      "og:site_name": "Animista - On-Demand CSS Animations Library",
+      "og:description": "Animista is a CSS animation library and a place where you can play with a collection of ready-made CSS animations and download only those you will use.",
+      "og:url": "http://animista.net/",
+      "og:locale": "en_GB",
+      "og:type": "website",
+      "og:image": "http://animista.net/animista-media-img.gif",
+      "og:image:type": "image/gif"
+    },
+    "created_at": "2026-04-04T08:14:27.454Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:14:27.460Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 34,
+  "fields": {
+    "url": "https://musicforprogramming.net/",
+    "metadata": {
+      "og:title": "musicForProgramming();",
+      "og:description": "A series of mixes intended for listening while programming."
+    },
+    "created_at": "2026-04-04T08:14:27.462Z",
+    "save_count": 5,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:16:30.001Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 35,
+  "fields": {
+    "url": "https://obsidian.md/",
+    "metadata": {
+      "og:site_name": "Obsidian",
+      "og:title": "Obsidian - Sharpen your thinking",
+      "og:description": "The free and flexible app for your private thoughts.",
+      "og:type": "website",
+      "og:image": "https://obsidian.md/images/banner.png"
+    },
+    "created_at": "2026-04-04T08:14:27.472Z",
+    "save_count": 2,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:14:27.475Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 36,
+  "fields": {
+    "url": "https://typora.io/",
+    "metadata": {
+      "og:title": "Typora — simple yet powerful Markdown reader."
+    },
+    "created_at": "2026-04-04T08:14:27.477Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.005Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 37,
+  "fields": {
+    "url": "https://useplaintext.email/",
+    "metadata": {
+      "og:title": "Use plain text email"
+    },
+    "created_at": "2026-04-04T08:14:27.484Z",
+    "save_count": 5,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.007Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 38,
+  "fields": {
+    "url": "https://pxlnv.com/blog/bullshit-web/",
+    "metadata": {
+      "og:type": "article",
+      "og:title": "The Bullshit Web",
+      "og:description": "My home computer in 1998 had a 56K modem connected to our telephone line; we were allowed a maximum of thirty minutes of computer usage a day, because my parents — quite reasonably — did not want to have their telephone shut off for an evening at a time. I remember webpages loading slowly: ten […]",
+      "og:url": "https://pxlnv.com/blog/bullshit-web/",
+      "og:image": "https://pxlnv.com/apple-touch-icon.png"
+    },
+    "created_at": "2026-04-04T08:14:27.494Z",
+    "save_count": 4,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:16:30.011Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 39,
+  "fields": {
+    "url": "https://muto.ca/posts/web-design-practices-that-don-t-suck.html",
+    "metadata": {
+      "og:title": "Web Design Practices That Don't Suck",
+      "og:description": "Practical web design principles that actually matter."
+    },
+    "created_at": "2026-04-04T08:14:27.502Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.014Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 40,
+  "fields": {
+    "url": "https://www.failory.com/",
+    "metadata": {
+      "og:title": "Failory: 90% of Startups Fail — Learn How Not To.",
+      "og:description": "Learn from startup failures and successes in 5 min or less. The stories, frameworks, and tactics that will make you a 10x better founder.",
+      "og:image": "https://cdn.prod.website-files.com/5fada95bd7a18db677087e20/65ce35877fa5c6affc710db4_Landing%20Page%20Social%20Share%20Image%20Final.png",
+      "og:type": "website"
+    },
+    "created_at": "2026-04-04T08:14:27.507Z",
+    "save_count": 4,
+    "comment_count": 1,
+    "last_saved_at": "2026-04-04T08:16:30.017Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 41,
+  "fields": {
+    "url": "https://www.first1000.co/",
+    "metadata": {
+      "og:title": "First 1000 — Notes from a Duolingo PM building Lazyweb to 1,000 customers",
+      "og:description": "Notes from a Duolingo PM using AI to design and grow Lazyweb.com to 1,000 paying customers. Join the First 1000 newsletter."
+    },
+    "created_at": "2026-04-04T08:14:27.515Z",
+    "save_count": 2,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:14:27.518Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 42,
+  "fields": {
+    "url": "https://alternativeto.net/",
+    "metadata": {
+      "og:title": "AlternativeTo – Crowdsourced software recommendations",
+      "og:description": "Find alternatives to any software, app or service."
+    },
+    "created_at": "2026-04-04T08:14:27.520Z",
+    "save_count": 3,
+    "comment_count": 1,
+    "last_saved_at": "2026-04-04T08:16:30.020Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 43,
+  "fields": {
+    "url": "https://squoosh.app/",
+    "metadata": {
+      "og:title": "Squoosh",
+      "og:type": "website",
+      "og:image": "https://squoosh.app/c/icon-large-maskable-c2078ced.png",
+      "og:image:secure_url": "https://squoosh.app/c/icon-large-maskable-c2078ced.png",
+      "og:image:type": "image/png",
+      "og:image:width": "500",
+      "og:image:height": "500",
+      "og:image:alt": "A cartoon of a hand squeezing an image file on a dark background.",
+      "og:description": "Squoosh is the ultimate image optimizer that allows you to compress and compare images with different codecs in your browser."
+    },
+    "created_at": "2026-04-04T08:14:27.525Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.023Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 44,
+  "fields": {
+    "url": "https://tinypng.com/",
+    "metadata": {
+      "og:title": "TinyPNG – Compress AVIF, WebP, PNG and JPEG images",
+      "og:description": "Free online image optimizer for faster websites! Reduce the file size of your AVIF, WEBP, JPEG and PNG images while preserving the image quality.",
+      "og:type": "website",
+      "og:url": "https://tinypng.com/",
+      "og:image": "https://tinypng.com/images/social/website.jpg"
+    },
+    "created_at": "2026-04-04T08:14:27.531Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.028Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 45,
+  "fields": {
+    "url": "https://colorleap.app/",
+    "metadata": {
+      "og:type": "website",
+      "og:title": "Color Leap - History's Palettes",
+      "og:description": "Search through 180 Color Palettes used throughout the last 4000 years.",
+      "og:image": "https://firebasestorage.googleapis.com/v0/b/color-leap-59240.appspot.com/o/CLmeta.png?alt=media&token=dea509fc-2dee-44cb-a05e-b8e6218fc9f9",
+      "og:url": "https://colorleap.app"
+    },
+    "created_at": "2026-04-04T08:14:27.537Z",
+    "save_count": 5,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.035Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 46,
+  "fields": {
+    "url": "https://animagraffs.com/",
+    "metadata": {
+      "og:url": "https://animagraffs.com/how-a-fire-engine-works/",
+      "og:locale": "en_US",
+      "og:site_name": "Animagraffs",
+      "og:title": "Animagraffs - Animated infographics about everything.",
+      "og:type": "website",
+      "og:description": "Animated infographics about everything."
+    },
+    "created_at": "2026-04-04T08:14:27.542Z",
+    "save_count": 3,
+    "comment_count": 1,
+    "last_saved_at": "2026-04-04T08:14:27.549Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 47,
+  "fields": {
+    "url": "https://www.howacarworks.com/",
+    "metadata": {
+      "og:title": "How a Car Works",
+      "og:description": "Beautifully illustrated guides to car mechanics, automotive engineering and tools.",
+      "og:type": "website",
+      "og:image": "https://www.howacarworks.com/assets/open-graph-image.en-d4992f8c59b6a1be431b2e4174dd478cd130f987bed8664a0eff19963abb408e.png",
+      "og:url": "https://www.howacarworks.com/"
+    },
+    "created_at": "2026-04-04T08:14:27.551Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.040Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 48,
+  "fields": {
+    "url": "https://www.lightpollutionmap.info/",
+    "metadata": {
+      "og:title": "Light Pollution Map",
+      "og:description": "Interactive world light pollution map. The map uses NASA Black marble VIIRS, Sky brightness, Aurora prediction, observatories, clouds and SQM/SQC overlay contributed by users.",
+      "og:image": "https://www.lightpollutionmap.info/icon-1024x1024.png",
+      "og:url": "https://www.lightpollutionmap.info/",
+      "og:type": "website"
+    },
+    "created_at": "2026-04-04T08:14:27.556Z",
+    "save_count": 4,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.045Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 49,
+  "fields": {
+    "url": "https://iss-sim.spacex.com/",
+    "metadata": {
+      "og:locale": "en_US",
+      "og:type": "website",
+      "og:title": "SPACEX - ISS Docking Simulator",
+      "og:site_name": "SPACEX - ISS Docking Simulator",
+      "og:description": "This simulator will familiarize you with the controls of the actual interface used by NASA Astronauts to manually pilot the SpaceX Dragon 2 vehicle to the International Space Station.",
+      "og:image": "https://iss-sim.spacex.com/img/share.jpg",
+      "og:url": "https://iss-sim.spacex.com"
+    },
+    "created_at": "2026-04-04T08:14:27.561Z",
+    "save_count": 4,
+    "comment_count": 1,
+    "last_saved_at": "2026-04-04T08:14:27.569Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 50,
+  "fields": {
+    "url": "https://onetimesecret.com/",
+    "metadata": {
+      "og:type": "website",
+      "og:url": "https://onetimesecret.com/",
+      "og:title": "Share Secrets Securely",
+      "og:description": "Share sensitive information securely with self-destructing links. Paste your secret, generate a link, and share it. Once viewed, it's gone forever",
+      "og:image": "https://onetimesecret.com/etc/img/social/onetimesecret-home-og.png",
+      "og:site_name": "Onetime Secret"
+    },
+    "created_at": "2026-04-04T08:14:27.571Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:14:27.576Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 51,
+  "fields": {
+    "url": "https://app.diagrams.net/",
+    "metadata": {
+      "og:title": "Flowchart Maker & Online Diagram Software"
+    },
+    "created_at": "2026-04-04T08:14:27.578Z",
+    "save_count": 3,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.048Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 52,
+  "fields": {
+    "url": "https://astro.build/",
+    "metadata": {
+      "og:title": "Astro",
+      "og:type": "website",
+      "og:url": "https://astro.build/",
+      "og:locale": "en",
+      "og:description": "Astro builds fast content sites, powerful web applications, dynamic server APIs, and everything in-between.",
+      "og:site_name": "Astro",
+      "og:image": "https://astro.build/og/astro.jpg",
+      "og:image:alt": "Astro - Build the web you want."
+    },
+    "created_at": "2026-04-04T08:14:27.585Z",
+    "save_count": 4,
+    "comment_count": 2,
+    "last_saved_at": "2026-04-04T08:16:30.051Z"
+  }
+},
+{
+  "model": "core.link",
+  "pk": 53,
+  "fields": {
+    "url": "https://dbdiagram.io/home",
+    "metadata": {
+      "og:image": "https://media.holistics.io/88148634-dbdiagram-og-image.png",
+      "og:image:secure_url": "https://media.holistics.io/88148634-dbdiagram-og-image.png",
+      "og:title": "dbdiagram.io - Database Relationship Diagrams Design Tool",
+      "og:description": "Quick and simple free tool to help you draw your database relationship diagrams and flow quickly using simple DSL language."
+    },
+    "created_at": "2026-04-04T08:14:27.599Z",
+    "save_count": 5,
+    "comment_count": 0,
+    "last_saved_at": "2026-04-04T08:16:30.056Z"
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "link": 1,
+    "parent": null,
+    "note": "Big release. Async support is finally mature.",
+    "is_private": false,
+    "note_html": "<p>Big release. Async support is finally mature.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.431Z",
+    "tags": [
+      2,
+      1,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "link": 2,
+    "parent": null,
+    "note": "Best explanation of ownership I've read.",
+    "is_private": false,
+    "note_html": "<p>Best explanation of ownership I've read.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.437Z",
+    "tags": [
+      4
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "link": 3,
+    "parent": null,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.443Z",
+    "tags": [
+      7,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 4,
+  "fields": {
+    "user": 4,
+    "link": 4,
+    "parent": null,
+    "note": "After years of pip and poetry, uv is a breath of fresh air.",
+    "is_private": false,
+    "note_html": "<p>After years of pip and poetry, uv is a breath of fresh air.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.448Z",
+    "tags": [
+      6,
+      1
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "link": 5,
+    "parent": null,
+    "note": "This + Django = no need for React.",
+    "is_private": false,
+    "note_html": "<p>This + Django = no need for React.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.453Z",
+    "tags": [
+      3,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "link": 6,
+    "parent": null,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.456Z",
+    "tags": [
+      6
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 7,
+  "fields": {
+    "user": 3,
+    "link": 7,
+    "parent": null,
+    "note": "Wish I had this when I started programming.",
+    "is_private": false,
+    "note_html": "<p>Wish I had this when I started programming.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.460Z",
+    "tags": [
+      7
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 8,
+  "fields": {
+    "user": 4,
+    "link": 8,
+    "parent": null,
+    "note": "Unpopular opinion: utility-first CSS couples your markup to presentation.",
+    "is_private": false,
+    "note_html": "<p>Unpopular opinion: utility-first CSS couples your markup to presentation.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.464Z",
+    "tags": [
+      7,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "link": 9,
+    "parent": null,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.468Z",
+    "tags": [
+      1
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 10,
+  "fields": {
+    "user": 2,
+    "link": 10,
+    "parent": null,
+    "note": "SQLite in prod is actually viable with this.",
+    "is_private": false,
+    "note_html": "<p>SQLite in prod is actually viable with this.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.471Z",
+    "tags": [
+      6
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 11,
+  "fields": {
+    "user": 3,
+    "link": 11,
+    "parent": null,
+    "note": "Memory safety without garbage collection. Every C developer should learn this.",
+    "is_private": false,
+    "note_html": "<p>Memory safety without garbage collection. Every C developer should learn this.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.474Z",
+    "tags": [
+      4
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 12,
+  "fields": {
+    "user": 4,
+    "link": 12,
+    "parent": null,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.478Z",
+    "tags": [
+      2,
+      1,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 13,
+  "fields": {
+    "user": 1,
+    "link": 13,
+    "parent": null,
+    "note": "Required reading for every new developer.",
+    "is_private": false,
+    "note_html": "<p>Required reading for every new developer.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.481Z",
+    "tags": [
+      7
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 14,
+  "fields": {
+    "user": 2,
+    "link": 13,
+    "parent": 13,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.485Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 15,
+  "fields": {
+    "user": 3,
+    "link": 12,
+    "parent": 12,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.487Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 16,
+  "fields": {
+    "user": 1,
+    "link": 11,
+    "parent": 11,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.490Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 17,
+  "fields": {
+    "user": 4,
+    "link": 10,
+    "parent": 10,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.492Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 18,
+  "fields": {
+    "user": 3,
+    "link": 9,
+    "parent": 9,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.495Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 19,
+  "fields": {
+    "user": 3,
+    "link": 8,
+    "parent": 8,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.498Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 20,
+  "fields": {
+    "user": 1,
+    "link": 6,
+    "parent": 6,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.501Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 21,
+  "fields": {
+    "user": 4,
+    "link": 6,
+    "parent": 6,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.504Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 22,
+  "fields": {
+    "user": 2,
+    "link": 5,
+    "parent": 5,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.507Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 23,
+  "fields": {
+    "user": 2,
+    "link": 4,
+    "parent": 4,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.510Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 24,
+  "fields": {
+    "user": 1,
+    "link": 3,
+    "parent": 3,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.513Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 25,
+  "fields": {
+    "user": 2,
+    "link": 3,
+    "parent": 3,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.515Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 26,
+  "fields": {
+    "user": 4,
+    "link": 3,
+    "parent": 3,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.517Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 27,
+  "fields": {
+    "user": 1,
+    "link": 2,
+    "parent": 2,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.519Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 28,
+  "fields": {
+    "user": 3,
+    "link": 2,
+    "parent": 2,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.521Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 29,
+  "fields": {
+    "user": 3,
+    "link": 1,
+    "parent": 1,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.524Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 30,
+  "fields": {
+    "user": 4,
+    "link": 1,
+    "parent": 1,
+    "note": "",
+    "is_private": true,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T06:55:57.526Z",
+    "tags": [],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 31,
+  "fields": {
+    "user": 5,
+    "link": 14,
+    "parent": null,
+    "note": "En iyi hızlı yazma oyunu. Her gün 10 dk oynuyorum.",
+    "is_private": false,
+    "note_html": "<p>En iyi hızlı yazma oyunu. Her gün 10 dk oynuyorum.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.304Z",
+    "tags": [
+      47,
+      19,
+      22
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 32,
+  "fields": {
+    "user": 8,
+    "link": 14,
+    "parent": 31,
+    "note": "İş yerinde herkes bağımlı oldu buna.",
+    "is_private": false,
+    "note_html": "<p>İş yerinde herkes bağımlı oldu buna.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.308Z",
+    "tags": [
+      47,
+      19,
+      22
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 33,
+  "fields": {
+    "user": 9,
+    "link": 14,
+    "parent": 31,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.311Z",
+    "tags": [
+      47,
+      19,
+      22
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 34,
+  "fields": {
+    "user": 6,
+    "link": 15,
+    "parent": null,
+    "note": "Çocukluğumun oyunu. Nostalji.",
+    "is_private": false,
+    "note_html": "<p>Çocukluğumun oyunu. Nostalji.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.315Z",
+    "tags": [
+      47,
+      19,
+      55
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 35,
+  "fields": {
+    "user": 9,
+    "link": 15,
+    "parent": 34,
+    "note": "Kontroller orijinale çok sadık kalmış.",
+    "is_private": false,
+    "note_html": "<p>Kontroller orijinale çok sadık kalmış.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.317Z",
+    "tags": [
+      47,
+      19,
+      55
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 36,
+  "fields": {
+    "user": 7,
+    "link": 15,
+    "parent": 34,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.319Z",
+    "tags": [
+      47,
+      19,
+      55
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 37,
+  "fields": {
+    "user": 7,
+    "link": 16,
+    "parent": null,
+    "note": "Basit başlıyor ama sonra inanılmaz derinleşiyor. Bitirmem 3 gün sürdü.",
+    "is_private": false,
+    "note_html": "<p>Basit başlıyor ama sonra inanılmaz derinleşiyor. Bitirmem 3 gün sürdü.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.323Z",
+    "tags": [
+      47,
+      19,
+      62
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 38,
+  "fields": {
+    "user": 9,
+    "link": 16,
+    "parent": 37,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.325Z",
+    "tags": [
+      47,
+      19,
+      62
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 39,
+  "fields": {
+    "user": 3,
+    "link": 17,
+    "parent": null,
+    "note": "Yapay zeka çizimlerimi tanıyabiliyor mu diye test ettim. Güldüm.",
+    "is_private": false,
+    "note_html": "<p>Yapay zeka çizimlerimi tanıyabiliyor mu diye test ettim. Güldüm.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.329Z",
+    "tags": [
+      37,
+      19,
+      12
+    ],
+    "collections": [
+      6
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 40,
+  "fields": {
+    "user": 5,
+    "link": 17,
+    "parent": 39,
+    "note": "Çocuklarla birlikte oynamak için harika.",
+    "is_private": false,
+    "note_html": "<p>Çocuklarla birlikte oynamak için harika.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.332Z",
+    "tags": [
+      37,
+      19,
+      12
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 41,
+  "fields": {
+    "user": 8,
+    "link": 18,
+    "parent": null,
+    "note": "CSS selector öğrenmek için en iyi yol.",
+    "is_private": false,
+    "note_html": "<p>CSS selector öğrenmek için en iyi yol.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.335Z",
+    "tags": [
+      18,
+      19,
+      64
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 42,
+  "fields": {
+    "user": 6,
+    "link": 18,
+    "parent": 41,
+    "note": "Stajyerlere ilk gün bunu veriyorum.",
+    "is_private": false,
+    "note_html": "<p>Stajyerlere ilk gün bunu veriyorum.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.337Z",
+    "tags": [
+      18,
+      19,
+      64
+    ],
+    "collections": [
+      2
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 43,
+  "fields": {
+    "user": 7,
+    "link": 18,
+    "parent": 41,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.339Z",
+    "tags": [
+      18,
+      19,
+      64
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 44,
+  "fields": {
+    "user": 9,
+    "link": 18,
+    "parent": 41,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.342Z",
+    "tags": [
+      18,
+      19,
+      64
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 45,
+  "fields": {
+    "user": 9,
+    "link": 19,
+    "parent": null,
+    "note": "Asansör algoritması yazmak düşündüğünüzden zor.",
+    "is_private": false,
+    "note_html": "<p>Asansör algoritması yazmak düşündüğünüzden zor.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.345Z",
+    "tags": [
+      19,
+      3,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 46,
+  "fields": {
+    "user": 6,
+    "link": 19,
+    "parent": 45,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.347Z",
+    "tags": [
+      19,
+      3,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 47,
+  "fields": {
+    "user": 6,
+    "link": 20,
+    "parent": null,
+    "note": "Vim öğrenmek için en eğlenceli yol.",
+    "is_private": false,
+    "note_html": "<p>Vim öğrenmek için en eğlenceli yol.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.350Z",
+    "tags": [
+      19,
+      71,
+      39
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 48,
+  "fields": {
+    "user": 8,
+    "link": 20,
+    "parent": 47,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.352Z",
+    "tags": [
+      19,
+      71,
+      39
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 49,
+  "fields": {
+    "user": 6,
+    "link": 21,
+    "parent": null,
+    "note": "Kendi betik dilini yazmak isteyenler için mükemmel kaynak.",
+    "is_private": false,
+    "note_html": "<p>Kendi betik dilini yazmak isteyenler için mükemmel kaynak.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.356Z",
+    "tags": [
+      13,
+      60,
+      34
+    ],
+    "collections": [
+      2
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 50,
+  "fields": {
+    "user": 9,
+    "link": 21,
+    "parent": 49,
+    "note": "Java ve C bölümleri ayrı ayrı yazılmış. İkisi de çok kaliteli.",
+    "is_private": false,
+    "note_html": "<p>Java ve C bölümleri ayrı ayrı yazılmış. İkisi de çok kaliteli.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.358Z",
+    "tags": [
+      13,
+      60,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 51,
+  "fields": {
+    "user": 3,
+    "link": 21,
+    "parent": 49,
+    "note": "Bölüm bölüm okudum, her biri kendi başına değerli.",
+    "is_private": false,
+    "note_html": "<p>Bölüm bölüm okudum, her biri kendi başına değerli.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.360Z",
+    "tags": [
+      13,
+      60,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 52,
+  "fields": {
+    "user": 5,
+    "link": 21,
+    "parent": 49,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.363Z",
+    "tags": [
+      13,
+      60,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 53,
+  "fields": {
+    "user": 8,
+    "link": 22,
+    "parent": null,
+    "note": "Karmaşık bash komutlarını anlamak için vazgeçilmez.",
+    "is_private": false,
+    "note_html": "<p>Karmaşık bash komutlarını anlamak için vazgeçilmez.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.368Z",
+    "tags": [
+      50,
+      59,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 54,
+  "fields": {
+    "user": 5,
+    "link": 22,
+    "parent": 53,
+    "note": "Stack Overflow yerine buna yapıştırıyorum komutu.",
+    "is_private": false,
+    "note_html": "<p>Stack Overflow yerine buna yapıştırıyorum komutu.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.370Z",
+    "tags": [
+      50,
+      59,
+      71
+    ],
+    "collections": [
+      1
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 55,
+  "fields": {
+    "user": 7,
+    "link": 22,
+    "parent": 53,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.372Z",
+    "tags": [
+      50,
+      59,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 56,
+  "fields": {
+    "user": 7,
+    "link": 23,
+    "parent": null,
+    "note": "Git force push yaptıktan sonra bu siteyi keşfettim. Keşke daha önce bilseydim.",
+    "is_private": false,
+    "note_html": "<p>Git force push yaptıktan sonra bu siteyi keşfettim. Keşke daha önce bilseydim.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.375Z",
+    "tags": [
+      35,
+      71,
+      44
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 57,
+  "fields": {
+    "user": 8,
+    "link": 23,
+    "parent": 56,
+    "note": "Türkçe çevirisi de var, harika.",
+    "is_private": false,
+    "note_html": "<p>Türkçe çevirisi de var, harika.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.377Z",
+    "tags": [
+      35,
+      71,
+      44
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 58,
+  "fields": {
+    "user": 9,
+    "link": 13,
+    "parent": 13,
+    "note": "Yıllar sonra tekrar okudum, hala geçerli.",
+    "is_private": false,
+    "note_html": "<p>Yıllar sonra tekrar okudum, hala geçerli.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.379Z",
+    "tags": [
+      31,
+      54,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 59,
+  "fields": {
+    "user": 6,
+    "link": 13,
+    "parent": 13,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.382Z",
+    "tags": [
+      31,
+      54,
+      34
+    ],
+    "collections": [
+      2
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 60,
+  "fields": {
+    "user": 7,
+    "link": 13,
+    "parent": 13,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.384Z",
+    "tags": [
+      31,
+      54,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 61,
+  "fields": {
+    "user": 3,
+    "link": 24,
+    "parent": null,
+    "note": "Commit mesajlarına emoji eklemek artık standart olmalı.",
+    "is_private": false,
+    "note_html": "<p>Commit mesajlarına emoji eklemek artık standart olmalı.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.388Z",
+    "tags": [
+      57,
+      35,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 62,
+  "fields": {
+    "user": 7,
+    "link": 24,
+    "parent": 61,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.390Z",
+    "tags": [
+      57,
+      35,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 63,
+  "fields": {
+    "user": 5,
+    "link": 25,
+    "parent": null,
+    "note": "Yeni bir teknoloji öğrenirken ilk baktığım yer.",
+    "is_private": false,
+    "note_html": "<p>Yeni bir teknoloji öğrenirken ilk baktığım yer.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.393Z",
+    "tags": [
+      49,
+      71,
+      5
+    ],
+    "collections": [
+      1
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 64,
+  "fields": {
+    "user": 6,
+    "link": 25,
+    "parent": 63,
+    "note": "Özellikle Bash ve Vim sayfaları çok iyi.",
+    "is_private": false,
+    "note_html": "<p>Özellikle Bash ve Vim sayfaları çok iyi.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.395Z",
+    "tags": [
+      49,
+      71,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 65,
+  "fields": {
+    "user": 7,
+    "link": 25,
+    "parent": 63,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.397Z",
+    "tags": [
+      49,
+      71,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 66,
+  "fields": {
+    "user": 9,
+    "link": 26,
+    "parent": null,
+    "note": "Her açık kaynak projede kullanılmalı.",
+    "is_private": false,
+    "note_html": "<p>Her açık kaynak projede kullanılmalı.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.401Z",
+    "tags": [
+      28,
+      10,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 67,
+  "fields": {
+    "user": 6,
+    "link": 26,
+    "parent": 66,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.403Z",
+    "tags": [
+      28,
+      10,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 68,
+  "fields": {
+    "user": 3,
+    "link": 26,
+    "parent": 66,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.405Z",
+    "tags": [
+      28,
+      10,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 69,
+  "fields": {
+    "user": 7,
+    "link": 27,
+    "parent": null,
+    "note": "Google 1998 tasarımı ile bugünkü arasındaki fark inanılmaz.",
+    "is_private": false,
+    "note_html": "<p>Google 1998 tasarımı ile bugünkü arasındaki fark inanılmaz.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.408Z",
+    "tags": [
+      21,
+      53,
+      61
+    ],
+    "collections": [
+      3
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 70,
+  "fields": {
+    "user": 3,
+    "link": 27,
+    "parent": 69,
+    "note": "İnternet kültürü müzesi. Saatlerce gezebilirsiniz.",
+    "is_private": false,
+    "note_html": "<p>İnternet kültürü müzesi. Saatlerce gezebilirsiniz.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.410Z",
+    "tags": [
+      21,
+      53,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 71,
+  "fields": {
+    "user": 5,
+    "link": 27,
+    "parent": 69,
+    "note": "GeoCities sayfaları beni güldürdü.",
+    "is_private": false,
+    "note_html": "<p>GeoCities sayfaları beni güldürdü.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.413Z",
+    "tags": [
+      21,
+      53,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 72,
+  "fields": {
+    "user": 6,
+    "link": 27,
+    "parent": 69,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.415Z",
+    "tags": [
+      21,
+      53,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 73,
+  "fields": {
+    "user": 9,
+    "link": 27,
+    "parent": 69,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.417Z",
+    "tags": [
+      21,
+      53,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 74,
+  "fields": {
+    "user": 8,
+    "link": 28,
+    "parent": null,
+    "note": "E-posta okumak için 8MB JS indirmek yanlış.",
+    "is_private": false,
+    "note_html": "<p>E-posta okumak için 8MB JS indirmek yanlış.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.420Z",
+    "tags": [
+      69,
+      38,
+      5
+    ],
+    "collections": [
+      4
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 75,
+  "fields": {
+    "user": 9,
+    "link": 28,
+    "parent": 74,
+    "note": "Benim kişisel sitem 12KB. Gurur duyuyorum.",
+    "is_private": false,
+    "note_html": "<p>Benim kişisel sitem 12KB. Gurur duyuyorum.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.423Z",
+    "tags": [
+      69,
+      38,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 76,
+  "fields": {
+    "user": 1,
+    "link": 28,
+    "parent": 74,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.425Z",
+    "tags": [
+      69,
+      38,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 77,
+  "fields": {
+    "user": 5,
+    "link": 29,
+    "parent": null,
+    "note": "Toplantılarda beyaz tahta yerine bunu kullanıyoruz.",
+    "is_private": false,
+    "note_html": "<p>Toplantılarda beyaz tahta yerine bunu kullanıyoruz.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.428Z",
+    "tags": [
+      7,
+      40,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 78,
+  "fields": {
+    "user": 6,
+    "link": 29,
+    "parent": 77,
+    "note": "Figma çok ağır geldiğinde Excalidraw kurtarıyor.",
+    "is_private": false,
+    "note_html": "<p>Figma çok ağır geldiğinde Excalidraw kurtarıyor.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.430Z",
+    "tags": [
+      7,
+      40,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 79,
+  "fields": {
+    "user": 1,
+    "link": 29,
+    "parent": 77,
+    "note": "Collaborative özelliği çok iyi çalışıyor.",
+    "is_private": false,
+    "note_html": "<p>Collaborative özelliği çok iyi çalışıyor.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.433Z",
+    "tags": [
+      7,
+      40,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 80,
+  "fields": {
+    "user": 7,
+    "link": 29,
+    "parent": 77,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.435Z",
+    "tags": [
+      7,
+      40,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 81,
+  "fields": {
+    "user": 9,
+    "link": 29,
+    "parent": 77,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.437Z",
+    "tags": [
+      7,
+      40,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 82,
+  "fields": {
+    "user": 3,
+    "link": 30,
+    "parent": null,
+    "note": "Font seçimi konusunda kararssızlığıma son verdi.",
+    "is_private": false,
+    "note_html": "<p>Font seçimi konusunda kararssızlığıma son verdi.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.440Z",
+    "tags": [
+      37,
+      7,
+      9
+    ],
+    "collections": [
+      6
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 83,
+  "fields": {
+    "user": 6,
+    "link": 30,
+    "parent": 82,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.442Z",
+    "tags": [
+      37,
+      7,
+      9
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 84,
+  "fields": {
+    "user": 7,
+    "link": 31,
+    "parent": null,
+    "note": "Space tuşuna basarak yeni palet üretmek bağımlılık yapıyor.",
+    "is_private": false,
+    "note_html": "<p>Space tuşuna basarak yeni palet üretmek bağımlılık yapıyor.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.445Z",
+    "tags": [
+      41,
+      7,
+      71
+    ],
+    "collections": [
+      3
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 85,
+  "fields": {
+    "user": 8,
+    "link": 31,
+    "parent": 84,
+    "note": "Her projemde kullanıyorum.",
+    "is_private": false,
+    "note_html": "<p>Her projemde kullanıyorum.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.447Z",
+    "tags": [
+      41,
+      7,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 86,
+  "fields": {
+    "user": 5,
+    "link": 32,
+    "parent": null,
+    "note": "CSS grid sıkıştığımda mutlaka başvurduğum kaynak.",
+    "is_private": false,
+    "note_html": "<p>CSS grid sıkıştığımda mutlaka başvurduğum kaynak.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.450Z",
+    "tags": [
+      18,
+      67,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 87,
+  "fields": {
+    "user": 9,
+    "link": 32,
+    "parent": 86,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.452Z",
+    "tags": [
+      18,
+      67,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 88,
+  "fields": {
+    "user": 3,
+    "link": 33,
+    "parent": null,
+    "note": "CSS animasyonlarını kod yazmadan oluşturmak mümkün.",
+    "is_private": false,
+    "note_html": "<p>CSS animasyonlarını kod yazmadan oluşturmak mümkün.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.455Z",
+    "tags": [
+      65,
+      18,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 89,
+  "fields": {
+    "user": 6,
+    "link": 33,
+    "parent": 88,
+    "note": "Entrance animasyonları projelerime hayat verdi.",
+    "is_private": false,
+    "note_html": "<p>Entrance animasyonları projelerime hayat verdi.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.457Z",
+    "tags": [
+      65,
+      18,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 90,
+  "fields": {
+    "user": 9,
+    "link": 33,
+    "parent": 88,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.460Z",
+    "tags": [
+      65,
+      18,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 91,
+  "fields": {
+    "user": 9,
+    "link": 34,
+    "parent": null,
+    "note": "Kod yazarken en iyi arkadaşım.",
+    "is_private": false,
+    "note_html": "<p>Kod yazarken en iyi arkadaşım.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.463Z",
+    "tags": [
+      8,
+      66,
+      46
+    ],
+    "collections": [
+      5
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 92,
+  "fields": {
+    "user": 7,
+    "link": 34,
+    "parent": 91,
+    "note": "Spotify yerine bunu açıyorum artık.",
+    "is_private": false,
+    "note_html": "<p>Spotify yerine bunu açıyorum artık.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.465Z",
+    "tags": [
+      8,
+      66,
+      46
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 93,
+  "fields": {
+    "user": 1,
+    "link": 34,
+    "parent": 91,
+    "note": "Episode 62 favorim.",
+    "is_private": false,
+    "note_html": "<p>Episode 62 favorim.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.467Z",
+    "tags": [
+      8,
+      66,
+      46
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 94,
+  "fields": {
+    "user": 8,
+    "link": 34,
+    "parent": 91,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.470Z",
+    "tags": [
+      8,
+      66,
+      46
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 95,
+  "fields": {
+    "user": 8,
+    "link": 35,
+    "parent": null,
+    "note": "Notion'dan geçtim, geri dönmem mümkün değil.",
+    "is_private": false,
+    "note_html": "<p>Notion'dan geçtim, geri dönmem mümkün değil.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.473Z",
+    "tags": [
+      23,
+      58,
+      46
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 96,
+  "fields": {
+    "user": 5,
+    "link": 35,
+    "parent": 95,
+    "note": "Zettelkasten metodu ile birlikte kullanınca müthiş.",
+    "is_private": false,
+    "note_html": "<p>Zettelkasten metodu ile birlikte kullanınca müthiş.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.475Z",
+    "tags": [
+      23,
+      58,
+      46
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 97,
+  "fields": {
+    "user": 3,
+    "link": 36,
+    "parent": null,
+    "note": "Notion'u bırakmama sebep olan uygulama.",
+    "is_private": false,
+    "note_html": "<p>Notion'u bırakmama sebep olan uygulama.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.478Z",
+    "tags": [
+      23,
+      71,
+      51
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 98,
+  "fields": {
+    "user": 1,
+    "link": 36,
+    "parent": 97,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.479Z",
+    "tags": [
+      23,
+      71,
+      51
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 99,
+  "fields": {
+    "user": 8,
+    "link": 36,
+    "parent": 97,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.482Z",
+    "tags": [
+      23,
+      71,
+      51
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 100,
+  "fields": {
+    "user": 9,
+    "link": 37,
+    "parent": null,
+    "note": "HTML email göndermek kabalık. Düz metin yeterli.",
+    "is_private": false,
+    "note_html": "<p>HTML email göndermek kabalık. Düz metin yeterli.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.485Z",
+    "tags": [
+      48,
+      32,
+      69
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 101,
+  "fields": {
+    "user": 6,
+    "link": 37,
+    "parent": 100,
+    "note": "Tartışmalı ama güzel argümanlar sunuyor.",
+    "is_private": false,
+    "note_html": "<p>Tartışmalı ama güzel argümanlar sunuyor.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.488Z",
+    "tags": [
+      48,
+      32,
+      69
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 102,
+  "fields": {
+    "user": 7,
+    "link": 37,
+    "parent": 100,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.490Z",
+    "tags": [
+      48,
+      32,
+      69
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 103,
+  "fields": {
+    "user": 8,
+    "link": 37,
+    "parent": 100,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.492Z",
+    "tags": [
+      48,
+      32,
+      69
+    ],
+    "collections": [
+      4
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 104,
+  "fields": {
+    "user": 8,
+    "link": 38,
+    "parent": null,
+    "note": "Bir haber okumak için 14MB indirmek zorunda kalmak anormal.",
+    "is_private": false,
+    "note_html": "<p>Bir haber okumak için 14MB indirmek zorunda kalmak anormal.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.495Z",
+    "tags": [
+      54,
+      32,
+      5
+    ],
+    "collections": [
+      4
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 105,
+  "fields": {
+    "user": 7,
+    "link": 38,
+    "parent": 104,
+    "note": "Her web geliştiricisinin okuması gereken manifesto.",
+    "is_private": false,
+    "note_html": "<p>Her web geliştiricisinin okuması gereken manifesto.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.498Z",
+    "tags": [
+      54,
+      32,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 106,
+  "fields": {
+    "user": 1,
+    "link": 38,
+    "parent": 104,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.500Z",
+    "tags": [
+      54,
+      32,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 107,
+  "fields": {
+    "user": 1,
+    "link": 39,
+    "parent": null,
+    "note": "Bu maddelerin hepsinin altına imzamı atarım.",
+    "is_private": false,
+    "note_html": "<p>Bu maddelerin hepsinin altına imzamı atarım.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.503Z",
+    "tags": [
+      28,
+      54,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 108,
+  "fields": {
+    "user": 5,
+    "link": 39,
+    "parent": 107,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.505Z",
+    "tags": [
+      28,
+      54,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 109,
+  "fields": {
+    "user": 5,
+    "link": 40,
+    "parent": null,
+    "note": "Başarı hikayelerinden çok başarısızlık hikayeleri öğretiyor.",
+    "is_private": false,
+    "note_html": "<p>Başarı hikayelerinden çok başarısızlık hikayeleri öğretiyor.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.508Z",
+    "tags": [
+      29,
+      43,
+      42
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 110,
+  "fields": {
+    "user": 9,
+    "link": 40,
+    "parent": 109,
+    "note": "Her girişimcinin ego kontrolü için okuması lazım.",
+    "is_private": false,
+    "note_html": "<p>Her girişimcinin ego kontrolü için okuması lazım.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.511Z",
+    "tags": [
+      29,
+      43,
+      42
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 111,
+  "fields": {
+    "user": 8,
+    "link": 40,
+    "parent": 109,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.513Z",
+    "tags": [
+      29,
+      43,
+      42
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 112,
+  "fields": {
+    "user": 8,
+    "link": 41,
+    "parent": null,
+    "note": "Notion ve Figma hikayeleri çok ilginç.",
+    "is_private": false,
+    "note_html": "<p>Notion ve Figma hikayeleri çok ilginç.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.516Z",
+    "tags": [
+      45,
+      36,
+      42
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 113,
+  "fields": {
+    "user": 9,
+    "link": 41,
+    "parent": 112,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.518Z",
+    "tags": [
+      45,
+      36,
+      42
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 114,
+  "fields": {
+    "user": 7,
+    "link": 42,
+    "parent": null,
+    "note": "Ücretli bir yazılımın bedava alternatifini bulmak için birebir.",
+    "is_private": false,
+    "note_html": "<p>Ücretli bir yazılımın bedava alternatifini bulmak için birebir.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.521Z",
+    "tags": [
+      56,
+      70,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 115,
+  "fields": {
+    "user": 1,
+    "link": 42,
+    "parent": 114,
+    "note": "Yıllardır kullanıyorum, community çok aktif.",
+    "is_private": false,
+    "note_html": "<p>Yıllardır kullanıyorum, community çok aktif.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.523Z",
+    "tags": [
+      56,
+      70,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 116,
+  "fields": {
+    "user": 3,
+    "link": 43,
+    "parent": null,
+    "note": "Google'ın yaptığı en iyi araçlardan biri.",
+    "is_private": false,
+    "note_html": "<p>Google'ın yaptığı en iyi araçlardan biri.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.526Z",
+    "tags": [
+      14,
+      38,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 117,
+  "fields": {
+    "user": 5,
+    "link": 43,
+    "parent": 116,
+    "note": "Web için görsel optimize etmek artık 2 dakika.",
+    "is_private": false,
+    "note_html": "<p>Web için görsel optimize etmek artık 2 dakika.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.529Z",
+    "tags": [
+      14,
+      38,
+      71
+    ],
+    "collections": [
+      1
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 118,
+  "fields": {
+    "user": 6,
+    "link": 44,
+    "parent": null,
+    "note": "Deploy öncesi mutlaka buradan geçiriyorum görselleri.",
+    "is_private": false,
+    "note_html": "<p>Deploy öncesi mutlaka buradan geçiriyorum görselleri.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.532Z",
+    "tags": [
+      14,
+      52,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 119,
+  "fields": {
+    "user": 8,
+    "link": 44,
+    "parent": 118,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.535Z",
+    "tags": [
+      14,
+      52,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 120,
+  "fields": {
+    "user": 7,
+    "link": 45,
+    "parent": null,
+    "note": "Rönesans dönemi renk paletleri gerçekten ilham verici.",
+    "is_private": false,
+    "note_html": "<p>Rönesans dönemi renk paletleri gerçekten ilham verici.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.538Z",
+    "tags": [
+      41,
+      7,
+      21
+    ],
+    "collections": [
+      3
+    ]
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 121,
+  "fields": {
+    "user": 3,
+    "link": 45,
+    "parent": 120,
+    "note": "Art Nouveau paleti ile bir site tasarladım, çok beğenildi.",
+    "is_private": false,
+    "note_html": "<p>Art Nouveau paleti ile bir site tasarladım, çok beğenildi.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.540Z",
+    "tags": [
+      41,
+      7,
+      21
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 122,
+  "fields": {
+    "user": 9,
+    "link": 46,
+    "parent": null,
+    "note": "Dikiş makinesinin nasıl çalıştığını nihayet anladım.",
+    "is_private": false,
+    "note_html": "<p>Dikiş makinesinin nasıl çalıştığını nihayet anladım.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.544Z",
+    "tags": [
+      15,
+      24,
+      11
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 123,
+  "fields": {
+    "user": 8,
+    "link": 46,
+    "parent": 122,
+    "note": "Michael Jackson moonwalk açıklaması muhteşem.",
+    "is_private": false,
+    "note_html": "<p>Michael Jackson moonwalk açıklaması muhteşem.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.546Z",
+    "tags": [
+      15,
+      24,
+      11
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 124,
+  "fields": {
+    "user": 5,
+    "link": 46,
+    "parent": 122,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.549Z",
+    "tags": [
+      15,
+      24,
+      11
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 125,
+  "fields": {
+    "user": 6,
+    "link": 47,
+    "parent": null,
+    "note": "Debriyajdan elektrik aksamına kadar her şey var.",
+    "is_private": false,
+    "note_html": "<p>Debriyajdan elektrik aksamına kadar her şey var.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.552Z",
+    "tags": [
+      16,
+      15,
+      26
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 126,
+  "fields": {
+    "user": 8,
+    "link": 47,
+    "parent": 125,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.554Z",
+    "tags": [
+      16,
+      15,
+      26
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 127,
+  "fields": {
+    "user": 5,
+    "link": 48,
+    "parent": null,
+    "note": "Yıldız gözlemi yapacak yer bulmak için kullandım.",
+    "is_private": false,
+    "note_html": "<p>Yıldız gözlemi yapacak yer bulmak için kullandım.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.557Z",
+    "tags": [
+      63,
+      27,
+      11
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 128,
+  "fields": {
+    "user": 7,
+    "link": 48,
+    "parent": 127,
+    "note": "İstanbul'dan neden yıldız göremediğimizi anlatan harita.",
+    "is_private": false,
+    "note_html": "<p>İstanbul'dan neden yıldız göremediğimizi anlatan harita.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.559Z",
+    "tags": [
+      63,
+      27,
+      11
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 129,
+  "fields": {
+    "user": 8,
+    "link": 49,
+    "parent": null,
+    "note": "SpaceX'in yaptığı simülasyonu denedim. Park etmesi çok zor.",
+    "is_private": false,
+    "note_html": "<p>SpaceX'in yaptığı simülasyonu denedim. Park etmesi çok zor.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.562Z",
+    "tags": [
+      19,
+      30,
+      68
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 130,
+  "fields": {
+    "user": 9,
+    "link": 49,
+    "parent": 129,
+    "note": "45 dakikada dock edebildim. Gerçek astronotlara saygım arttı.",
+    "is_private": false,
+    "note_html": "<p>45 dakikada dock edebildim. Gerçek astronotlara saygım arttı.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.564Z",
+    "tags": [
+      19,
+      30,
+      68
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 131,
+  "fields": {
+    "user": 1,
+    "link": 49,
+    "parent": 129,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.567Z",
+    "tags": [
+      19,
+      30,
+      68
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 132,
+  "fields": {
+    "user": 7,
+    "link": 49,
+    "parent": 129,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.569Z",
+    "tags": [
+      19,
+      30,
+      68
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 133,
+  "fields": {
+    "user": 1,
+    "link": 50,
+    "parent": null,
+    "note": "Şifre paylaşmak için Slack yerine bunu kullanıyorum.",
+    "is_private": false,
+    "note_html": "<p>Şifre paylaşmak için Slack yerine bunu kullanıyorum.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.572Z",
+    "tags": [
+      25,
+      17,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 134,
+  "fields": {
+    "user": 6,
+    "link": 50,
+    "parent": 133,
+    "note": "Self-hosted versiyonu da var.",
+    "is_private": false,
+    "note_html": "<p>Self-hosted versiyonu da var.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.574Z",
+    "tags": [
+      25,
+      17,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 135,
+  "fields": {
+    "user": 3,
+    "link": 50,
+    "parent": 133,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.576Z",
+    "tags": [
+      25,
+      17,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 136,
+  "fields": {
+    "user": 3,
+    "link": 51,
+    "parent": null,
+    "note": "Lucidchart ve Miro yerine bedava alternatif.",
+    "is_private": false,
+    "note_html": "<p>Lucidchart ve Miro yerine bedava alternatif.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.579Z",
+    "tags": [
+      40,
+      20,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 137,
+  "fields": {
+    "user": 5,
+    "link": 51,
+    "parent": 136,
+    "note": "Git entegrasyonu ile diagram versiyonlama mümkün.",
+    "is_private": false,
+    "note_html": "<p>Git entegrasyonu ile diagram versiyonlama mümkün.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.582Z",
+    "tags": [
+      40,
+      20,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 138,
+  "fields": {
+    "user": 9,
+    "link": 52,
+    "parent": null,
+    "note": "React'i Astro ile sardık. Sayfa hızımız 3x arttı.",
+    "is_private": false,
+    "note_html": "<p>React'i Astro ile sardık. Sayfa hızımız 3x arttı.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.586Z",
+    "tags": [
+      3,
+      38,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 139,
+  "fields": {
+    "user": 8,
+    "link": 52,
+    "parent": 138,
+    "note": "Static site generator olarak en iyisi bence.",
+    "is_private": false,
+    "note_html": "<p>Static site generator olarak en iyisi bence.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.588Z",
+    "tags": [
+      3,
+      38,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 140,
+  "fields": {
+    "user": 1,
+    "link": 52,
+    "parent": 138,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.591Z",
+    "tags": [
+      3,
+      38,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 141,
+  "fields": {
+    "user": 1,
+    "link": 53,
+    "parent": null,
+    "note": "Her projeye başlamadan önce mutlaka uğradığım yer.",
+    "is_private": false,
+    "note_html": "<p>Her projeye başlamadan önce mutlaka uğradığım yer.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.601Z",
+    "tags": [
+      33,
+      7,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 142,
+  "fields": {
+    "user": 7,
+    "link": 53,
+    "parent": 141,
+    "note": "Kod yazarak diagram çizmek çok pratik.",
+    "is_private": false,
+    "note_html": "<p>Kod yazarak diagram çizmek çok pratik.</p>\n",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.604Z",
+    "tags": [
+      33,
+      7,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 143,
+  "fields": {
+    "user": 3,
+    "link": 53,
+    "parent": 141,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:14:27.607Z",
+    "tags": [
+      33,
+      7,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 144,
+  "fields": {
+    "user": 6,
+    "link": 14,
+    "parent": 31,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.933Z",
+    "tags": [
+      47,
+      19,
+      22
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 145,
+  "fields": {
+    "user": 3,
+    "link": 14,
+    "parent": 31,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.937Z",
+    "tags": [
+      47,
+      19,
+      22
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 146,
+  "fields": {
+    "user": 5,
+    "link": 15,
+    "parent": 34,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.941Z",
+    "tags": [
+      47,
+      19,
+      55
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 147,
+  "fields": {
+    "user": 6,
+    "link": 16,
+    "parent": 37,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.944Z",
+    "tags": [
+      47,
+      19,
+      62
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 148,
+  "fields": {
+    "user": 3,
+    "link": 16,
+    "parent": 37,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.946Z",
+    "tags": [
+      47,
+      19,
+      62
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 149,
+  "fields": {
+    "user": 8,
+    "link": 17,
+    "parent": 39,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.949Z",
+    "tags": [
+      37,
+      19,
+      12
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 150,
+  "fields": {
+    "user": 9,
+    "link": 17,
+    "parent": 39,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.952Z",
+    "tags": [
+      37,
+      19,
+      12
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 151,
+  "fields": {
+    "user": 1,
+    "link": 18,
+    "parent": 41,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.955Z",
+    "tags": [
+      18,
+      19,
+      64
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 152,
+  "fields": {
+    "user": 5,
+    "link": 19,
+    "parent": 45,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.958Z",
+    "tags": [
+      19,
+      3,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 153,
+  "fields": {
+    "user": 8,
+    "link": 19,
+    "parent": 45,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.961Z",
+    "tags": [
+      19,
+      3,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 154,
+  "fields": {
+    "user": 7,
+    "link": 21,
+    "parent": 49,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.964Z",
+    "tags": [
+      13,
+      60,
+      34
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 155,
+  "fields": {
+    "user": 6,
+    "link": 22,
+    "parent": 53,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.966Z",
+    "tags": [
+      50,
+      59,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 156,
+  "fields": {
+    "user": 5,
+    "link": 23,
+    "parent": 56,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.969Z",
+    "tags": [
+      35,
+      71,
+      44
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 157,
+  "fields": {
+    "user": 3,
+    "link": 23,
+    "parent": 56,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.972Z",
+    "tags": [
+      35,
+      71,
+      44
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 158,
+  "fields": {
+    "user": 9,
+    "link": 23,
+    "parent": 56,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.974Z",
+    "tags": [
+      35,
+      71,
+      44
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 159,
+  "fields": {
+    "user": 5,
+    "link": 24,
+    "parent": 61,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.977Z",
+    "tags": [
+      57,
+      35,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 160,
+  "fields": {
+    "user": 9,
+    "link": 24,
+    "parent": 61,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.980Z",
+    "tags": [
+      57,
+      35,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 161,
+  "fields": {
+    "user": 8,
+    "link": 27,
+    "parent": 69,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.983Z",
+    "tags": [
+      21,
+      53,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 162,
+  "fields": {
+    "user": 3,
+    "link": 28,
+    "parent": 74,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.986Z",
+    "tags": [
+      69,
+      38,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 163,
+  "fields": {
+    "user": 9,
+    "link": 30,
+    "parent": 82,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.990Z",
+    "tags": [
+      37,
+      7,
+      9
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 164,
+  "fields": {
+    "user": 6,
+    "link": 31,
+    "parent": 84,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.993Z",
+    "tags": [
+      41,
+      7,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 165,
+  "fields": {
+    "user": 6,
+    "link": 32,
+    "parent": 86,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.996Z",
+    "tags": [
+      18,
+      67,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 166,
+  "fields": {
+    "user": 7,
+    "link": 32,
+    "parent": 86,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:29.998Z",
+    "tags": [
+      18,
+      67,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 167,
+  "fields": {
+    "user": 5,
+    "link": 34,
+    "parent": 91,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.001Z",
+    "tags": [
+      8,
+      66,
+      46
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 168,
+  "fields": {
+    "user": 7,
+    "link": 36,
+    "parent": 97,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.004Z",
+    "tags": [
+      23,
+      71,
+      51
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 169,
+  "fields": {
+    "user": 5,
+    "link": 37,
+    "parent": 100,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.007Z",
+    "tags": [
+      48,
+      32,
+      69
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 170,
+  "fields": {
+    "user": 6,
+    "link": 38,
+    "parent": 104,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.011Z",
+    "tags": [
+      54,
+      32,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 171,
+  "fields": {
+    "user": 3,
+    "link": 39,
+    "parent": 107,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.014Z",
+    "tags": [
+      28,
+      54,
+      61
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 172,
+  "fields": {
+    "user": 1,
+    "link": 40,
+    "parent": 109,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.017Z",
+    "tags": [
+      29,
+      43,
+      42
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 173,
+  "fields": {
+    "user": 3,
+    "link": 42,
+    "parent": 114,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.020Z",
+    "tags": [
+      56,
+      70,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 174,
+  "fields": {
+    "user": 8,
+    "link": 43,
+    "parent": 116,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.022Z",
+    "tags": [
+      14,
+      38,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 175,
+  "fields": {
+    "user": 1,
+    "link": 44,
+    "parent": 118,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.025Z",
+    "tags": [
+      14,
+      52,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 176,
+  "fields": {
+    "user": 5,
+    "link": 44,
+    "parent": 118,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.028Z",
+    "tags": [
+      14,
+      52,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 177,
+  "fields": {
+    "user": 1,
+    "link": 45,
+    "parent": 120,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.030Z",
+    "tags": [
+      41,
+      7,
+      21
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 178,
+  "fields": {
+    "user": 6,
+    "link": 45,
+    "parent": 120,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.032Z",
+    "tags": [
+      41,
+      7,
+      21
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 179,
+  "fields": {
+    "user": 8,
+    "link": 45,
+    "parent": 120,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.034Z",
+    "tags": [
+      41,
+      7,
+      21
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 180,
+  "fields": {
+    "user": 7,
+    "link": 47,
+    "parent": 125,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.037Z",
+    "tags": [
+      16,
+      15,
+      26
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 181,
+  "fields": {
+    "user": 9,
+    "link": 47,
+    "parent": 125,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.040Z",
+    "tags": [
+      16,
+      15,
+      26
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 182,
+  "fields": {
+    "user": 3,
+    "link": 48,
+    "parent": 127,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.042Z",
+    "tags": [
+      63,
+      27,
+      11
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 183,
+  "fields": {
+    "user": 9,
+    "link": 48,
+    "parent": 127,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.044Z",
+    "tags": [
+      63,
+      27,
+      11
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 184,
+  "fields": {
+    "user": 9,
+    "link": 51,
+    "parent": 136,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.048Z",
+    "tags": [
+      40,
+      20,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 185,
+  "fields": {
+    "user": 6,
+    "link": 52,
+    "parent": 138,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.051Z",
+    "tags": [
+      3,
+      38,
+      5
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 186,
+  "fields": {
+    "user": 6,
+    "link": 53,
+    "parent": 141,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.053Z",
+    "tags": [
+      33,
+      7,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.bookmark",
+  "pk": 187,
+  "fields": {
+    "user": 9,
+    "link": 53,
+    "parent": 141,
+    "note": "",
+    "is_private": false,
+    "note_html": "",
+    "status": "unread",
+    "is_pinned": false,
+    "pinned_at": null,
+    "created_at": "2026-04-04T08:16:30.055Z",
+    "tags": [
+      33,
+      7,
+      71
+    ],
+    "collections": []
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 1,
+  "fields": {
+    "link": 1,
+    "posted_by": 2,
+    "body": "This is great news!",
+    "body_html": "<p>This is great news!</p>\n",
+    "created_at": "2026-04-04T06:55:57.529Z",
+    "updated_at": "2026-04-04T06:55:57.529Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 2,
+  "fields": {
+    "link": 1,
+    "posted_by": 1,
+    "body": "Agreed, can't wait to try the new features.",
+    "body_html": "<p>Agreed, can't wait to try the new features.</p>\n",
+    "created_at": "2026-04-04T06:55:57.532Z",
+    "updated_at": "2026-04-04T06:55:57.532Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 3,
+  "fields": {
+    "link": 1,
+    "posted_by": 3,
+    "body": "Already upgraded, zero issues so far.",
+    "body_html": "<p>Already upgraded, zero issues so far.</p>\n",
+    "created_at": "2026-04-04T06:55:57.534Z",
+    "updated_at": "2026-04-04T06:55:57.534Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 4,
+  "fields": {
+    "link": 2,
+    "posted_by": 4,
+    "body": "Ownership is the hardest part of Rust for newcomers.",
+    "body_html": "<p>Ownership is the hardest part of Rust for newcomers.</p>\n",
+    "created_at": "2026-04-04T06:55:57.536Z",
+    "updated_at": "2026-04-04T06:55:57.536Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 5,
+  "fields": {
+    "link": 2,
+    "posted_by": 2,
+    "body": "Once it clicks, you never want to go back to manual memory management.",
+    "body_html": "<p>Once it clicks, you never want to go back to manual memory management.</p>\n",
+    "created_at": "2026-04-04T06:55:57.539Z",
+    "updated_at": "2026-04-04T06:55:57.539Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 6,
+  "fields": {
+    "link": 5,
+    "posted_by": 1,
+    "body": "htmx + Django is such a great combo.",
+    "body_html": "<p>htmx + Django is such a great combo.</p>\n",
+    "created_at": "2026-04-04T06:55:57.541Z",
+    "updated_at": "2026-04-04T06:55:57.541Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 7,
+  "fields": {
+    "link": 5,
+    "posted_by": 3,
+    "body": "Replaced our entire React frontend with htmx. No regrets.",
+    "body_html": "<p>Replaced our entire React frontend with htmx. No regrets.</p>\n",
+    "created_at": "2026-04-04T06:55:57.543Z",
+    "updated_at": "2026-04-04T06:55:57.543Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 8,
+  "fields": {
+    "link": 9,
+    "posted_by": 2,
+    "body": "Strong disagree. Tailwind saved us so much time.",
+    "body_html": "<p>Strong disagree. Tailwind saved us so much time.</p>\n",
+    "created_at": "2026-04-04T06:55:57.545Z",
+    "updated_at": "2026-04-04T06:55:57.545Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 9,
+  "fields": {
+    "link": 9,
+    "posted_by": 4,
+    "body": "I agree with OP. Semantic CSS > utility classes.",
+    "body_html": "<p>I agree with OP. Semantic CSS &gt; utility classes.</p>\n",
+    "created_at": "2026-04-04T06:55:57.548Z",
+    "updated_at": "2026-04-04T06:55:57.548Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 10,
+  "fields": {
+    "link": 9,
+    "posted_by": 1,
+    "body": "Both approaches have tradeoffs. Use what fits your team.",
+    "body_html": "<p>Both approaches have tradeoffs. Use what fits your team.</p>\n",
+    "created_at": "2026-04-04T06:55:57.550Z",
+    "updated_at": "2026-04-04T06:55:57.550Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 11,
+  "fields": {
+    "link": 4,
+    "posted_by": 3,
+    "body": "uv is insanely fast. pip feels ancient now.",
+    "body_html": "<p>uv is insanely fast. pip feels ancient now.</p>\n",
+    "created_at": "2026-04-04T06:55:57.552Z",
+    "updated_at": "2026-04-04T06:55:57.552Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 12,
+  "fields": {
+    "link": 12,
+    "posted_by": 2,
+    "body": "Ninja is great for new projects but DRF has a much bigger ecosystem.",
+    "body_html": "<p>Ninja is great for new projects but DRF has a much bigger ecosystem.</p>\n",
+    "created_at": "2026-04-04T06:55:57.555Z",
+    "updated_at": "2026-04-04T06:55:57.555Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 13,
+  "fields": {
+    "link": 13,
+    "posted_by": 4,
+    "body": "Classic Norvig. Should be required reading.",
+    "body_html": "<p>Classic Norvig. Should be required reading.</p>\n",
+    "created_at": "2026-04-04T06:55:57.558Z",
+    "updated_at": "2026-04-04T06:55:57.558Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 14,
+  "fields": {
+    "link": 21,
+    "posted_by": 8,
+    "body": "Tree-walk interpreter bölümü tek başına bir kurs değerinde.",
+    "body_html": "<p>Tree-walk interpreter bölümü tek başına bir kurs değerinde.</p>\n",
+    "created_at": "2026-04-04T08:14:27.621Z",
+    "updated_at": "2026-04-04T08:14:27.621Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 15,
+  "fields": {
+    "link": 21,
+    "posted_by": 7,
+    "body": "Ben Lua bölümünden başladım, sonra Java'ya döndüm. İkisi de çok iyi.",
+    "body_html": "<p>Ben Lua bölümünden başladım, sonra Java'ya döndüm. İkisi de çok iyi.</p>\n",
+    "created_at": "2026-04-04T08:14:27.623Z",
+    "updated_at": "2026-04-04T08:14:27.623Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 16,
+  "fields": {
+    "link": 34,
+    "posted_by": 5,
+    "body": "Spotify Focus playlist lerinden çok daha iyi. Reklam yok, algoritma yok.",
+    "body_html": "<p>Spotify Focus playlist lerinden çok daha iyi. Reklam yok, algoritma yok.</p>\n",
+    "created_at": "2026-04-04T08:14:27.630Z",
+    "updated_at": "2026-04-04T08:14:27.630Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 17,
+  "fields": {
+    "link": 34,
+    "posted_by": 8,
+    "body": "Arayüzü bile kod yazma hissi veriyor.",
+    "body_html": "<p>Arayüzü bile kod yazma hissi veriyor.</p>\n",
+    "created_at": "2026-04-04T08:14:27.632Z",
+    "updated_at": "2026-04-04T08:14:27.632Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 18,
+  "fields": {
+    "link": 28,
+    "posted_by": 1,
+    "body": "kaydet.link da 250kb altında. Gururla katılabiliriz.",
+    "body_html": "<p>kaydet.link da 250kb altında. Gururla katılabiliriz.</p>\n",
+    "created_at": "2026-04-04T08:14:27.635Z",
+    "updated_at": "2026-04-04T08:14:27.635Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 19,
+  "fields": {
+    "link": 28,
+    "posted_by": 6,
+    "body": "Medium bile 4MB. Düşünün artık.",
+    "body_html": "<p>Medium bile 4MB. Düşünün artık.</p>\n",
+    "created_at": "2026-04-04T08:14:27.636Z",
+    "updated_at": "2026-04-04T08:14:27.636Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 20,
+  "fields": {
+    "link": 29,
+    "posted_by": 7,
+    "body": "Figma'ya gerek kalmadan hızlıca wireframe çiziyorum.",
+    "body_html": "<p>Figma'ya gerek kalmadan hızlıca wireframe çiziyorum.</p>\n",
+    "created_at": "2026-04-04T08:14:27.638Z",
+    "updated_at": "2026-04-04T08:14:27.638Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 21,
+  "fields": {
+    "link": 29,
+    "posted_by": 9,
+    "body": "Collaborative modu toplantılarda çok işe yarıyor.",
+    "body_html": "<p>Collaborative modu toplantılarda çok işe yarıyor.</p>\n",
+    "created_at": "2026-04-04T08:14:27.641Z",
+    "updated_at": "2026-04-04T08:14:27.641Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 22,
+  "fields": {
+    "link": 23,
+    "posted_by": 1,
+    "body": "git reflog hayat kurtarır. Bu siteden öğrendim.",
+    "body_html": "<p>git reflog hayat kurtarır. Bu siteden öğrendim.</p>\n",
+    "created_at": "2026-04-04T08:14:27.643Z",
+    "updated_at": "2026-04-04T08:14:27.643Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 23,
+  "fields": {
+    "link": 23,
+    "posted_by": 3,
+    "body": "Türkçe çeviri kalitesi çok iyi.",
+    "body_html": "<p>Türkçe çeviri kalitesi çok iyi.</p>\n",
+    "created_at": "2026-04-04T08:14:27.645Z",
+    "updated_at": "2026-04-04T08:14:27.645Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 24,
+  "fields": {
+    "link": 27,
+    "posted_by": 6,
+    "body": "Apple.com'un 1997 versiyonunu görünce şok oldum.",
+    "body_html": "<p>Apple.com'un 1997 versiyonunu görünce şok oldum.</p>\n",
+    "created_at": "2026-04-04T08:14:27.647Z",
+    "updated_at": "2026-04-04T08:14:27.647Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 25,
+  "fields": {
+    "link": 27,
+    "posted_by": 8,
+    "body": "Flash'lı siteler dönemi... Ne günlerdi.",
+    "body_html": "<p>Flash'lı siteler dönemi... Ne günlerdi.</p>\n",
+    "created_at": "2026-04-04T08:14:27.649Z",
+    "updated_at": "2026-04-04T08:14:27.649Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 26,
+  "fields": {
+    "link": 35,
+    "posted_by": 1,
+    "body": "Plugin ekosistemi inanılmaz zengin.",
+    "body_html": "<p>Plugin ekosistemi inanılmaz zengin.</p>\n",
+    "created_at": "2026-04-04T08:14:27.652Z",
+    "updated_at": "2026-04-04T08:14:27.652Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 27,
+  "fields": {
+    "link": 35,
+    "posted_by": 7,
+    "body": "Dataview plugin ile veritabanı gibi kullanabiliyorsunuz.",
+    "body_html": "<p>Dataview plugin ile veritabanı gibi kullanabiliyorsunuz.</p>\n",
+    "created_at": "2026-04-04T08:14:27.654Z",
+    "updated_at": "2026-04-04T08:14:27.654Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 28,
+  "fields": {
+    "link": 38,
+    "posted_by": 9,
+    "body": "2017'de yazılmış ama her yıl daha geçerli.",
+    "body_html": "<p>2017'de yazılmış ama her yıl daha geçerli.</p>\n",
+    "created_at": "2026-04-04T08:14:27.656Z",
+    "updated_at": "2026-04-04T08:14:27.656Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 29,
+  "fields": {
+    "link": 38,
+    "posted_by": 5,
+    "body": "Cookie banner ları da ekleseydi keşke.",
+    "body_html": "<p>Cookie banner ları da ekleseydi keşke.</p>\n",
+    "created_at": "2026-04-04T08:14:27.658Z",
+    "updated_at": "2026-04-04T08:14:27.658Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 30,
+  "fields": {
+    "link": 49,
+    "posted_by": 3,
+    "body": "Fizik dersinde öğretmen olsam bunu ödev olarak verirdim.",
+    "body_html": "<p>Fizik dersinde öğretmen olsam bunu ödev olarak verirdim.</p>\n",
+    "created_at": "2026-04-04T08:14:27.659Z",
+    "updated_at": "2026-04-04T08:14:27.660Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 31,
+  "fields": {
+    "link": 17,
+    "posted_by": 9,
+    "body": "Kedimi tanıyamadı ama bisikleti ilk çizgide bildi.",
+    "body_html": "<p>Kedimi tanıyamadı ama bisikleti ilk çizgide bildi.</p>\n",
+    "created_at": "2026-04-04T08:14:27.662Z",
+    "updated_at": "2026-04-04T08:14:27.662Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 32,
+  "fields": {
+    "link": 52,
+    "posted_by": 5,
+    "body": "Blog sitem Astro ile 5 dakikada ayağa kalktı.",
+    "body_html": "<p>Blog sitem Astro ile 5 dakikada ayağa kalktı.</p>\n",
+    "created_at": "2026-04-04T08:14:27.664Z",
+    "updated_at": "2026-04-04T08:14:27.664Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 33,
+  "fields": {
+    "link": 52,
+    "posted_by": 7,
+    "body": "Next.js'den geçtim, pişman değilim.",
+    "body_html": "<p>Next.js'den geçtim, pişman değilim.</p>\n",
+    "created_at": "2026-04-04T08:14:27.666Z",
+    "updated_at": "2026-04-04T08:14:27.666Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 34,
+  "fields": {
+    "link": 40,
+    "posted_by": 1,
+    "body": "Survivor bias'a karşı en iyi ilaç.",
+    "body_html": "<p>Survivor bias'a karşı en iyi ilaç.</p>\n",
+    "created_at": "2026-04-04T08:14:27.668Z",
+    "updated_at": "2026-04-04T08:14:27.668Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 35,
+  "fields": {
+    "link": 42,
+    "posted_by": 6,
+    "body": "Notion alternatifi ararken AppFlowy'yi burada buldum.",
+    "body_html": "<p>Notion alternatifi ararken AppFlowy'yi burada buldum.</p>\n",
+    "created_at": "2026-04-04T08:14:27.670Z",
+    "updated_at": "2026-04-04T08:14:27.670Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 36,
+  "fields": {
+    "link": 13,
+    "posted_by": 7,
+    "body": "Her sene bir kere okurum. Her seferinde farklı bir şey öğrenirim.",
+    "body_html": "<p>Her sene bir kere okurum. Her seferinde farklı bir şey öğrenirim.</p>\n",
+    "created_at": "2026-04-04T08:14:27.672Z",
+    "updated_at": "2026-04-04T08:14:27.672Z"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 37,
+  "fields": {
+    "link": 46,
+    "posted_by": 5,
+    "body": "Motor çalışma prensibi animasyonu muhteşem.",
+    "body_html": "<p>Motor çalışma prensibi animasyonu muhteşem.</p>\n",
+    "created_at": "2026-04-04T08:14:27.674Z",
+    "updated_at": "2026-04-04T08:14:27.674Z"
+  }
+},
+{
+  "model": "core.collection",
+  "pk": 1,
+  "fields": {
+    "name": "Günlük Araçlar",
+    "slug": "günlük-araçlar",
+    "description": "Her gün kullandığım web araçları",
+    "user": 5,
+    "is_private": false,
+    "position": 0,
+    "created_at": "2026-04-04T08:14:27.610Z",
+    "updated_at": "2026-04-04T08:14:27.610Z"
+  }
+},
+{
+  "model": "core.collection",
+  "pk": 2,
+  "fields": {
+    "name": "Öğrenme Kaynakları",
+    "slug": "öğrenme-kaynakları",
+    "description": "Yazılım öğrenmek için en iyi kaynaklar",
+    "user": 6,
+    "is_private": false,
+    "position": 0,
+    "created_at": "2026-04-04T08:14:27.612Z",
+    "updated_at": "2026-04-04T08:14:27.612Z"
+  }
+},
+{
+  "model": "core.collection",
+  "pk": 3,
+  "fields": {
+    "name": "Tasarım İlhamı",
+    "slug": "tasarım-ilhamı",
+    "description": "Tasarım yaparken başvurduğum yerler",
+    "user": 7,
+    "is_private": false,
+    "position": 0,
+    "created_at": "2026-04-04T08:14:27.614Z",
+    "updated_at": "2026-04-04T08:14:27.614Z"
+  }
+},
+{
+  "model": "core.collection",
+  "pk": 4,
+  "fields": {
+    "name": "Manifesto",
+    "slug": "manifesto",
+    "description": "Web nasıl olmalı hakkında fikirler",
+    "user": 8,
+    "is_private": false,
+    "position": 0,
+    "created_at": "2026-04-04T08:14:27.616Z",
+    "updated_at": "2026-04-04T08:14:27.616Z"
+  }
+},
+{
+  "model": "core.collection",
+  "pk": 5,
+  "fields": {
+    "name": "Kod Yazarken",
+    "slug": "kod-yazarken",
+    "description": "Kod yazma seansı için gereken her şey",
+    "user": 9,
+    "is_private": false,
+    "position": 0,
+    "created_at": "2026-04-04T08:14:27.617Z",
+    "updated_at": "2026-04-04T08:14:27.617Z"
+  }
+},
+{
+  "model": "core.collection",
+  "pk": 6,
+  "fields": {
+    "name": "Yapay Zeka Oyunları",
+    "slug": "yapay-zeka-oyunları",
+    "description": "AI ile etkileşimli projeler",
+    "user": 3,
+    "is_private": false,
+    "position": 0,
+    "created_at": "2026-04-04T08:14:27.619Z",
+    "updated_at": "2026-04-04T08:14:27.619Z"
+  }
+}
+]

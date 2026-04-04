@@ -34,6 +34,7 @@
             <div class="dashboard-bookmark-meta">
                 {% include "partials/status_badge.html" with bookmark=bookmark %}
                 {% include "partials/pin_button.html" with bookmark=bookmark %}
+                <a href="{% url 'bookmark-edit' pk=bookmark.pk %}" class="bookmark-edit-link">{% translate "edit" %}</a>
                 {% if bookmark.note %}<span class="note-indicator" title="{{ bookmark.note|truncatewords:20 }}">&#9998;</span>{% endif %}
                 {% if bookmark.tags.all %}
                 <span class="dashboard-bookmark-tags">

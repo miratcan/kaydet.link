@@ -144,6 +144,22 @@ class LinkService:
 
         links = Link.objects.filter(query).distinct()
 
+        # Annotate last saver username for social proof on cards
+        from django.contrib.auth import get_user_model
+        from django.db.models import CharField, Subquery
+
+        UserModel = get_user_model()
+        last_public_bookmark = Bookmark.objects.filter(
+            link=OuterRef('pk'),
+            is_private=False,
+        ).order_by('-created_at')
+        links = links.annotate(
+            last_saved_by=Subquery(
+                last_public_bookmark.values('user__username')[:1],
+                output_field=CharField(),
+            ),
+        )
+
         if user and user.is_authenticated:
             from django.db.models import Subquery
 

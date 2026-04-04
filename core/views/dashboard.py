@@ -3,6 +3,7 @@ from datetime import timedelta
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count
 from django.shortcuts import redirect
+from django.template.response import TemplateResponse
 from django.utils import timezone
 from django.views import View
 from django.views.generic import TemplateView
@@ -106,3 +107,22 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         context['random_bookmark'] = old_bookmarks.order_by('?').first()
 
         return context
+
+
+class DashboardRediscoverView(LoginRequiredMixin, View):
+    def get(self, request):
+        now = timezone.now()
+        random_bookmark = (
+            Bookmark.objects.filter(
+                user=request.user,
+                created_at__lte=now - timedelta(days=30),
+            )
+            .select_related('link')
+            .order_by('?')
+            .first()
+        )
+        return TemplateResponse(
+            request,
+            'dashboard/partials/rediscover.html',
+            {'random_bookmark': random_bookmark},
+        )

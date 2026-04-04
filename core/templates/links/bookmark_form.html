@@ -41,6 +41,13 @@
                     {{ form.tag_names }}
                     {% if form.tag_names.help_text %}<span class="helptext">{{ form.tag_names.help_text }}</span>{% endif %}
                     {{ form.tag_names.errors }}
+                    {% if user_tags %}
+                    <div class="tag-suggestions">
+                        {% for tag in user_tags %}
+                        <button type="button" class="tag-suggestion" onclick="addTag('{{ tag.name|escapejs }}')">{{ tag.name }}</button>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
 
                 <div class="form-field form-field-note">
@@ -95,6 +102,34 @@
 
 {% block extra_js %}
 <script>
+function addTag(name) {
+    var input = document.getElementById('id_tag_names');
+    var current = input.value.split(',').map(function(t) { return t.trim(); }).filter(Boolean);
+    if (current.indexOf(name) === -1) {
+        current.push(name);
+    }
+    input.value = current.join(', ');
+    input.focus();
+    syncTagChips();
+}
+function syncTagChips() {
+    var input = document.getElementById('id_tag_names');
+    var current = input.value.split(',').map(function(t) { return t.trim().toLowerCase(); }).filter(Boolean);
+    document.querySelectorAll('.tag-suggestion').forEach(function(btn) {
+        if (current.indexOf(btn.textContent.trim().toLowerCase()) !== -1) {
+            btn.classList.add('selected');
+        } else {
+            btn.classList.remove('selected');
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+    var input = document.getElementById('id_tag_names');
+    if (input) {
+        input.addEventListener('input', syncTagChips);
+        syncTagChips();
+    }
+});
 function toggleNotePreview() {
     const edit = document.getElementById('note-edit');
     const preview = document.getElementById('note-preview');

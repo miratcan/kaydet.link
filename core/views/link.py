@@ -42,7 +42,17 @@ class LinkListView(ListView):
         context = super().get_context_data(**kwargs)
         context['ordering'] = self.request.GET.get('ordering', 'hot')
         if 'tag_slug' in self.kwargs:
-            context['current_tag'] = get_object_or_404(Tag, slug=self.kwargs.get('tag_slug'))
+            current_tag = get_object_or_404(Tag, slug=self.kwargs.get('tag_slug'))
+            context['current_tag'] = current_tag
+            # Co-occurring tags: tags that appear on bookmarks alongside the current tag
+            context['related_tags'] = (
+                Tag.objects.filter(
+                    bookmarks__tags=current_tag,
+                )
+                .exclude(pk=current_tag.pk)
+                .annotate(co_count=models.Count('bookmarks'))
+                .order_by('-co_count')[:10]
+            )
         if 'username' in self.kwargs:
             context['profile_user'] = get_object_or_404(
                 get_user_model(), username=self.kwargs.get('username'),
@@ -129,12 +139,19 @@ class BookmarkCreateView(LoginRequiredMixin, View):
     def _context(self, form, parent):
         from django.utils.translation import gettext as _
 
+        user_tags = Tag.objects.filter(
+            bookmarks__user=self.request.user,
+        ).annotate(
+            usage_count=models.Count('bookmarks'),
+        ).order_by('-usage_count')[:20]
+
         return {
             'form': form,
             'parent': parent,
             'link': parent.link if parent else None,
             'show_url': parent is None,
             'page_title': _('Save a Link'),
+            'user_tags': user_tags,
         }
 
 
@@ -157,12 +174,19 @@ class BookmarkEditView(LoginRequiredMixin, View):
     def _context(self, form, bookmark):
         from django.utils.translation import gettext as _
 
+        user_tags = Tag.objects.filter(
+            bookmarks__user=self.request.user,
+        ).annotate(
+            usage_count=models.Count('bookmarks'),
+        ).order_by('-usage_count')[:20]
+
         return {
             'form': form,
             'link': bookmark.link,
             'bookmark': bookmark,
             'show_url': False,
             'page_title': _('Edit Bookmark'),
+            'user_tags': user_tags,
         }
 
 

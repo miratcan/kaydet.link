@@ -12,7 +12,7 @@ from core.views.bookmark_list import BookmarkListView
 from core.views.bookmark_status import BookmarkPinToggleView, BookmarkStatusSetView, BookmarkStatusToggleView
 from core.views.comment import CommentCreateView, CommentDeleteView, CommentUpdateView
 from core.views.data import ExportCSVView, ExportHTMLView, ExportJSONView, ExportView, ImportView
-from core.views.dashboard import DashboardView, HomeRedirectView
+from core.views.dashboard import DashboardRediscoverView, DashboardView, HomeRedirectView
 from core.views.link import (
     BookmarkCreateView,
     BookmarkDeleteView,
@@ -34,6 +34,7 @@ urlpatterns = [
 
     # dashboard
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
+    path('dashboard/rediscover/', DashboardRediscoverView.as_view(), name='dashboard-rediscover'),
 
     # feed (explore)
     path('explore/', LinkListView.as_view(), name='link-list'),

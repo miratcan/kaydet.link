@@ -15,7 +15,15 @@
     {% elif profile_user %}
         <h1>{{ profile_user.username }}</h1>
     {% else %}
-        <h1>{% translate "All Links" %}</h1>
+        <h1>{% translate "Explore" %}</h1>
+    {% endif %}
+
+    {% if related_tags %}
+    <div class="related-tags">
+        {% for tag in related_tags %}
+            <a href="{% url 'link-list-by-tag' tag_slug=tag.slug %}" class="entry-tag">#{{ tag.name }}</a>
+        {% endfor %}
+    </div>
     {% endif %}
 
     <nav class="ordering">
@@ -26,6 +34,13 @@
     </nav>
 </section>
 
+{% if not user.is_authenticated and links and not current_tag and not profile_user %}
+<div class="explore-intro">
+    <p>{% translate "A shared bookmark collection. Save links, add notes, and rediscover them later." %}</p>
+    <a href="{% url 'account_login' %}" class="btn btn-sm">{% translate "Sign in to start saving" %}</a>
+</div>
+{% endif %}
+
 <div class="link-list">
     {% for link in links %}
         {% include "links/partials/link_card.html" %}
@@ -35,6 +50,20 @@
             <h2>{% translate "Save, organize, and rediscover your bookmarks." %}</h2>
             <p>{% translate "A personal bookmarking tool. Private by default. Tag, collect, and search your links — all in one place." %}</p>
             <a href="{% url 'account_login' %}" class="btn btn-hero">{% translate "Sign in to get started" %}</a>
+            <div class="landing-features">
+                <div class="landing-feature">
+                    <strong>{% translate "Private by default" %}</strong>
+                    <span>{% translate "Your bookmarks are private unless you choose to share them." %}</span>
+                </div>
+                <div class="landing-feature">
+                    <strong>{% translate "Tag & collect" %}</strong>
+                    <span>{% translate "Organize with tags and collections. Find anything instantly." %}</span>
+                </div>
+                <div class="landing-feature">
+                    <strong>{% translate "Notes & comments" %}</strong>
+                    <span>{% translate "Add personal notes to bookmarks. Discuss links with others." %}</span>
+                </div>
+            </div>
         </div>
         {% else %}
         <p class="empty">{% translate "No links yet." %}</p>

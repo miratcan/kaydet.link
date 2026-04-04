@@ -19,10 +19,10 @@
         <nav class="wrapper">
             <a href="{% url 'home' %}" class="brand">{{ site_name }}</a>
             <div class="nav-links">
+                <form action="{% url 'search' %}" method="get" class="nav-search">
+                    <input type="search" name="q" placeholder="{% translate 'Search...' %}" value="{{ request.GET.q|default:'' }}" class="nav-search-input" aria-label="{% translate 'Search' %}">
+                </form>
                 {% if user.is_authenticated %}
-                    <form action="{% url 'search' %}" method="get" class="nav-search">
-                        <input type="search" name="q" placeholder="{% translate 'Search...' %}" value="{{ request.GET.q|default:'' }}" class="nav-search-input" aria-label="{% translate 'Search' %}">
-                    </form>
                     <a href="{% url 'bookmark-create' %}" class="btn nav-save-btn">+ {% translate "Save" %}</a>
                     <a href="{% url 'link-list' %}" class="nav-link-desktop">{% translate "Explore" %}</a>
                     <a href="{% url 'collection-list' %}" class="nav-link-desktop">{% translate "Collections" %}</a>
@@ -73,8 +73,10 @@
         <div class="wrapper">
             <span class="footer-brand">{{ site_name }}</span>
             <div class="footer-links">
+                <a href="{% url 'link-list' %}">{% translate "Explore" %}</a>
+                <a href="{% url 'search' %}">{% translate "Search" %}</a>
                 <a href="{% url 'tag-list' %}">{% translate "Tags" %}</a>
-                <a href="{% url 'wiki-index' %}">{% translate "Wiki" %}</a>
+                {% if wiki_has_pages %}<a href="{% url 'wiki-index' %}">{% translate "Wiki" %}</a>{% endif %}
                 <a href="#" id="issue-reporter-btn">{% translate "Report Issue" %}</a>
             </div>
         </div>
@@ -86,6 +88,13 @@
         document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
             if (!d.contains(e.target)) d.classList.remove('open');
         });
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
+                d.classList.remove('open');
+            });
+        }
     });
     </script>
     {% block extra_js %}{% endblock %}

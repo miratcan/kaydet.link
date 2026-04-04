@@ -20,6 +20,7 @@
         </div>
         <a href="{{ link.get_absolute_url }}" class="card-body">
             <h2 class="card-title">{{ link.title|default:link.url }}</h2>
+            <span class="card-domain">{{ link.get_domain }}</span>
             {% if link.description %}
             <p class="card-description">{{ link.description }}</p>
             {% endif %}
@@ -31,16 +32,19 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </span>
         {% endif %}
+        {% if link.last_saved_by %}<a href="{% url 'link-list-by-user' username=link.last_saved_by %}" class="card-meta-user">@{{ link.last_saved_by }}</a>{% endif %}
         <span>{{ link.save_count }} {% translate "saved" %}</span>
         <span>{{ link.comment_count }} {% translate "comments" %}</span>
         {% if link.is_saved %}
         <a href="{% url 'bookmark-edit' pk=link.user_bookmark_id %}" class="btn btn-outline card-meta-action">{% translate "Saved" %}</a>
-        {% else %}
+        {% elif user.is_authenticated %}
         {% with first_bm=link.first_bookmark %}
         {% if first_bm %}
         <a href="{% url 'bookmark-create' %}?from={{ first_bm.pk }}" class="btn card-meta-action">{% translate "Save" %}</a>
         {% endif %}
         {% endwith %}
+        {% else %}
+        <a href="{% url 'account_login' %}?next={{ link.get_absolute_url|urlencode }}" class="btn card-meta-action">{% translate "Save" %}</a>
         {% endif %}
     </div>
 </div>
